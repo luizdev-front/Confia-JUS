@@ -7,16 +7,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <!-- HEADER -->
   <header class="header">
-    <img src="logo-hotizontal.png" alt="Logo Confia JUS" class="logo" />
+    <img src="logo-horizontal.png" alt="Logo Confia JUS" class="logo" />
     <h1 class="title">Seu processo jurídico, claro como nunca.</h1>
-    <p class="slogan">Receba explicações simples sobre seu caso, sem juridiquês.</p>
-    <a href="#formulario" class="cta-button">Quero clareza no meu processo</a>
+    <p class="subheadline">Transforme o juridiquês em clareza total. Entenda seu processo com linguagem simples e segura.</p>
+    <a href="#formulario" class="cta-button">Quero entender meu processo agora!</a>
   </header>
 
+  <!-- CTA FLUTUANTE -->
+  <a href="#formulario" class="cta-fixed">Começar com Confia JUS</a>
+
+  <!-- CONTEÚDO PRINCIPAL -->
   <main class="main-content">
     
+    <!-- PROBLEMA -->
     <section class="problema">
       <h2 class="subtitle">Por que você precisa do Ato Simples?</h2>
       <ul class="list">
@@ -26,6 +33,7 @@
       </ul>
     </section>
 
+    <!-- BENEFÍCIOS -->
     <section class="beneficios">
       <h2 class="subtitle">O que você ganha com o Ato Simples:</h2>
       <ul class="list">
@@ -35,42 +43,74 @@
       </ul>
     </section>
 
+    <!-- PROVA SOCIAL -->
     <section class="depoimentos">
-      <h2 class="subtitle">Quem já usou, recomenda</h2>
+      <h2 class="subtitle">Veja e ouça quem obteve 100% de êxito no Confia JUS</h2>
+      <div class="video-testimonials">
+        <video controls width="280"><source src="video1.mp4" type="video/mp4"></video>
+        <video controls width="280"><source src="video2.mp4" type="video/mp4"></video>
+        <video controls width="280"><source src="video3.mp4" type="video/mp4"></video>
+      </div>
       <div class="testimonial">
         <p>“Finalmente entendi o que estava acontecendo no meu processo. Muito mais tranquilo agora!”</p>
         <span>— João Silva</span>
       </div>
-      <div class="testimonial">
-        <p>“Me senti mais segura com as explicações. Um alívio enorme!”</p>
-        <span>— Ana Costa</span>
-      </div>
-      <div class="testimonial">
-        <p>“Serviço essencial para quem quer entender seus direitos sem complicação.”</p>
-        <span>— Carlos Menezes</span>
-      </div>
     </section>
 
+    <!-- COMO FUNCIONA -->
     <section class="recursos">
       <h2 class="subtitle">Como funciona o Ato Simples?</h2>
-      <ul class="list">
-        <li>📩 Você envia os dados do processo</li>
-        <li>👩‍⚖️ Um especialista traduz as informações jurídicas</li>
-        <li>📘 Você recebe um relatório claro e direto</li>
-      </ul>
+      <div class="recursos-grid">
+        <div class="recurso">
+          <span class="icon">📩</span>
+          <p>Você envia os dados do processo</p>
+        </div>
+        <div class="recurso">
+          <span class="icon">👩‍⚖️</span>
+          <p>Um especialista traduz as informações jurídicas</p>
+        </div>
+        <div class="recurso">
+          <span class="icon">📘</span>
+          <p>Você recebe um relatório claro e direto</p>
+        </div>
+      </div>
     </section>
 
-    <section class="formulario" id="formulario">
-  <h2 class="subtitle">Receba a explicação do seu processo</h2>
+    <!-- AUTORIDADE -->
+    <section class="autoridade">
+      <h2 class="subtitle">Segurança e Credibilidade</h2>
+      <div class="selos">
+        <img src="ssl.png" alt="Site Seguro SSL" />
+        <img src="parceiro1.png" alt="Parceiro Confia JUS" />
+        <img src="certificado.png" alt="Certificação Confia JUS" />
+      </div>
+      <p>Seus dados são protegidos por criptografia SSL e tratados de forma 100% confidencial.</p>
+    </section>
 
-  <!-- Formulário HubSpot Embed -->
-  <script src="https://js.hsforms.net/forms/embed/50609902.js" defer></script>
-  <div class="hs-form-frame" data-region="na1" data-form-id="a64af870-b9b4-43b9-b0b9-29a9ec6cf5c9" data-portal-id="50609902"></div>
-</section>
+    <!-- CTA FINAL -->
+    <section class="cta-final" id="formulario">
+      <h2 class="subtitle">O momento de agir é agora!</h2>
+      <p class="cta-text">Receba a explicação completa do seu processo em linguagem simples e direta.</p>
 
-<footer class="footer">
-  <img src="logo-hotizontal.png" alt="Logo Confia JUS" class="logo" />
-  <p class="text">© FATI Arquitetura e Conteúdo. Documento Interno e Confidencial.</p>
-</footer>
+      <!-- Formulário HubSpot -->
+      <script src="https://js.hsforms.net/forms/embed/50609902.js" defer></script>
+      <div class="hs-form-frame" data-region="na1" data-form-id="a64af870-b9b4-43b9-b0b9-29a9ec6cf5c9" data-portal-id="50609902"></div>
+
+      <a href="#formulario" class="cta-button cta-final-btn">Quero meu relatório agora!</a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <img src="logo-horizontal.png" alt="Logo Confia JUS" class="logo" />
+    <p>
+      <a href="#">Política de Privacidade</a> | 
+      <a href="#">Termos de Uso</a> | 
+      <a href="#">Contato</a>
+    </p>
+    <p>© 2025 Confia JUS. Todos os direitos reservados.</p>
+  </footer>
+
 </body>
 </html>
