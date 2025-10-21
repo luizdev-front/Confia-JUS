@@ -1,16 +1,16 @@
-body {
+Body {
   font-family: 'Open Sans', sans-serif;
   color: #1A1A1A;
-  background-color: #FFFFFF;
+  background-color: #FFFFFF; [span_8](start_span)/* Fundo Neutro[span_8](end_span) */
   margin: 0;
   padding: 0;
 }
 
 h1, h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif; [span_9](start_span)/* Fonte para Títulos[span_9](end_span) */
 }
 
-/* HEADER */
+[span_10](start_span)/* HEADER - Fundo Azul Primário para Confiança[span_10](end_span) */
 .header {
   background-color: #007BFF;
   color: #FFFFFF;
@@ -33,6 +33,7 @@ h1, h2 {
   margin-bottom: 25px;
 }
 
+[span_11](start_span)/* CTA BOTÃO - Cor Secundária (Verde Esmeralda) para Conversão[span_11](end_span) */
 .cta-button {
   background-color: #2ECC71;
   color: #FFFFFF;
@@ -48,7 +49,7 @@ h1, h2 {
   background-color: #27AE60;
 }
 
-/* CTA FIXO */
+[span_12](start_span)/* CTA FIXO - Cor Secundária (Laranja Vibrante) para Alto Contraste[span_12](end_span) */
 .cta-fixed {
   position: fixed;
   top: 20px;
@@ -68,7 +69,7 @@ h1, h2 {
   background-color: #e67300;
 }
 
-/* CONTEÚDO PRINCIPAL */
+[span_13](start_span)/* CONTEÚDO PRINCIPAL - Fundo Cinza Claro Sutil[span_13](end_span) */
 .main-content {
   padding: 60px 20px;
   background-color: #F8F9FA;
@@ -95,9 +96,9 @@ h1, h2 {
   margin-bottom: 60px;
 }
 
-/* DEPOIMENTOS */
+[span_14](start_span)[span_15](start_span)/* DEPOIMENTOS - Fundo Azul Claro para Destaque[span_14](end_span)[span_15](end_span) */
 .depoimentos {
-  background-color: #E9F1FF;
+  background-color: #E9F1FF; 
   padding: 60px 20px;
   border-radius: 12px;
   text-align: center;
@@ -109,13 +110,6 @@ h1, h2 {
   flex-wrap: wrap;
   gap: 20px;
   margin-bottom: 30px;
-}
-
-.testimonial {
-  font-style: italic;
-  font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 10px;
 }
 
 /* RECURSOS */
@@ -142,7 +136,7 @@ h1, h2 {
   margin-bottom: 10px;
 }
 
-/* AUTORIDADE */
+[span_16](start_span)/* AUTORIDADE - Fundo Branco Limpo[span_16](end_span) */
 .autoridade {
   text-align: center;
   background-color: #FFFFFF;
@@ -161,7 +155,7 @@ h1, h2 {
   max-width: 90px;
 }
 
-/* CTA FINAL */
+[span_17](start_span)/* CTA FINAL - Fundo Azul Primário[span_17](end_span) */
 .cta-final {
   text-align: center;
   background-color: #007BFF;
@@ -176,6 +170,30 @@ h1, h2 {
   font-size: 1.2rem;
 }
 
+/* Estilização do Bloco de Preço Adicionado */
+.preco-bloco {
+    margin: 30px auto;
+    padding: 15px;
+    background-color: #FFFFFF; 
+    color: #007BFF;
+    border-radius: 8px;
+    max-width: 300px;
+}
+
+.valor {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.preco {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 5px 0 0;
+}
+
+
+[span_18](start_span)/* CTA FINAL Botão - Cor Secundária (Laranja) para Máximo Impacto[span_18](end_span) */
 .cta-final-btn {
   background-color: #FF851B;
   color: #FFFFFF;
@@ -193,8 +211,9 @@ h1, h2 {
   padding: 30px 20px;
 }
 
+[span_19](start_span)/* CORREÇÃO: Links do footer agora usam a cor primária, não a secundária[span_19](end_span) */
 .footer a {
-  color: #2ECC71;
+  color: #007BFF; 
   text-decoration: none;
   font-weight: 600;
 }
@@ -222,5 +241,5 @@ h1, h2 {
     bottom: 20px;
     right: 20px;
   }
-
+}
 
