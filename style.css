@@ -1,21 +1,124 @@
+/* ========================================= */
+/* VARIÁVEIS DE CORES DO PLANO */
+/* ========================================= */
+:root {
+  /* Primárias (Marca/Autoridade) */
+  --azul-primario: #007BFF;
+  --preto-texto: #212529;
+
+  /* Secundárias (Ação/Conversão) - USADAS APENAS NO CTA */
+  --laranja-cta: #FF851B; 
+  --laranja-hover: #E07715; 
+  /* --verde-cta: #2ecc71; */
+
+  /* Neutras (Fundo) */
+  --branco-fundo: #FFFFFF;
+  --cinza-fundo: #F8F9FA;
+}
+
+/* ========================================= */
+/* ESTILOS GERAIS */
+/* ========================================= */
 body {
   font-family: 'Open Sans', sans-serif;
-  color: #1A1A1A;
-  background-color: #FFFFFF; /* Fundo Neutro */
+  color: var(--preto-texto);
   margin: 0;
   padding: 0;
+  background-color: var(--branco-fundo);
 }
 
-h1, h2 {
-  font-family: 'Montserrat', sans-serif; /* Fonte para Títulos */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* HEADER - Fundo Azul Primário para Confiança */
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800; /* Extra Bold */
+  font-size: 2.5rem;
+  color: var(--preto-texto);
+}
+
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--preto-texto);
+  margin-bottom: 30px;
+}
+
+section {
+  padding: 40px 20px;
+}
+
+/* ========================================= */
+/* ESTILIZAÇÃO DO CTA (Call to Action) - Laranja Vibrante */
+/* ========================================= */
+
+/* Estilo Base para todos os Botões de Ação Imediata (Hero, Final) */
+.cta-whatsapp {
+    background-color: var(--laranja-cta); /* Laranja Vibrante */
+    color: var(--branco-fundo);
+    text-decoration: none; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 15px 30px; 
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    /* A micro-copy deve ser persuasiva */
+}
+
+.cta-whatsapp:hover {
+    background-color: var(--laranja-hover);
+    cursor: pointer;
+}
+
+/* Estilo para Botão CTA GIGANTE (CTA Final) */
+.cta-gigante {
+    font-size: 1.6rem;
+    padding: 20px 40px;
+}
+
+
+/* ========================================= */
+/* BOTÃO FIXO (FLUTUANTE) */
+/* ========================================= */
+.cta-fixed {
+    /* Herda o estilo base do CTA */
+    background-color: var(--laranja-cta); 
+    color: var(--branco-fundo);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
+    z-index: 1000;
+    
+    /* Posição Fixa no canto inferior direito */
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    transition: background-color 0.3s ease;
+    /* Usar display: none; para esconder se for no desktop e mostrar apenas no mobile, se for o caso */
+}
+
+.cta-fixed:hover {
+    background-color: var(--laranja-hover);
+}
+
+
+/* ========================================= */
+/* HEADER */
+/* ========================================= */
 .header {
-  background-color: #007BFF;
-  color: #FFFFFF;
   text-align: center;
-  padding: 60px 20px 80px;
+  padding: 40px 20px;
+  background-color: var(--branco-fundo);
 }
 
 .logo {
@@ -23,105 +126,67 @@ h1, h2 {
   margin-bottom: 20px;
 }
 
-.title {
-  font-size: 2.4rem;
-  margin: 10px 0;
-}
-
 .subheadline {
   font-size: 1.2rem;
-  margin-bottom: 25px;
+  color: var(--preto-texto);
+  margin-bottom: 30px;
 }
 
-/* CTA BOTÃO - Cor Secundária (Verde Esmeralda) para Conversão */
-.cta-button {
-  background-color: #2ECC71;
-  color: #FFFFFF;
-  text-decoration: none;
-  padding: 14px 28px;
-  border-radius: 8px;
-  font-weight: 700;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #27AE60;
-}
-
-/* CTA FIXO - Cor Secundária (Laranja Vibrante) para Alto Contraste */
-.cta-fixed {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: #FF851B;
-  padding: 12px 20px;
-  border-radius: 8px;
-  color: #fff;
-  font-weight: 700;
-  z-index: 1000;
-  text-decoration: none;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  transition: background 0.3s;
-}
-
-.cta-fixed:hover {
-  background-color: #e67300;
-}
-
-/* CONTEÚDO PRINCIPAL - Fundo Cinza Claro Sutil */
-.main-content {
-  padding: 60px 20px;
-  background-color: #F8F9FA;
-}
-
-.subtitle {
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
+/* ========================================= */
+/* LISTAS (Problema / Benefícios) */
+/* ========================================= */
 .list {
   list-style: none;
-  padding-left: 0;
-  line-height: 1.8;
+  padding: 0;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.list li {
   font-size: 1.1rem;
-  max-width: 700px;
-  margin: 0 auto;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--cinza-fundo);
 }
 
-/* SEÇÕES */
-.problema, .beneficios, .recursos, .formulario, .autoridade {
-  margin-bottom: 60px;
-}
-
-/* DEPOIMENTOS - Fundo Azul Claro para Destaque */
+/* SEÇÃO DEPOIMENTOS (Fundo Cinza Claro para Prova Social) */
 .depoimentos {
-  background-color: #E9F1FF; 
-  padding: 60px 20px;
-  border-radius: 12px;
-  text-align: center;
+    text-align: center;
+    background-color: var(--cinza-fundo); /* Cinza Claro */
+    padding: 60px 20px;
 }
 
 .video-testimonials {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 20px;
-  margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 
-/* RECURSOS */
+.video-testimonials video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* SEÇÃO FUNCIONAMENTO (RECURSOS) */
+.recursos {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: var(--branco-fundo);
+}
+
 .recursos-grid {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
 }
 
 .recurso {
-  background: #FFFFFF;
+  background: var(--branco-fundo);
   border: 1px solid #E0E0E0;
   border-radius: 10px;
   padding: 20px;
@@ -139,7 +204,7 @@ h1, h2 {
 /* AUTORIDADE - Fundo Branco Limpo */
 .autoridade {
   text-align: center;
-  background-color: #FFFFFF;
+  background-color: var(--branco-fundo);
   padding: 60px 20px;
   border-top: 2px solid #E0E0E0;
 }
@@ -158,8 +223,8 @@ h1, h2 {
 /* CTA FINAL - Fundo Azul Primário */
 .cta-final {
   text-align: center;
-  background-color: #007BFF;
-  color: #FFFFFF;
+  background-color: var(--azul-primario);
+  color: var(--branco-fundo);
   padding: 80px 20px;
   border-radius: 12px;
   margin-top: 60px;
@@ -174,8 +239,8 @@ h1, h2 {
 .preco-bloco {
   margin: 30px auto;
   padding: 15px;
-  background-color: #FFFFFF; 
-  color: #007BFF;
+  background-color: var(--branco-fundo); 
+  color: var(--azul-primario);
   border-radius: 8px;
   max-width: 300px;
 }
@@ -192,27 +257,17 @@ h1, h2 {
   margin: 5px 0 0;
 }
 
-/* CTA FINAL Botão - Cor Secundária (Laranja) para Máximo Impacto */
-.cta-final-btn {
-  background-color: #FF851B;
-  color: #FFFFFF;
-}
-
-.cta-final-btn:hover {
-  background-color: #e67300;
-}
-
 /* FOOTER */
 .footer {
   background-color: #1A1A1A;
-  color: #FFFFFF;
+  color: var(--branco-fundo);
   text-align: center;
   padding: 30px 20px;
 }
 
 /* Links do footer agora usam a cor primária */
 .footer a {
-  color: #007BFF; 
+  color: var(--azul-primario); 
   text-decoration: none;
   font-weight: 600;
 }
@@ -226,7 +281,9 @@ h1, h2 {
   margin-bottom: 10px;
 }
 
+/* ========================================= */
 /* RESPONSIVO */
+/* ========================================= */
 @media (max-width: 768px) {
   .title {
     font-size: 1.8rem;
@@ -236,89 +293,12 @@ h1, h2 {
     flex-direction: column;
     align-items: center;
   }
-
-  .cta-fixed {
-    top: auto;
-    bottom: 20px;
-    right: 20px;
+  
+  /* CTA GIGANTE no mobile se torna full-width */
+  .cta-gigante {
+    display: block;
+    width: 90%;
+    margin: 30px auto;
   }
 }
-/* ========================================= */
-/* ESTILIZAÇÃO ESPECÍFICA DO FORMULÁRIO HUBSPOT */
-/* ========================================= */
 
-/* 1. Campos de Entrada (Inputs) */
-/* Garante que os campos de texto/email usem a fonte Open Sans e cor do texto da página */
-.hs-form-frame .hs-input,
-.hs-form-frame .hs-textarea {
-    font-family: 'Open Sans', sans-serif !important;
-    color: #1A1A1A !important;
-    border: 1px solid #ced4da !important;
-    border-radius: 6px !important;
-    padding: 10px !important;
-    box-shadow: none !important;
-}
-
-/* Foco no Campo (destaque ao clicar) usando o azul primário */
-.hs-form-frame .hs-input:focus,
-.hs-form-frame .hs-textarea:focus {
-    border-color: #007BFF !important; /* Azul Primário */
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25) !important; /* Efeito de foco sutil */
-}
-
-/* 2. Rótulos (Labels) */
-/* Estiliza o texto acima dos campos para seguir o estilo da página */
-.hs-form-frame label {
-    font-family: 'Open Sans', sans-serif !important;
-    font-weight: 600 !important; /* Semi-bold para rótulos */
-    color: #1A1A1A !important;
-    font-size: 1rem !important;
-}
-
-/* 3. Botão de Envio (Submit) */
-/* Usa o estilo de conversão (laranja vibrante) do seu CTA Final */
-.hs-form-frame .hs-button.primary {
-    /* Cor de Fundo Laranja do CTA Final */
-    background-color: #FF851B !important; 
-    border-color: #FF851B !important;
-    color: #FFFFFF !important;
-    padding: 14px 28px !important;
-    border-radius: 8px !important;
-    font-weight: 700 !important;
-    font-size: 1.1rem !important;
-    transition: background-color 0.3s ease;
-}
-
-/* Efeito Hover do Botão */
-.hs-form-frame .hs-button.primary:hover {
-    background-color: #e67300 !important; /* Laranja Escuro */
-    border-color: #e67300 !important;
-}
-
-/* 4. Título do Formulário e Mensagens de Erro */
-/* Garante que títulos (se houver) e mensagens de erro combinem */
-.hs-form-frame .hs-form-field h3,
-.hs-form-frame .hs-form-field h4 {
-    font-family: 'Montserrat', sans-serif !important;
-    color: #1A1A1A !important;
-}
-
-/* Estilo para mensagens de erro */
-.hs-form-frame .hs-error-msgs label {
-    color: #DC3545 !important; /* Vermelho Padrão para Erros */
-    font-weight: 400 !important;
-}
-
-/* 5. Estilo do Conteúdo do Formulário (div principal) */
-/* Alinha o formulário para a esquerda dentro do seu div container */
-.hs-form-frame .form-columns-2 .hs-form-field,
-.hs-form-frame .hs-form-field {
-    text-align: left !important;
-}
-
-/* Estilo para o formulário no bloco CTA FINAL (Fundo azul) */
-.cta-final .hs-form-frame {
-    /* O background-color do formulário em si deve ser transparente */
-    background-color: transparent !important; 
-    padding: 0;
-}
