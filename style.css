@@ -243,3 +243,82 @@ h1, h2 {
     right: 20px;
   }
 }
+/* ========================================= */
+/* ESTILIZAÇÃO ESPECÍFICA DO FORMULÁRIO HUBSPOT */
+/* ========================================= */
+
+/* 1. Campos de Entrada (Inputs) */
+/* Garante que os campos de texto/email usem a fonte Open Sans e cor do texto da página */
+.hs-form-frame .hs-input,
+.hs-form-frame .hs-textarea {
+    font-family: 'Open Sans', sans-serif !important;
+    color: #1A1A1A !important;
+    border: 1px solid #ced4da !important;
+    border-radius: 6px !important;
+    padding: 10px !important;
+    box-shadow: none !important;
+}
+
+/* Foco no Campo (destaque ao clicar) usando o azul primário */
+.hs-form-frame .hs-input:focus,
+.hs-form-frame .hs-textarea:focus {
+    border-color: #007BFF !important; /* Azul Primário */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25) !important; /* Efeito de foco sutil */
+}
+
+/* 2. Rótulos (Labels) */
+/* Estiliza o texto acima dos campos para seguir o estilo da página */
+.hs-form-frame label {
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 600 !important; /* Semi-bold para rótulos */
+    color: #1A1A1A !important;
+    font-size: 1rem !important;
+}
+
+/* 3. Botão de Envio (Submit) */
+/* Usa o estilo de conversão (laranja vibrante) do seu CTA Final */
+.hs-form-frame .hs-button.primary {
+    /* Cor de Fundo Laranja do CTA Final */
+    background-color: #FF851B !important; 
+    border-color: #FF851B !important;
+    color: #FFFFFF !important;
+    padding: 14px 28px !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    font-size: 1.1rem !important;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito Hover do Botão */
+.hs-form-frame .hs-button.primary:hover {
+    background-color: #e67300 !important; /* Laranja Escuro */
+    border-color: #e67300 !important;
+}
+
+/* 4. Título do Formulário e Mensagens de Erro */
+/* Garante que títulos (se houver) e mensagens de erro combinem */
+.hs-form-frame .hs-form-field h3,
+.hs-form-frame .hs-form-field h4 {
+    font-family: 'Montserrat', sans-serif !important;
+    color: #1A1A1A !important;
+}
+
+/* Estilo para mensagens de erro */
+.hs-form-frame .hs-error-msgs label {
+    color: #DC3545 !important; /* Vermelho Padrão para Erros */
+    font-weight: 400 !important;
+}
+
+/* 5. Estilo do Conteúdo do Formulário (div principal) */
+/* Alinha o formulário para a esquerda dentro do seu div container */
+.hs-form-frame .form-columns-2 .hs-form-field,
+.hs-form-frame .hs-form-field {
+    text-align: left !important;
+}
+
+/* Estilo para o formulário no bloco CTA FINAL (Fundo azul) */
+.cta-final .hs-form-frame {
+    /* O background-color do formulário em si deve ser transparente */
+    background-color: transparent !important; 
+    padding: 0;
+}
