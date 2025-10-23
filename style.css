@@ -130,9 +130,12 @@ section {
   margin-bottom: 30px;
 }
 
-/* ========================================= */
-/* SEÇÃO PROBLEMA - IMPLEMENTAÇÃO DO CINZA CLARO */
-/* ========================================= */
+/* HERO SECTION */
+.hero {
+    text-align: center;
+}
+
+/* SEÇÃO PROBLEMA - FUNDO CINZA CLARO IMPLEMENTADO */
 .problema {
   text-align: center; 
   background-color: var(--cinza-fundo); /* NOVO FUNDO CINZA CLARO */
@@ -153,14 +156,14 @@ section {
 .list li {
   font-size: 1.1rem;
   padding: 10px 0;
-  /* Ajuste para que a borda fique visível contra o fundo cinza claro */
-  border-bottom: 1px solid var(--branco-fundo); 
+  /* Borda sutil que aparece bem contra o cinza/branco */
+  border-bottom: 1px solid #E0E0E0; 
 }
 
 /* SEÇÃO DEPOIMENTOS (Fundo Cinza Claro para Prova Social) */
 .depoimentos {
     text-align: center;
-    background-color: var(--cinza-fundo); /* Já estava Cinza Claro */
+    background-color: var(--cinza-fundo); /* Cinza Claro */
     padding: 60px 20px;
 }
 
@@ -243,27 +246,7 @@ section {
   font-size: 1.2rem;
 }
 
-/* Bloco de Preço */
-.preco-bloco {
-  margin: 30px auto;
-  padding: 15px;
-  background-color: var(--branco-fundo); 
-  color: var(--azul-primario);
-  border-radius: 8px;
-  max-width: 300px;
-}
-
-.valor {
-  margin: 0;
-  font-size: 1.1rem;
-}
-
-.preco {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin: 5px 0 0;
-}
+/* Estilos removidos: .preco-bloco, .valor, .preco */
 
 /* FOOTER */
 .footer {
@@ -297,6 +280,10 @@ section {
     font-size: 1.8rem;
   }
 
+  .subtitle {
+      font-size: 1.6rem;
+  }
+
   .recursos-grid {
     flex-direction: column;
     align-items: center;
@@ -308,5 +295,10 @@ section {
     width: 90%;
     margin: 30px auto;
   }
+
+  .video-testimonials {
+      gap: 10px;
+  }
 }
+
 
