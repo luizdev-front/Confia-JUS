@@ -50,26 +50,24 @@ section {
 /* ========================================= */
 /* ESTILIZAÇÃO DO CTA (Call to Action) - Laranja Vibrante */
 /* ========================================= */
-
-/* Estilo Base para todos os Botões de Ação Imediata (Hero, Final) */
 .cta-whatsapp {
-    background-color: var(--laranja-cta); /* Laranja Vibrante */
-    color: var(--branco-fundo);
-    text-decoration: none; 
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 700;
-    padding: 15px 30px; 
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
-    display: inline-block;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
+    background-color: var(--verde-esmeralda-cta); /* Antigo: var(--laranja-cta) */
+    /* ... */
 }
 
 .cta-whatsapp:hover {
-    background-color: var(--laranja-hover);
-    cursor: pointer;
+    background-color: var(--verde-esmeralda-hover); /* Antigo: var(--laranja-hover) */
+    /* ... */
+}
+
+/* E também no botão fixo */
+.cta-fixed {
+    background-color: var(--verde-esmeralda-cta); /* Antigo: var(--laranja-cta) */
+    /* ... */
+}
+
+.cta-fixed:hover {
+    background-color: var(--verde-esmeralda-hover); /* Antigo: var(--laranja-hover) */
 }
 
 /* Estilo para Botão CTA GIGANTE (CTA Final) */
