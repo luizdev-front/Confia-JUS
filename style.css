@@ -1,15 +1,11 @@
-/* ========================================= */
 /* VARIÁVEIS DE CORES DO PLANO */
-/* ========================================= */
 :root {
-  /* Primárias (Marca/Autoridade) */
-  --azul-primario: #007BFF;
-  --preto-texto: #212529;
-
-  /* Secundárias (Ação/Conversão) - USADAS APENAS NO CTA */
-  --laranja-cta: #FF851B; 
-  --laranja-hover: #E07715; 
-  /* --verde-cta: #2ecc71; */
+  /* ... (cores primárias e neutras existentes) ... */
+  
+  /* Secundárias (Ação/Conversão) - Mudar para Verde Esmeralda */
+  --verde-esmeralda-cta: #00A36C; /* Exemplo de Verde Esmeralda */
+  --verde-esmeralda-hover: #008f5d; 
+}
 
   /* Neutras (Fundo) */
   --branco-fundo: #FFFFFF;
