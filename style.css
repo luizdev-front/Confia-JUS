@@ -1,247 +1,123 @@
 /* ========================================= */
-/* ESTILIZAÇÃO DO CTA (Call to Action) - Laranja Vibrante */
+/* ESTILOS GERAIS - REFINADO */
 /* ========================================= */
-.cta-whatsapp {
-    background-color: var(--verde-esmeralda-cta); /* Antigo: var(--laranja-cta) */
-    /* ... */
-}
-
-.cta-whatsapp:hover {
-    background-color: var(--verde-esmeralda-hover); /* Antigo: var(--laranja-hover) */
-    /* ... */
-}
-
-/* E também no botão fixo */
-.cta-fixed {
-    background-color: var(--verde-esmeralda-cta); /* Antigo: var(--laranja-cta) */
-    /* ... */
-}
-
-.cta-fixed:hover {
-    background-color: var(--verde-esmeralda-hover); /* Antigo: var(--laranja-hover) */
-}
-
-/* Estilo para Botão CTA GIGANTE (CTA Final) */
-.cta-gigante {
-    font-size: 1.6rem;
-    padding: 20px 40px;
-}
-
-
-/* ========================================= */
-/* BOTÃO FIXO (FLUTUANTE) */
-/* ========================================= */
-.cta-fixed {
-    /* Herda o estilo base do CTA */
-    background-color: var(--laranja-cta); 
-    color: var(--branco-fundo);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    text-decoration: none;
-    padding: 12px 20px;
-    border-radius: 50px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
-    z-index: 1000;
-
-    /* Posição Fixa no canto inferior direito */
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    transition: background-color 0.3s ease;
-}
-
-.cta-fixed:hover {
-    background-color: var(--laranja-hover);
-}
-
-
-/* ========================================= */
-/* HEADER */
-/* ========================================= */
-.header {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: var(--branco-fundo);
-}
-
-.logo {
-  max-width: 180px;
-  margin-bottom: 20px;
-}
-
-.subheadline {
-  font-size: 1.2rem;
+body {
+  /* Aumento sutil para melhor legibilidade */
+  font-size: 17px; 
+  font-family: 'Open Sans', sans-serif;
   color: var(--preto-texto);
+  margin: 0;
+  padding: 0;
+  background-color: var(--branco-fundo);
+  /* Melhora na renderização de fontes */
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.title {
+  /* Ajuste no espaçamento para "respirar" */
+  margin-top: 0; 
   margin-bottom: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: var(--preto-texto);
 }
 
-/* HERO SECTION */
-.hero {
-    text-align: center;
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--preto-texto);
+  /* Aumento de espaçamento após o título */
+  margin-bottom: 45px; 
 }
 
-/* SEÇÃO PROBLEMA - FUNDO CINZA CLARO IMPLEMENTADO */
+section {
+  padding: 60px 20px; /* Mais espaço vertical nas seções */
+}
+
+
+/* ========================================= */
+/* BOTÃO FIXO (FLUTUANTE) - REFINADO */
+/* ========================================= */
+.cta-fixed {
+    /* ... (outras propriedades) */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra um pouco mais suave */
+    /* ... (outras propriedades) */
+}
+
+
+/* SEÇÃO PROBLEMA */
 .problema {
   text-align: center; 
-  background-color: var(--cinza-fundo); /* NOVO FUNDO CINZA CLARO */
-  padding: 40px 20px;
+  background-color: var(--cinza-fundo); 
+  padding: 60px 20px;
 }
 
 /* ========================================= */
-/* LISTAS (Problema / Benefícios) */
+/* LISTAS (Problema / Benefícios) - REFINADO */
 /* ========================================= */
 .list {
-  list-style: none;
-  padding: 0;
-  text-align: left;
-  max-width: 600px;
-  margin: 0 auto 30px;
+  /* ... (outras propriedades) */
+  margin: 0 auto 40px; /* Mais espaço após a lista */
 }
 
 .list li {
-  font-size: 1.1rem;
-  padding: 10px 0;
-  /* Borda sutil que aparece bem contra o cinza/branco */
-  border-bottom: 1px solid #E0E0E0; 
+  font-size: 1.15rem; /* Leve aumento no tamanho da fonte da lista */
+  padding: 12px 0;
+  /* ... (outras propriedades) */
 }
 
-/* SEÇÃO DEPOIMENTOS (Fundo Cinza Claro para Prova Social) */
-.depoimentos {
-    text-align: center;
-    background-color: var(--cinza-fundo); /* Cinza Claro */
-    padding: 60px 20px;
-}
-
-.video-testimonials {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.video-testimonials video {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* SEÇÃO FUNCIONAMENTO (RECURSOS) */
-.recursos {
-  text-align: center;
-  padding: 60px 20px;
-  background-color: var(--branco-fundo);
-}
-
-.recursos-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 40px;
-}
-
+/* SEÇÃO FUNCIONAMENTO (RECURSOS) - REFINADO */
 .recurso {
-  background: var(--branco-fundo);
-  border: 1px solid #E0E0E0;
-  border-radius: 10px;
-  padding: 20px;
-  width: 260px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  /* ... (outras propriedades) */
+  /* Largura fixa para manter o alinhamento */
+  width: 280px; 
+  transition: transform 0.3s ease; /* Adicionando um leve efeito */
+}
+
+.recurso:hover {
+    transform: translateY(-5px);
 }
 
 .icon {
-  font-size: 2rem;
+  font-size: 2.5rem; /* Ícone um pouco maior */
+  color: var(--azul-primario); /* Usando a cor primária nos ícones */
   display: block;
   margin-bottom: 10px;
 }
 
-/* AUTORIDADE - Fundo Branco Limpo */
-.autoridade {
-  text-align: center;
-  background-color: var(--branco-fundo);
-  padding: 60px 20px;
-  border-top: 2px solid #E0E0E0;
-}
-
-.selos {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-bottom: 20px;
-}
-
-.selos img {
-  max-width: 90px;
-}
-
-/* CTA FINAL - Fundo Azul Primário */
-.cta-final {
-  text-align: center;
-  background-color: var(--azul-primario);
-  color: var(--branco-fundo);
-  padding: 80px 20px;
-  border-radius: 12px;
-  margin-top: 60px;
-}
-
-.cta-final .cta-text {
-  margin: 20px 0;
-  font-size: 1.2rem;
-}
-
-/* Estilos removidos: .preco-bloco, .valor, .preco */
-
-/* FOOTER */
-.footer {
-  background-color: #1A1A1A;
-  color: var(--branco-fundo);
-  text-align: center;
-  padding: 30px 20px;
-}
-
-/* Links do footer agora usam a cor primária */
-.footer a {
-  color: var(--azul-primario); 
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
-.footer .logo {
-  max-width: 100px;
-  margin-bottom: 10px;
-}
-
 /* ========================================= */
-/* RESPONSIVO */
+/* RESPONSIVO - REFINADO */
 /* ========================================= */
 @media (max-width: 768px) {
   .title {
-    font-size: 1.8rem;
+    font-size: 2rem; /* Leve aumento no mobile para destaque */
+    margin-bottom: 20px;
   }
 
   .subtitle {
-      font-size: 1.6rem;
+      font-size: 1.7rem;
+  }
+  
+  section {
+    padding: 40px 15px; /* Redução do padding lateral no mobile */
   }
 
-  .recursos-grid {
-    flex-direction: column;
-    align-items: center;
+  .cta-fixed {
+      font-size: 0.9rem;
+      padding: 10px 15px;
   }
 
-  /* CTA GIGANTE no mobile se torna full-width */
   .cta-gigante {
-    display: block;
-    width: 90%;
-    margin: 30px auto;
+    font-size: 1.4rem;
+    padding: 18px 30px;
+    width: 95%;
   }
 
-  .video-testimonials {
-      gap: 10px;
+  /* Ajuste para que o texto não fique tão espremido */
+  .recurso {
+    width: 90%; 
   }
-} 
+}
