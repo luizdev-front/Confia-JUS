@@ -1,92 +1,24 @@
 /* ========================================= */
-/* VARIÁVEIS DE CORES DO PLANO */
+/* ESTILIZAÇÃO DO CTA (Call to Action) - Laranja Vibrante */
 /* ========================================= */
-:root {
-  /* Primárias (Marca/Autoridade) */
-  --azul-primario: #007BFF;
-  --preto-texto: #212529;
-
-  /* Secundárias (Ação/Conversão) - USADAS AGORA EM VERDE ESMERALDA */
-  --verde-esmeralda-cta: #00A36C; /* Exemplo de Verde Esmeralda para CTA */
-  --verde-esmeralda-hover: #008f5d; /* Cor mais escura para o hover */
-  
-  /* Mantido para referência, mas não usado nos CTAs abaixo */
-  --laranja-cta-antigo: #FF851B; 
-  --laranja-hover-antigo: #E07715; 
-
-  /* Neutras (Fundo) */
-  --branco-fundo: #FFFFFF;
-  --cinza-fundo: #F8F9FA;
-}
-
-/* ========================================= */
-/* ESTILOS GERAIS - REFINADO */
-/* ========================================= */
-body {
-  /* Aumento sutil para melhor legibilidade */
-  font-size: 17px; 
-  font-family: 'Open Sans', sans-serif;
-  color: var(--preto-texto);
-  margin: 0;
-  padding: 0;
-  background-color: var(--branco-fundo);
-  /* Melhora na renderização de fontes */
-  -webkit-font-smoothing: antialiased; 
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.main-content {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800; /* Extra Bold */
-  font-size: 2.5rem;
-  color: var(--preto-texto);
-  /* Ajuste de espaçamento */
-  margin-top: 0; 
-  margin-bottom: 30px;
-}
-
-.subtitle {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 1.8rem;
-  color: var(--preto-texto);
-  /* Aumento de espaçamento após o título */
-  margin-bottom: 45px; 
-}
-
-section {
-  /* Mais espaço vertical nas seções */
-  padding: 60px 20px; 
-}
-
-/* ========================================= */
-/* ESTILIZAÇÃO DO CTA (Call to Action) - VERDE ESMERALDA */
-/* ========================================= */
-
-/* Estilo Base para todos os Botões de Ação Imediata */
 .cta-whatsapp {
-    background-color: var(--verde-esmeralda-cta); /* Aplicado o Verde Esmeralda */
-    color: var(--branco-fundo);
-    text-decoration: none; 
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 700;
-    padding: 15px 30px; 
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
-    display: inline-block;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
+    background-color: var(--verde-esmeralda-cta); /* Antigo: var(--laranja-cta) */
+    /* ... */
 }
 
 .cta-whatsapp:hover {
-    background-color: var(--verde-esmeralda-hover); /* Aplicado o Hover Esmeralda */
-    cursor: pointer;
+    background-color: var(--verde-esmeralda-hover); /* Antigo: var(--laranja-hover) */
+    /* ... */
+}
+
+/* E também no botão fixo */
+.cta-fixed {
+    background-color: var(--verde-esmeralda-cta); /* Antigo: var(--laranja-cta) */
+    /* ... */
+}
+
+.cta-fixed:hover {
+    background-color: var(--verde-esmeralda-hover); /* Antigo: var(--laranja-hover) */
 }
 
 /* Estilo para Botão CTA GIGANTE (CTA Final) */
@@ -97,19 +29,18 @@ section {
 
 
 /* ========================================= */
-/* BOTÃO FIXO (FLUTUANTE) - CORRIGIDO */
+/* BOTÃO FIXO (FLUTUANTE) */
 /* ========================================= */
 .cta-fixed {
     /* Herda o estilo base do CTA */
-    background-color: var(--verde-esmeralda-cta); /* Aplicado o Verde Esmeralda */
+    background-color: var(--laranja-cta); 
     color: var(--branco-fundo);
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     text-decoration: none;
     padding: 12px 20px;
     border-radius: 50px;
-    /* Sombra um pouco mais suave */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
     z-index: 1000;
 
     /* Posição Fixa no canto inferior direito */
@@ -120,7 +51,7 @@ section {
 }
 
 .cta-fixed:hover {
-    background-color: var(--verde-esmeralda-hover); /* Aplicado o Hover Esmeralda */
+    background-color: var(--laranja-hover);
 }
 
 
@@ -152,25 +83,24 @@ section {
 /* SEÇÃO PROBLEMA - FUNDO CINZA CLARO IMPLEMENTADO */
 .problema {
   text-align: center; 
-  background-color: var(--cinza-fundo); 
-  padding: 60px 20px;
+  background-color: var(--cinza-fundo); /* NOVO FUNDO CINZA CLARO */
+  padding: 40px 20px;
 }
 
 /* ========================================= */
-/* LISTAS (Problema / Benefícios) - REFINADO */
+/* LISTAS (Problema / Benefícios) */
 /* ========================================= */
 .list {
   list-style: none;
   padding: 0;
   text-align: left;
   max-width: 600px;
-  /* Mais espaço após a lista */
-  margin: 0 auto 40px; 
+  margin: 0 auto 30px;
 }
 
 .list li {
-  font-size: 1.15rem; /* Leve aumento no tamanho da fonte da lista */
-  padding: 12px 0;
+  font-size: 1.1rem;
+  padding: 10px 0;
   /* Borda sutil que aparece bem contra o cinza/branco */
   border-bottom: 1px solid #E0E0E0; 
 }
@@ -178,7 +108,7 @@ section {
 /* SEÇÃO DEPOIMENTOS (Fundo Cinza Claro para Prova Social) */
 .depoimentos {
     text-align: center;
-    background-color: var(--cinza-fundo); 
+    background-color: var(--cinza-fundo); /* Cinza Claro */
     padding: 60px 20px;
 }
 
@@ -196,7 +126,7 @@ section {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* SEÇÃO FUNCIONAMENTO (RECURSOS) - REFINADO */
+/* SEÇÃO FUNCIONAMENTO (RECURSOS) */
 .recursos {
   text-align: center;
   padding: 60px 20px;
@@ -216,20 +146,13 @@ section {
   border: 1px solid #E0E0E0;
   border-radius: 10px;
   padding: 20px;
-  /* Largura fixa para manter o alinhamento */
-  width: 280px; 
+  width: 260px;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
-}
-
-.recurso:hover {
-    transform: translateY(-5px);
 }
 
 .icon {
-  font-size: 2.5rem; /* Ícone um pouco maior */
-  color: var(--azul-primario); /* Usando a cor primária nos ícones */
+  font-size: 2rem;
   display: block;
   margin-bottom: 10px;
 }
@@ -268,6 +191,8 @@ section {
   font-size: 1.2rem;
 }
 
+/* Estilos removidos: .preco-bloco, .valor, .preco */
+
 /* FOOTER */
 .footer {
   background-color: #1A1A1A;
@@ -293,21 +218,15 @@ section {
 }
 
 /* ========================================= */
-/* RESPONSIVO - REFINADO */
+/* RESPONSIVO */
 /* ========================================= */
 @media (max-width: 768px) {
   .title {
-    font-size: 2rem; /* Leve aumento no mobile para destaque */
-    margin-bottom: 20px;
+    font-size: 1.8rem;
   }
 
   .subtitle {
-      font-size: 1.7rem;
-      margin-bottom: 30px;
-  }
-  
-  section {
-    padding: 40px 15px; /* Redução do padding lateral no mobile */
+      font-size: 1.6rem;
   }
 
   .recursos-grid {
@@ -318,19 +237,11 @@ section {
   /* CTA GIGANTE no mobile se torna full-width */
   .cta-gigante {
     display: block;
-    width: 95%;
+    width: 90%;
     margin: 30px auto;
-    font-size: 1.4rem;
-    padding: 18px 30px;
-  }
-  
-  .cta-fixed {
-      font-size: 0.9rem;
-      padding: 10px 15px;
   }
 
-  /* Ajuste para que o texto não fique tão espremido */
-  .recurso {
-    width: 90%; 
+  .video-testimonials {
+      gap: 10px;
   }
-}
+} 
