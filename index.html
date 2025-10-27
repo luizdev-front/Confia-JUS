@@ -5,11 +5,331 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advogado Sumiu? Fale com a Confia JUS e Tenha Controle Total!</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> 
     
+    <style>
+        /* ========================================= */
+        /* VARIÁVEIS DE CORES DO PLANO */
+        /* ========================================= */
+        :root {
+          /* Primárias (Marca/Autoridade) */
+          --azul-primario: #007BFF;
+          --preto-texto: #212529;
+
+          /* Secundárias (Ação/Conversão) - VERDE ESMERALDA ATIVADO */
+          --verde-esmeralda-cta: #50C878; 
+          --verde-esmeralda-hover: #45b36a; 
+
+          /* Laranja antigo (desativado, mantido para referência) */
+          --laranja-cta: #FF851B; 
+          --laranja-hover: #E07715; 
+
+          /* Neutras (Fundo) */
+          --branco-fundo: #FFFFFF;
+          --cinza-fundo: #F8F9FA;
+        }
+
+        /* ========================================= */
+        /* ESTILOS GERAIS */
+        /* ========================================= */
+        body {
+          font-family: 'Open Sans', sans-serif;
+          font-size: 17px; /* Adicionado refinamento */
+          color: var(--preto-texto);
+          margin: 0;
+          padding: 0;
+          background-color: var(--branco-fundo);
+          -webkit-font-smoothing: antialiased; /* Adicionado refinamento */
+          -moz-osx-font-smoothing: grayscale; /* Adicionado refinamento */
+        }
+
+        .main-content {
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        .title {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 800; /* Extra Bold */
+          font-size: 2.5rem;
+          color: var(--preto-texto);
+          margin-top: 0; /* Adicionado refinamento */
+          margin-bottom: 30px;
+        }
+
+        .subtitle {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 700;
+          font-size: 1.8rem;
+          color: var(--preto-texto);
+          margin-bottom: 45px; /* Ajustado refinamento */
+        }
+
+        section {
+          padding: 60px 20px; /* Ajustado refinamento */
+        }
+
+        /* ========================================= */
+        /* ESTILIZAÇÃO DO CTA (Call to Action) - VERDE ESMERALDA APLICADO */
+        /* ========================================= */
+
+        /* Estilo Base para todos os Botões de Ação Imediata (Hero, Final) */
+        .cta-whatsapp {
+            background-color: var(--verde-esmeralda-cta); /* USANDO VERDE ESMERALDA */
+            color: var(--branco-fundo);
+            text-decoration: none; 
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            padding: 15px 30px; 
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .cta-whatsapp:hover {
+            background-color: var(--verde-esmeralda-hover); /* USANDO VERDE ESMERALDA HOVER */
+            cursor: pointer;
+        }
+
+        /* Estilo para Botão CTA GIGANTE (CTA Final) */
+        .cta-gigante {
+            font-size: 1.6rem;
+            padding: 20px 40px;
+        }
+
+
+        /* ========================================= */
+        /* BOTÃO FIXO (FLUTUANTE) - VERDE ESMERALDA APLICADO */
+        /* ========================================= */
+        .cta-fixed {
+            /* Herda o estilo base do CTA */
+            background-color: var(--verde-esmeralda-cta); /* USANDO VERDE ESMERALDA */
+            color: var(--branco-fundo);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
+            z-index: 1000;
+
+            /* Posição Fixa no canto inferior direito */
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-fixed:hover {
+            background-color: var(--verde-esmeralda-hover); /* USANDO VERDE ESMERALDA HOVER */
+        }
+
+
+
+        /* ========================================= */
+        /* HEADER */
+        /* ========================================= */
+        .header {
+          text-align: center;
+          padding: 40px 20px;
+          background-color: var(--branco-fundo);
+        }
+
+        .logo {
+          max-width: 180px;
+          margin-bottom: 20px;
+        }
+
+        .subheadline {
+          font-size: 1.2rem;
+          color: var(--preto-texto);
+          margin-bottom: 30px;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            text-align: center;
+        }
+
+        /* SEÇÃO PROBLEMA - FUNDO CINZA CLARO IMPLEMENTADO */
+        .problema {
+          text-align: center; 
+          background-color: var(--cinza-fundo); /* NOVO FUNDO CINZA CLARO */
+          padding: 40px 20px;
+        }
+
+        /* ========================================= */
+        /* LISTAS (Problema / Benefícios) */
+        /* ========================================= */
+        .list {
+          list-style: none;
+          padding: 0;
+          text-align: left;
+          max-width: 600px;
+          margin: 0 auto 30px;
+        }
+
+        .list li {
+          font-size: 1.1rem;
+          padding: 10px 0;
+          /* Borda sutil que aparece bem contra o cinza/branco */
+          border-bottom: 1px solid #E0E0E0; 
+        }
+
+        /* SEÇÃO DEPOIMENTOS (Fundo Cinza Claro para Prova Social) */
+        .depoimentos {
+            text-align: center;
+            background-color: var(--cinza-fundo); /* Cinza Claro */
+            padding: 60px 20px;
+        }
+
+        .video-testimonials {
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          flex-wrap: wrap;
+        }
+
+        .video-testimonials video {
+          max-width: 100%;
+          height: auto;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* SEÇÃO FUNCIONAMENTO (RECURSOS) */
+        .recursos {
+          text-align: center;
+          padding: 60px 20px;
+          background-color: var(--branco-fundo);
+        }
+
+        .recursos-grid {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 20px;
+          margin-top: 40px;
+        }
+
+        .recurso {
+          background: var(--branco-fundo);
+          border: 1px solid #E0E0E0;
+          border-radius: 10px;
+          padding: 20px;
+          width: 260px;
+          text-align: center;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .icon {
+          font-size: 2rem;
+          display: block;
+          margin-bottom: 10px;
+        }
+
+        /* AUTORIDADE - Fundo Branco Limpo */
+        .autoridade {
+          text-align: center;
+          background-color: var(--branco-fundo);
+          padding: 60px 20px;
+          border-top: 2px solid #E0E0E0;
+        }
+
+        .selos {
+          display: flex;
+          justify-content: center;
+          gap: 25px;
+          margin-bottom: 20px;
+        }
+
+        .selos img {
+          max-width: 90px;
+        }
+
+        /* CTA FINAL - Fundo Azul Primário */
+        .cta-final {
+          text-align: center;
+          background-color: var(--azul-primario);
+          color: var(--branco-fundo);
+          padding: 80px 20px;
+          border-radius: 12px;
+          margin-top: 60px;
+        }
+
+        .cta-final .cta-text {
+          margin: 20px 0;
+          font-size: 1.2rem;
+        }
+
+        /* FOOTER */
+        .footer {
+          background-color: #1A1A1A;
+          color: var(--branco-fundo);
+          text-align: center;
+          padding: 30px 20px;
+        }
+
+        /* Links do footer agora usam a cor primária */
+        .footer a {
+          color: var(--azul-primario); 
+          text-decoration: none;
+          font-weight: 600;
+        }
+
+        .footer a:hover {
+          text-decoration: underline;
+        }
+
+        .footer .logo {
+          max-width: 100px;
+          margin-bottom: 10px;
+        }
+
+        /* ========================================= */
+        /* RESPONSIVO - CORRIGIDO */
+        /* ========================================= */
+        @media (max-width: 768px) {
+          .title {
+            font-size: 1.8rem;
+          }
+
+          .subtitle {
+              font-size: 1.6rem;
+          }
+          
+          section {
+            padding: 40px 15px; /* Adicionado refinamento */
+          }
+          
+          .recursos-grid {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          /* CTA GIGANTE no mobile se torna full-width */
+          .cta-gigante {
+            display: block;
+            width: 90%;
+            margin: 30px auto;
+          }
+          
+          .cta-fixed {
+              font-size: 0.9rem; /* Adicionado refinamento */
+              padding: 10px 15px; /* Adicionado refinamento */
+          }
+
+          .video-testimonials {
+              gap: 10px;
+          }
+        } /* FIM CORRIGIDO DO MEDIA QUERY */
+    </style>
+
 </head>
 <body>
-    
+
     <a href="https://wa.me/5524981095926?text=Quero%20conversar%20com%20um%20advogado%20especialista." 
        target="_blank" 
        class="cta-fixed">
@@ -27,7 +347,7 @@
         <div class="main-content">
             <h1 class="title">Seu advogado sumiu? Não deixe seu caso nas mãos de quem vai negligenciar o seu futuro.</h1>
             <p class="cta-text">A Confia JUS te coloca no controle total do seu processo com transparência em tempo real.</p>
-            
+
             <a href="https://wa.me/5524981095926?text=Quero%20conversar%20com%20um%20advogado%20especialista." 
                target="_blank" 
                class="cta-whatsapp cta-gigante">
@@ -39,9 +359,9 @@
     <section class="problema">
         <div class="main-content">
             <h2 class="subtitle">O Risco Iminente: O que acontece quando seu advogado some e te ignora.</h2>
-            
+
             <p class="cta-text">A falta de comunicação e follow-up pode transformar o seu caso em um pesadelo. Veja os 5 maiores riscos que você corre:</p>
-            
+
             <ul class="list">
                 <li>❌ <strong>Perda de Prazos (Risco Crítico):</strong> O processo pode ser prejudicado ou perdido por negligência e sumiço do profissional.</li>
                 <li>❌ <strong>Falta de Controle:</strong> Você é pego de surpresa por decisões judiciais, sem tempo para reação ou preparo emocional/financeiro.</li>
@@ -49,7 +369,7 @@
                 <li>❌ <strong>Decisões Mal Informadas:</strong> Você precisa recorrer a terceiros (internet) para saber do seu caso, tomando decisões de vida sem ter os dados completos.</li>
                 <li>❌ <strong>Prejuízo Financeiro Irreversível:</strong> Sentenças favoráveis podem ser revertidas, ou oportunidades de negociação são perdidas permanentemente por pura falta de atenção.</li>
             </ul>
-            
+
             <a href="https://wa.me/5524981095926?text=Quero%20conversar%20com%20um%20advogado%20especialista." 
                target="_blank" 
                class="cta-whatsapp">
@@ -143,11 +463,11 @@
             <h2 class="subtitle" style="color: var(--branco-fundo);">
                 Não espere mais. Transforme o medo em controle em minutos.
             </h2>
-    
+
             <p class="cta-text">
                 Fale diretamente com um advogado especialista para levantar o seu caso e receber a primeira orientação SEM COMPROMISSO.
             </p>
-            
+
             <a href="https://wa.me/5524981095926?text=Quero%20conversar%20com%20um%20advogado%20especialista." 
                target="_blank" 
                class="cta-whatsapp cta-gigante">
@@ -170,6 +490,3 @@
     </footer>
 </body>
 </html>
-
-
-      
