@@ -1,4 +1,4 @@
-========================================= */
+/* ========================================= */
 /* VARIÁVEIS DE CORES DO PLANO */
 /* ========================================= */
 :root {
@@ -6,10 +6,13 @@
   --azul-primario: #007BFF;
   --preto-texto: #212529;
 
-  /* Secundárias (Ação/Conversão) - USADAS APENAS NO CTA */
+  /* Secundárias (Ação/Conversão) - VERDE ESMERALDA ATIVADO */
+  --verde-esmeralda-cta: #50C878; 
+  --verde-esmeralda-hover: #45b36a; 
+  
+  /* Laranja antigo (desativado, mantido para referência) */
   --laranja-cta: #FF851B; 
   --laranja-hover: #E07715; 
-  /* --verde-cta: #2ecc71; */
 
   /* Neutras (Fundo) */
   --branco-fundo: #FFFFFF;
@@ -21,10 +24,13 @@
 /* ========================================= */
 body {
   font-family: 'Open Sans', sans-serif;
+  font-size: 17px; /* Adicionado refinamento */
   color: var(--preto-texto);
   margin: 0;
   padding: 0;
   background-color: var(--branco-fundo);
+  -webkit-font-smoothing: antialiased; /* Adicionado refinamento */
+  -moz-osx-font-smoothing: grayscale; /* Adicionado refinamento */
 }
 
 .main-content {
@@ -37,6 +43,8 @@ body {
   font-weight: 800; /* Extra Bold */
   font-size: 2.5rem;
   color: var(--preto-texto);
+  margin-top: 0; /* Adicionado refinamento */
+  margin-bottom: 30px;
 }
 
 .subtitle {
@@ -44,20 +52,20 @@ body {
   font-weight: 700;
   font-size: 1.8rem;
   color: var(--preto-texto);
-  margin-bottom: 30px;
+  margin-bottom: 45px; /* Ajustado refinamento */
 }
 
 section {
-  padding: 40px 20px;
+  padding: 60px 20px; /* Ajustado refinamento */
 }
 
 /* ========================================= */
-/* ESTILIZAÇÃO DO CTA (Call to Action) - Laranja Vibrante */
+/* ESTILIZAÇÃO DO CTA (Call to Action) - VERDE ESMERALDA APLICADO */
 /* ========================================= */
 
 /* Estilo Base para todos os Botões de Ação Imediata (Hero, Final) */
 .cta-whatsapp {
-    background-color: var(--laranja-cta); /* Laranja Vibrante */
+    background-color: var(--verde-esmeralda-cta); /* USANDO VERDE ESMERALDA */
     color: var(--branco-fundo);
     text-decoration: none; 
     font-family: 'Montserrat', sans-serif;
@@ -72,7 +80,7 @@ section {
 }
 
 .cta-whatsapp:hover {
-    background-color: var(--laranja-hover);
+    background-color: var(--verde-esmeralda-hover); /* USANDO VERDE ESMERALDA HOVER */
     cursor: pointer;
 }
 
@@ -84,11 +92,11 @@ section {
 
 
 /* ========================================= */
-/* BOTÃO FIXO (FLUTUANTE) */
+/* BOTÃO FIXO (FLUTUANTE) - VERDE ESMERALDA APLICADO */
 /* ========================================= */
 .cta-fixed {
     /* Herda o estilo base do CTA */
-    background-color: var(--laranja-cta); 
+    background-color: var(--verde-esmeralda-cta); /* USANDO VERDE ESMERALDA */
     color: var(--branco-fundo);
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -106,8 +114,9 @@ section {
 }
 
 .cta-fixed:hover {
-    background-color: var(--laranja-hover);
+    background-color: var(--verde-esmeralda-hover); /* USANDO VERDE ESMERALDA HOVER */
 }
+
 
 
 /* ========================================= */
