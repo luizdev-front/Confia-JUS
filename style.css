@@ -750,3 +750,40 @@ body {
     /* Reutiliza o estilo do botão CTA */
     margin-top: 30px;
 }
+/* --- RODAPÉ --- */
+.site-footer {
+    background-color: #000000;
+    padding: 20px 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.footer-links {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os links quebrem a linha em telas pequenas */
+}
+
+.site-footer a {
+    color: #CCCCCC;
+    text-decoration: none;
+    margin: 5px 10px;
+    white-space: nowrap;
+}
+
+.site-footer a:hover {
+    color: #FFFFFF;
+}
+
+.separator {
+    color: #555555;
+    margin: 0 5px;
+}
+
+.canva-credit {
+    color: #555555;
+    margin: 5px 10px;
+}
