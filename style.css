@@ -1,24 +1,59 @@
-/* Definições básicas e importação de fonte (simulada) */
-body {
-    font-family: Arial, sans-serif; /* Use a fonte real do Canva, se souber qual é */
-    margin: 0;
-    padding: 0;
-    color: #FFFFFF; /* Cor do texto principal */
-    background-color: #333; /* Cor de fundo de segurança */
+/* ============================================== */
+/* FASE 1.2: TIPOGRAFIA (MONTSERRAT)              */
+/* ============================================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+/* ============================================== */
+/* FASE 1.3: PALETA DE CORES (VARIÁVEIS CSS)      */
+/* ============================================== */
+:root {
+    --color-cta-orange: #FF5722;      /* Laranja Vívido (Para Botões) */
+    --color-cta-emerald: #2e7c71;     /* VERDE ESMERALDA (Para WhatsApp, conforme doc.) */
+    --color-blue-m-v-v: #2196F3;      /* Azul Missão/Visão/Valores */
+    --color-dark-bg: #424242;         /* Fundo Escuro das Áreas de Atuação */
+    --color-text-light: #FFFFFF;
+    --color-text-dark: #000000;
 }
 
-/* 1. SEÇÃO PRINCIPAL (HERO) - Configuração do Fundo */
+/* ============================================== */
+/* DEFINIÇÕES BÁSICAS E GERAIS                    */
+/* ============================================== */
+body {
+    /* FASE 1.2: Aplicando a fonte Montserrat */
+    font-family: 'Montserrat', sans-serif; 
+    margin: 0;
+    padding: 0;
+    color: var(--color-text-light); 
+    background-color: #333; 
+}
+
+h1, h2, h3, h4 {
+    /* Garantindo que títulos usem uma variação de peso maior */
+    font-weight: 700;
+}
+
+.content-wrapper {
+    max-width: 800px;
+    width: 100%;
+    z-index: 2;
+    margin: 0 auto; /* Centraliza o wrapper */
+}
+
+/* ============================================== */
+/* SEÇÕES DO SITE                                 */
+/* ============================================== */
+
+/* 1. SEÇÃO PRINCIPAL (HERO) */
 .hero-section {
-    background-image: url('caminho/para/sua/imagem/fundo.jpg'); /* Substitua pelo caminho da sua imagem de fundo (ex: martelo/escuro) */
+    background-image: url('caminho/para/sua/imagem/fundo.jpg');
     background-size: cover;
     background-position: center;
-    min-height: 100vh; /* Ocupa a altura total da tela */
+    min-height: 100vh;
     padding: 40px 20px;
     display: flex;
     justify-content: center;
 }
 
-/* Camada escura para aumentar a legibilidade do texto (overlay) */
 .hero-section::before {
     content: '';
     position: absolute;
@@ -26,15 +61,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Escurece a imagem de fundo */
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
-}
-
-/* Wrapper para centralizar o conteúdo e garantir que ele fique acima do overlay */
-.content-wrapper {
-    max-width: 800px;
-    width: 100%;
-    z-index: 2; /* Fica acima do overlay */
 }
 
 /* 2. LOGOTIPO E TAGLINE */
@@ -45,30 +73,31 @@ body {
 }
 
 .logo-image {
-    width: 60px; /* Ajuste conforme o tamanho real da sua imagem */
+    width: 60px;
     height: auto;
     margin-right: 15px;
 }
 
 .logo-text h1 {
-    font-size: 3em; /* Tamanho grande para o título */
-    font-weight: bold;
+    font-size: 3em;
     line-height: 1;
     margin: 0;
     text-transform: uppercase;
 }
 
 .jus-highlight {
-    color: #4CAF50; /* Cor de destaque para 'JUS' (verde claro, adapte se a cor for azul) */
+    /* Mantido o tom de verde claro/original para o logo, se for intencional */
+    color: #4CAF50; 
 }
 
 .tagline {
     font-size: 1.2em;
     color: #AAAAAA;
     margin: 5px 0 0 0;
+    font-weight: 400; /* Regular */
 }
 
-/* 3. TÍTULO DE IMPACTO */
+/* TÍTULO DE IMPACTO */
 .impact-title {
     font-size: 2.5em;
     font-weight: 500;
@@ -76,58 +105,42 @@ body {
     line-height: 1.3;
 }
 
-/* 4. TÍTULO SECUNDÁRIO (AZUL CLARO) */
+/* TÍTULO SECUNDÁRIO (AZUL CLARO) */
 .secondary-title {
     font-size: 1.8em;
-    font-weight: bold;
-    color: #2196F3; /* Azul Claro, adapte para a cor exata do Canva */
+    color: #2196F3;
     margin-bottom: 30px;
     line-height: 1.4;
 }
 
 .advogado-highlight {
-    /* O texto 'advogado some e te ignora' parece em negrito/mais escuro dentro do título */
-    font-weight: 900;
+    font-weight: 900; /* Bold */
 }
 
-/* 5. LISTA DE PROBLEMAS */
+/* LISTA DE PROBLEMAS */
 .problem-list {
-    list-style: none; /* Remove os marcadores de lista padrão */
+    list-style: none;
     padding: 0;
 }
 
 .problem-list li {
     margin-bottom: 25px;
     line-height: 1.5;
+    font-weight: 400; /* Regular */
 }
 
 .problem-list h4 {
     display: inline;
-    font-size: 1em; /* Tamanho do título do problema (ex: Perda de Prazos) */
-    font-weight: bold;
+    font-size: 1em;
     margin: 0;
 }
 
 .critical-risk {
-    color: #FFC107; /* Amarelo/Laranja para 'Risco Crítico' */
+    color: #FFC107;
     font-weight: 500;
 }
-/* --- SEÇÃO DE CONTINUAÇÃO DE TEXTO E CTA (Prejuízo Financeiro) --- */
-.text-cta-section {
-    background-color: #000000; /* Fundo preto sólido */
-    padding: 40px 20px;
-    text-align: center;
-}
 
-.final-impact-text {
-    font-size: 1.5em;
-    font-weight: 500;
-    line-height: 1.4;
-    max-width: 700px;
-    margin: 0 auto 30px auto;
-    color: #FFFFFF;
-}
-
+/* --- CTA (BOTÕES) --- */
 .cta-button-area {
     display: flex;
     justify-content: center;
@@ -138,35 +151,47 @@ body {
 .butterfly-icon {
     font-size: 1.8em;
     margin-right: 15px;
-    /* Ajuste de cor se for uma imagem e não um emoji */
 }
 
 .cta-button {
-    background-color: #FF5722; /* Laranja Vívido (adapte a cor exata) */
-    color: #FFFFFF;
+    /* FASE 1.3: Usando a variável de cor laranja para o CTA */
+    background-color: var(--color-cta-orange); 
+    color: var(--color-text-light);
     text-decoration: none;
     font-size: 1.2em;
     font-weight: bold;
     padding: 15px 30px;
-    border-radius: 8px; /* Borda levemente arredondada */
+    border-radius: 8px;
     transition: background-color 0.3s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .cta-button:hover {
-    background-color: #E64A19; /* Laranja um pouco mais escuro no hover */
+    background-color: #E64A19;
 }
 
-/* --- SEÇÃO MISSÃO, VISÃO E VALORES --- */
+/* --- SEÇÃO DE CONTINUAÇÃO DE TEXTO E CTA --- */
+.text-cta-section {
+    background-color: #000000;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.final-impact-text {
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 1.4;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    color: var(--color-text-light);
+}
+
+/* --- SEÇÃO MISSÃO, VISÃO E VALORES (M-V-V) --- */
 .m-v-v-section {
-    background-color: #2196F3; /* Fundo em tom de Azul/Ciano (adapte a cor exata) */
+    background-color: var(--color-blue-m-v-v);
     padding: 50px 20px;
     text-align: center;
-    color: #FFFFFF;
-}
-
-.m-v-v-section .content-wrapper {
-    max-width: 600px;
 }
 
 .m-v-v-item {
@@ -175,7 +200,7 @@ body {
 
 .arrow-icon {
     font-size: 1.5em;
-    color: #FFC107; /* Cor de destaque (Laranja/Amarelo) */
+    color: #FFC107;
     margin-right: 10px;
     display: inline-block;
 }
@@ -183,7 +208,6 @@ body {
 .m-v-v-item h4 {
     display: inline;
     font-size: 1.5em;
-    font-weight: bold;
     margin-top: 0;
     margin-bottom: 5px;
 }
@@ -192,27 +216,26 @@ body {
     font-size: 1.1em;
     line-height: 1.4;
     margin-top: 10px;
+    font-weight: 400; /* Regular */
 }
 
 .values-list {
-    line-height: 1.8 !important; /* Aumenta o espaçamento entre as linhas dos valores */
+    line-height: 1.8 !important;
 }
 
-/* --- SEÇÃO DE ÁREAS DE ATUAÇÃO (INÍCIO) --- */
+/* --- SEÇÃO DE ÁREAS DE ATUAÇÃO --- */
 .areas-section {
-    /* Fundo Escuro com textura, simulamos um cinza escuro */
-    background-color: #424242; 
+    background-color: var(--color-dark-bg); 
     padding: 50px 20px;
 }
 
 .areas-title {
-    background-color: #FFFFFF;
-    color: #FF5722; /* Laranja da CTA */
+    background-color: var(--color-text-light);
+    color: var(--color-cta-orange);
     font-size: 1.8em;
-    font-weight: bold;
     padding: 10px 20px;
     margin: 0 auto 30px auto;
-    width: fit-content; /* Largura ajustada ao texto */
+    width: fit-content;
     text-align: center;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -225,7 +248,7 @@ body {
 
 .area-icon {
     font-size: 1.5em;
-    color: #FFC107; /* Cor do ícone */
+    color: #FFC107;
     margin-right: 5px;
     display: inline-block;
 }
@@ -233,8 +256,7 @@ body {
 .area-item h4 {
     display: inline;
     font-size: 1.2em;
-    font-weight: bold;
-    color: #FFFFFF;
+    color: var(--color-text-light);
     margin: 0;
 }
 
@@ -243,192 +265,58 @@ body {
     color: #CCCCCC;
     margin-top: 5px;
     text-align: center;
-}
-/* --- SEÇÃO DE CONTINUAÇÃO DE TEXTO E CTA (Prejuízo Financeiro) --- */
-.text-cta-section {
-    background-color: #000000; /* Fundo preto sólido */
-    padding: 40px 20px;
-    text-align: center;
+    font-weight: 400; /* Regular */
 }
 
-.final-impact-text {
-    font-size: 1.5em;
-    font-weight: 500;
-    line-height: 1.4;
-    max-width: 700px;
-    margin: 0 auto 30px auto;
-    color: #FFFFFF;
-}
-
-.cta-button-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.butterfly-icon {
-    font-size: 1.8em;
-    margin-right: 15px;
-    /* Ajuste de cor se for uma imagem e não um emoji */
-}
-
-.cta-button {
-    background-color: #FF5722; /* Laranja Vívido (adapte a cor exata) */
-    color: #FFFFFF;
-    text-decoration: none;
-    font-size: 1.2em;
-    font-weight: bold;
-    padding: 15px 30px;
-    border-radius: 8px; /* Borda levemente arredondada */
-    transition: background-color 0.3s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.cta-button:hover {
-    background-color: #E64A19; /* Laranja um pouco mais escuro no hover */
-}
-
-/* --- SEÇÃO MISSÃO, VISÃO E VALORES --- */
-.m-v-v-section {
-    background-color: #2196F3; /* Fundo em tom de Azul/Ciano (adapte a cor exata) */
-    padding: 50px 20px;
-    text-align: center;
-    color: #FFFFFF;
-}
-
-.m-v-v-section .content-wrapper {
-    max-width: 600px;
-}
-
-.m-v-v-item {
-    margin-bottom: 40px;
-}
-
-.arrow-icon {
-    font-size: 1.5em;
-    color: #FFC107; /* Cor de destaque (Laranja/Amarelo) */
-    margin-right: 10px;
-    display: inline-block;
-}
-
-.m-v-v-item h4 {
-    display: inline;
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 5px;
-}
-
-.m-v-v-item p {
-    font-size: 1.1em;
-    line-height: 1.4;
-    margin-top: 10px;
-}
-
-.values-list {
-    line-height: 1.8 !important; /* Aumenta o espaçamento entre as linhas dos valores */
-}
-
-.areas-section {
-    /* Fundo Escuro com textura, simulamos um cinza escuro */
-    background-color: #424242; 
-    padding: 50px 20px;
-}
-
-.areas-title {
-    background-color: #FFFFFF;
-    color: #FF5722; /* Laranja da CTA */
-    font-size: 1.8em;
-    font-weight: bold;
-    padding: 10px 20px;
-    margin: 0 auto 30px auto;
-    width: fit-content; /* Largura ajustada ao texto */
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.area-item {
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-.area-icon {
-    font-size: 1.5em;
-    color: #FFC107; /* Cor do ícone */
-    margin-right: 5px;
-    display: inline-block;
-}
-
-.area-item h4 {
-    display: inline;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #FFFFFF;
-    margin: 0;
-}
-
-.area-description {
-    font-size: 1em;
-    color: #CCCCCC;
-    margin-top: 5px;
-    text-align: center;
-}
-/* --- ESTILO PARA AS LISTAS DE DETALHES DAS ÁREAS --- */
 .area-details-list {
-    list-style: none; /* Remove os marcadores padrão */
+    list-style: none;
     padding: 0;
     margin-top: 10px;
-    margin-bottom: 40px; /* Espaço entre as áreas */
-    text-align: left; /* Alinha o texto à esquerda (como na imagem) */
-    max-width: 600px; /* Limita a largura para melhor leitura */
+    margin-bottom: 40px;
+    text-align: left;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    color: #CCCCCC; /* Cor do texto da lista */
+    color: #CCCCCC;
 }
 
 .area-details-list li {
     position: relative;
-    padding-left: 20px; /* Espaço para o marcador simulado */
+    padding-left: 20px;
     margin-bottom: 10px;
     font-size: 1em;
     line-height: 1.4;
+    font-weight: 400; /* Regular */
 }
 
-/* Criando o marcador de bullet point do Canva (ponto sólido pequeno) */
 .area-details-list li::before {
-    content: "•"; 
+    content: "•";
     position: absolute;
     left: 0;
     font-size: 1.2em;
-    color: #FFC107; /* Amarelo/Laranja (cor do ícone) */
+    color: #FFC107;
     font-weight: bold;
 }
 
-/* Garantindo que o item principal da área se alinhe com a lista */
 .areas-section .area-item {
-    text-align: left; /* Alinha o título da área à esquerda */
+    text-align: left;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Correção para a lista continuada (se necessário) */
 .area-details-list.continued {
-    margin-top: -30px; /* Ajusta o espaçamento para continuar a lista anterior */
+    margin-top: -30px;
     margin-bottom: 0;
 }
 
-/* --- SEÇÃO DE IMAGEM ESCURA DE TRANSIÇÃO --- */
+/* --- SEÇÃO DE TRANSIÇÃO E EQUIPE --- */
 .transition-image-area {
-    /* Substitua pelo caminho real da sua imagem com as pessoas na mesa */
-    background-image: url('caminho/para/imagem/escritorio.jpg'); 
+    background-image: url('caminho/para/imagem/escritorio.jpg');
     background-size: cover;
     background-position: center top;
-    height: 400px; /* Altura visual da imagem */
+    height: 400px;
     width: 100%;
-    /* Adiciona um overlay escuro para o efeito da imagem */
     position: relative;
 }
 
@@ -439,9 +327,9 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4); /* Leve escurecimento */
+    background-color: rgba(0, 0, 0, 0.4);
 }
-/* --- SEÇÃO NOSSA EQUIPE --- */
+
 .team-section {
     padding: 60px 20px;
     text-align: center;
@@ -449,13 +337,12 @@ body {
 
 .team-title {
     font-size: 2.5em;
-    font-weight: bold;
-    color: #000000;
+    color: var(--color-text-dark);
     margin-bottom: 50px;
 }
 
 .team-member-card {
-    background-color: #F8F8F8; /* Fundo levemente acinzentado */
+    background-color: #F8F8F8;
     padding: 30px 20px;
     max-width: 400px;
     margin: 0 auto;
@@ -464,8 +351,7 @@ body {
 
 .member-name {
     font-size: 1.8em;
-    font-weight: bold;
-    color: #000000;
+    color: var(--color-text-dark);
     margin: 0 0 5px 0;
     line-height: 1.2;
 }
@@ -474,35 +360,36 @@ body {
     font-size: 1.2em;
     color: #666666;
     margin: 0;
+    font-weight: 400; /* Regular */
 }
 
-/* --- SEÇÃO DE CITAÇÃO DE TRANSIÇÃO 1 --- */
+/* --- CITAÇÃO DE TRANSIÇÃO --- */
 .quote-section {
     padding: 40px 20px;
     text-align: center;
-    background-color: #F8F8F8; /* Cor que precede o fundo da Dra. Bárbara */
+    background-color: #F8F8F8;
 }
 
 .quote-1 {
-    background-color: #F8F8F8; /* Fundo que parece um cinza claro/bege */
+    background-color: #F8F8F8;
 }
 
 .quote-text {
-    font-family: serif; /* Usando serif para simular a fonte do Canva (adapte se souber a fonte real) */
+    /* Mantido o font-family serif para o estilo de citação */
+    font-family: serif; 
     font-size: 2em;
     font-weight: 500;
     line-height: 1.3;
-    color: #424242; /* Cinza escuro */
+    color: #424242;
     max-width: 600px;
     margin: 0 auto;
 }
-/* --- SEÇÃO DR. ANDERSON E FUNDO COM IMAGEM --- */
+
+/* --- SEÇÃO DR. ANDERSON E CITAÇÃO CONTINUADA --- */
 .team-member-2 {
-    /* Fundo com imagem de sorriso e celular */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* Aplicamos um overlay para dar o efeito de cor */
     position: relative;
 }
 
@@ -513,33 +400,30 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    /* Simula a cor/filtro que está na imagem (azul/ciano claro) */
-    background-color: rgba(173, 216, 230, 0.4); 
+    background-color: rgba(173, 216, 230, 0.4);
     z-index: 1;
 }
 
 .team-member-2 .content-wrapper {
-    z-index: 2; /* Garante que o conteúdo fique sobre o overlay */
+    z-index: 2;
     position: relative;
 }
 
 .quote-text.continuation {
-    /* Estilo para o texto que continua a citação, na parte superior da imagem */
     font-family: serif;
     font-size: 2em;
     font-weight: 500;
     line-height: 1.3;
     color: #424242;
-    background-color: rgba(255, 255, 255, 0.85); /* Fundo semi-transparente para legibilidade */
+    background-color: rgba(255, 255, 255, 0.85);
     padding: 20px;
     margin-bottom: 50px;
 }
 
-/* --- SEÇÃO DE CHAMADA PARA RESULTADOS --- */
 .results-cta {
-    background-color: #FFFFFF;
+    background-color: var(--color-text-light);
     padding: 30px 20px;
-    margin-top: 50px; /* Distância do card do Dr. Anderson */
+    margin-top: 50px;
     border-radius: 5px;
 }
 
@@ -547,24 +431,28 @@ body {
     font-size: 1.6em;
     font-weight: 500;
     line-height: 1.4;
-    color: #000000;
+    color: var(--color-text-dark);
     margin: 0;
 }
+
 /* --- DEPOIMENTOS --- */
 .testimonials-section {
-    background-color: #FFFFFF;
+    background-color: var(--color-text-light);
     padding: 60px 20px;
     text-align: center;
+    /* Mantido o fundo com imagem das mãos */
+    background-image: url('caminho/para/imagem/maos.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .testimonials-title {
     font-size: 1.8em;
-    font-weight: bold;
-    color: #000000;
+    color: var(--color-text-dark);
     margin-bottom: 40px;
 }
 
-/* Reutilizando o estilo do botão CTA, mas centralizado */
 .cta-button-area.top-cta {
     margin-bottom: 30px;
 }
@@ -574,16 +462,15 @@ body {
     max-width: 600px;
     margin: 0 auto 30px auto;
     position: relative;
-    padding-left: 40px; /* Espaço para o ícone */
+    padding-left: 40px;
 }
 
-/* Ícone de Checkmark Laranja (Simulado) */
 .check-icon {
     position: absolute;
     left: 0;
     top: 0;
     font-size: 1.5em;
-    color: #FF5722; /* Laranja Vívido (cor da CTA) */
+    color: var(--color-cta-orange);
 }
 
 .quote-text-small {
@@ -592,38 +479,24 @@ body {
     line-height: 1.5;
     color: #333333;
     margin: 0 0 5px 0;
+    font-weight: 400; /* Regular */
 }
 
 .client-info {
     font-size: 1em;
-    font-weight: bold;
-    color: #000000;
+    color: var(--color-text-dark);
     margin: 0;
 }
 
-/* A imagem 1000179058.jpg tem uma imagem de fundo sutil para um depoimento */
-.testimonials-section {
-    /* Adicione a imagem de fundo das mãos, se for o caso. Simulação: */
-    background-image: url('caminho/para/imagem/maos.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-/* No caso da imagem 1000179058, o texto parece estar sobre uma imagem de fundo de mãos. Se for, ajuste: */
 .visible-on-next-image {
-    /* Estilo para o depoimento específico sobre a imagem de fundo, se precisar de ajuste de cor */
-    color: #000000; /* Texto preto para a parte superior do depoimento */
-}
-/* --- ESTRATÉGIA COMPROVADA --- */
-.strategy-section {
-    background-color: #007ACC; /* Azul forte (adapte para o tom exato do Canva) */
-    padding: 60px 20px;
-    text-align: left;
-    color: #FFFFFF;
+    color: var(--color-text-dark);
 }
 
-.strategy-section .content-wrapper {
-    max-width: 600px;
+/* --- ESTRATÉGIA COMPROVADA --- */
+.strategy-section {
+    background-color: #007ACC; /* Cor azul forte original */
+    padding: 60px 20px;
+    text-align: left;
 }
 
 .strategy-main-title {
@@ -643,7 +516,7 @@ body {
 .strategy-step {
     margin-bottom: 40px;
     position: relative;
-    padding-left: 80px; /* Espaço para o número grande */
+    padding-left: 80px;
     min-height: 60px;
 }
 
@@ -651,17 +524,16 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    font-size: 4em; /* Número grande e em destaque */
+    font-size: 4em;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.4); /* Cor clara e semi-transparente */
+    color: rgba(255, 255, 255, 0.4);
     line-height: 1;
 }
 
 .step-title {
     font-size: 1.4em;
-    font-weight: bold;
+    color: var(--color-text-light);
     margin: 5px 0 5px 0;
-    color: #FFFFFF;
 }
 
 .step-description {
@@ -669,47 +541,45 @@ body {
     line-height: 1.4;
     margin: 0;
     color: #CCCCCC;
+    font-weight: 400; /* Regular */
 }
 
-/* --- LISTA DE DETALHES DO PASSO 4 --- */
 .strategy-details-list {
-    list-style: none; 
+    list-style: none;
     padding: 0;
     margin-top: 15px;
     text-align: left;
-    color: #FFFFFF;
+    color: var(--color-text-light);
 }
 
 .strategy-details-list li {
     position: relative;
-    padding-left: 20px; 
+    padding-left: 20px;
     margin-bottom: 5px;
     font-size: 1.1em;
     line-height: 1.4;
+    font-weight: 400; /* Regular */
 }
 
-/* Marcador de bolinha */
 .strategy-details-list li::before {
-    content: "•"; 
+    content: "•";
     position: absolute;
     left: 0;
     font-size: 1.2em;
-    color: #FFC107; /* Amarelo/Laranja de destaque */
+    color: #FFC107;
     font-weight: bold;
 }
+
 /* --- CTA FINAL ("O momento é agora") --- */
 .final-cta-section {
-    /* Substitua pelo caminho real da sua imagem do homem de terno */
     background-image: url('caminho/para/imagem/homem-terno.jpg');
     background-size: cover;
     background-position: center;
     padding: 80px 20px;
     text-align: center;
     position: relative;
-    color: #FFFFFF;
 }
 
-/* Overlay para escurecer a imagem e melhorar a legibilidade do texto */
 .final-cta-section::before {
     content: '';
     position: absolute;
@@ -717,18 +587,12 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4); /* Escuro */
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: 1;
-}
-
-.final-cta-section .content-wrapper {
-    z-index: 2;
-    position: relative;
 }
 
 .cta-final-title {
     font-size: 3em;
-    font-weight: bold;
     line-height: 1.1;
     margin-bottom: 30px;
 }
@@ -738,6 +602,7 @@ body {
     line-height: 1.5;
     max-width: 550px;
     margin: 0 auto 20px auto;
+    font-weight: 400; /* Regular */
 }
 
 .cta-final-info {
@@ -747,9 +612,9 @@ body {
 }
 
 .cta-button-area.final-cta {
-    /* Reutiliza o estilo do botão CTA */
     margin-top: 30px;
 }
+
 /* --- RODAPÉ --- */
 .site-footer {
     background-color: #000000;
@@ -764,7 +629,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap; /* Permite que os links quebrem a linha em telas pequenas */
+    flex-wrap: wrap;
 }
 
 .site-footer a {
@@ -772,10 +637,11 @@ body {
     text-decoration: none;
     margin: 5px 10px;
     white-space: nowrap;
+    font-weight: 400; /* Regular */
 }
 
 .site-footer a:hover {
-    color: #FFFFFF;
+    color: var(--color-text-light);
 }
 
 .separator {
@@ -786,4 +652,43 @@ body {
 .canva-credit {
     color: #555555;
     margin: 5px 10px;
+    font-weight: 400; /* Regular */
+}
+
+/* ============================================== */
+/* FASE 1.4: CTA FLUTUANTE (WHATSAPP)             */
+/* ============================================== */
+.floating-cta-whatsapp {
+    position: fixed; /* Fixa o elemento na tela */
+    bottom: 20px;    /* 20px acima da borda inferior */
+    right: 20px;     /* 20px da borda direita */
+    z-index: 1000;   /* Garante que fique acima de outros elementos */
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--color-cta-emerald); /* FASE 1.3: Verde Esmeralda */
+    color: var(--color-text-light);
+    padding: 10px 15px;
+    border-radius: 50px; /* Borda arredondada */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.floating-cta-whatsapp:hover {
+    background-color: #266b60; /* Tom um pouco mais escuro no hover */
+    transform: scale(1.05);
+}
+
+.whatsapp-icon {
+    font-size: 1.5em; /* Tamanho do ícone de mensagem/WhatsApp */
+    margin-right: 10px;
+    line-height: 1; /* Alinha o ícone */
+}
+
+.whatsapp-text {
+    font-weight: bold;
+    font-size: 0.95em;
+    white-space: nowrap; /* Impede que o texto quebre */
+    /* Para telas muito pequenas, pode-se esconder o texto: */
+    /* @media (max-width: 600px) { display: none; } */
 }
