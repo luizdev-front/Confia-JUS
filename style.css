@@ -441,3 +441,58 @@ body {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.4); /* Leve escurecimento */
 }
+/* --- SEÇÃO NOSSA EQUIPE --- */
+.team-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.team-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 50px;
+}
+
+.team-member-card {
+    background-color: #F8F8F8; /* Fundo levemente acinzentado */
+    padding: 30px 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.member-name {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #000000;
+    margin: 0 0 5px 0;
+    line-height: 1.2;
+}
+
+.member-oab {
+    font-size: 1.2em;
+    color: #666666;
+    margin: 0;
+}
+
+/* --- SEÇÃO DE CITAÇÃO DE TRANSIÇÃO 1 --- */
+.quote-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #F8F8F8; /* Cor que precede o fundo da Dra. Bárbara */
+}
+
+.quote-1 {
+    background-color: #F8F8F8; /* Fundo que parece um cinza claro/bege */
+}
+
+.quote-text {
+    font-family: serif; /* Usando serif para simular a fonte do Canva (adapte se souber a fonte real) */
+    font-size: 2em;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #424242; /* Cinza escuro */
+    max-width: 600px;
+    margin: 0 auto;
+}
