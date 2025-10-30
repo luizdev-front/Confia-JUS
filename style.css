@@ -496,3 +496,57 @@ body {
     max-width: 600px;
     margin: 0 auto;
 }
+/* --- SEÇÃO DR. ANDERSON E FUNDO COM IMAGEM --- */
+.team-member-2 {
+    /* Fundo com imagem de sorriso e celular */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Aplicamos um overlay para dar o efeito de cor */
+    position: relative;
+}
+
+.team-member-2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Simula a cor/filtro que está na imagem (azul/ciano claro) */
+    background-color: rgba(173, 216, 230, 0.4); 
+    z-index: 1;
+}
+
+.team-member-2 .content-wrapper {
+    z-index: 2; /* Garante que o conteúdo fique sobre o overlay */
+    position: relative;
+}
+
+.quote-text.continuation {
+    /* Estilo para o texto que continua a citação, na parte superior da imagem */
+    font-family: serif;
+    font-size: 2em;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #424242;
+    background-color: rgba(255, 255, 255, 0.85); /* Fundo semi-transparente para legibilidade */
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+/* --- SEÇÃO DE CHAMADA PARA RESULTADOS --- */
+.results-cta {
+    background-color: #FFFFFF;
+    padding: 30px 20px;
+    margin-top: 50px; /* Distância do card do Dr. Anderson */
+    border-radius: 5px;
+}
+
+.results-cta-text {
+    font-size: 1.6em;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #000000;
+    margin: 0;
+}
