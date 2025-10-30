@@ -697,3 +697,56 @@ body {
     color: #FFC107; /* Amarelo/Laranja de destaque */
     font-weight: bold;
 }
+/* --- CTA FINAL ("O momento é agora") --- */
+.final-cta-section {
+    /* Substitua pelo caminho real da sua imagem do homem de terno */
+    background-image: url('caminho/para/imagem/homem-terno.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    color: #FFFFFF;
+}
+
+/* Overlay para escurecer a imagem e melhorar a legibilidade do texto */
+.final-cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Escuro */
+    z-index: 1;
+}
+
+.final-cta-section .content-wrapper {
+    z-index: 2;
+    position: relative;
+}
+
+.cta-final-title {
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.cta-final-text {
+    font-size: 1.3em;
+    line-height: 1.5;
+    max-width: 550px;
+    margin: 0 auto 20px auto;
+}
+
+.cta-final-info {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.cta-button-area.final-cta {
+    /* Reutiliza o estilo do botão CTA */
+    margin-top: 30px;
+}
