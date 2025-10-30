@@ -614,3 +614,59 @@ body {
     /* Estilo para o depoimento específico sobre a imagem de fundo, se precisar de ajuste de cor */
     color: #000000; /* Texto preto para a parte superior do depoimento */
 }
+/* --- ESTRATÉGIA COMPROVADA --- */
+.strategy-section {
+    background-color: #007ACC; /* Azul forte (adapte para o tom exato do Canva) */
+    padding: 60px 20px;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.strategy-section .content-wrapper {
+    max-width: 600px;
+}
+
+.strategy-main-title {
+    font-size: 1.8em;
+    line-height: 1.3;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.highlight-action {
+    display: block;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.strategy-step {
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 80px; /* Espaço para o número grande */
+    min-height: 60px;
+}
+
+.step-number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 4em; /* Número grande e em destaque */
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.4); /* Cor clara e semi-transparente */
+    line-height: 1;
+}
+
+.step-title {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 5px 0 5px 0;
+    color: #FFFFFF;
+}
+
+.step-description {
+    font-size: 1.1em;
+    line-height: 1.4;
+    margin: 0;
+    color: #CCCCCC;
+}
