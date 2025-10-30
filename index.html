@@ -1,492 +1,350 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advogado Sumiu? Fale com a Confia JUS e Tenha Controle Total!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
-    <style>
-        /* ========================================= */
-        /* VARIÁVEIS DE CORES DO PLANO */
-        /* ========================================= */
-        :root {
-          /* Primárias (Marca/Autoridade) */
-          --azul-primario: #007BFF;
-          --preto-texto: #212529;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advogado Sumiu? Fale com a Confia JUS e Tenha Controle Total!</title>
 
-          /* Secundárias (Ação/Conversão) - VERDE ESMERALDA ATIVADO */
-          --verde-esmeralda-cta: #50C878; 
-          --verde-esmeralda-hover: #45b36a; 
+  <!-- FAVICON -->
+  <link rel="icon" href="favicon.png" type="image/png">
 
-          /* Laranja antigo (desativado, mantido para referência) */
-          --laranja-cta: #FF851B; 
-          --laranja-hover: #E07715; 
+  <!-- FONTES -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-          /* Neutras (Fundo) */
-          --branco-fundo: #FFFFFF;
-          --cinza-fundo: #F8F9FA;
-        }
+  <!-- META TAGS SEO -->
+  <meta name="description" content="A Confia JUS te coloca no controle total do seu processo jurídico com tecnologia, transparência e acompanhamento em tempo real.">
+  <meta name="keywords" content="advogado sumiu, controle de processo, Confia JUS, acompanhamento jurídico, advocacia transparente">
+  <meta name="author" content="Confia JUS">
 
-        /* ========================================= */
-        /* ESTILOS GERAIS */
-        /* ========================================= */
-        body {
-          font-family: 'Open Sans', sans-serif;
-          font-size: 17px; /* Adicionado refinamento */
-          color: var(--preto-texto);
-          margin: 0;
-          padding: 0;
-          background-color: var(--branco-fundo);
-          -webkit-font-smoothing: antialiased; /* Adicionado refinamento */
-          -moz-osx-font-smoothing: grayscale; /* Adicionado refinamento */
-        }
+  <!-- META TAGS OPEN GRAPH -->
+  <meta property="og:title" content="Advogado Sumiu? Fale com a Confia JUS e Tenha Controle Total!">
+  <meta property="og:description" content="Nunca mais perca o controle do seu caso. Transparência e acompanhamento em tempo real com a Confia JUS.">
+  <meta property="og:image" content="og-image.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.confiajus.com.br">
 
-        .main-content {
-          max-width: 1200px;
-          margin: 0 auto;
-        }
+  <!-- ESTILOS -->
+  <style>
+    :root {
+      --azul-confia: #00BFFF;
+      --verde-esmeralda: #2ecc71;
+      --verde-esmeralda-hover: #28b966;
+      --branco: #ffffff;
+      --cinza-fundo: #f8f9fa;
+      --preto: #1e1e1e;
+    }
 
-        .title {
-          font-family: 'Montserrat', sans-serif;
-          font-weight: 800; /* Extra Bold */
-          font-size: 2.5rem;
-          color: var(--preto-texto);
-          margin-top: 0; /* Adicionado refinamento */
-          margin-bottom: 30px;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .subtitle {
-          font-family: 'Montserrat', sans-serif;
-          font-weight: 700;
-          font-size: 1.8rem;
-          color: var(--preto-texto);
-          margin-bottom: 45px; /* Ajustado refinamento */
-        }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      color: var(--preto);
+      background-color: var(--branco);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 
-        section {
-          padding: 60px 20px; /* Ajustado refinamento */
-        }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
 
-        /* ========================================= */
-        /* ESTILIZAÇÃO DO CTA (Call to Action) - VERDE ESMERALDA APLICADO */
-        /* ========================================= */
+    .logo {
+      max-width: 180px;
+      margin-bottom: 15px;
+    }
 
-        /* Estilo Base para todos os Botões de Ação Imediata (Hero, Final) */
-        .cta-whatsapp {
-            background-color: var(--verde-esmeralda-cta); /* USANDO VERDE ESMERALDA */
-            color: var(--branco-fundo);
-            text-decoration: none; 
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.25rem;
-            font-weight: 700;
-            padding: 15px 30px; 
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
-            display: inline-block;
-            transition: background-color 0.3s ease;
-            margin-top: 20px;
-        }
+    .subheadline {
+      font-size: 1.1rem;
+      color: var(--preto);
+      opacity: 0.85;
+    }
 
-        .cta-whatsapp:hover {
-            background-color: var(--verde-esmeralda-hover); /* USANDO VERDE ESMERALDA HOVER */
-            cursor: pointer;
-        }
+    h1, h2, h3 {
+      font-weight: 800;
+      color: var(--preto);
+      margin-bottom: 20px;
+    }
 
-        /* Estilo para Botão CTA GIGANTE (CTA Final) */
-        .cta-gigante {
-            font-size: 1.6rem;
-            padding: 20px 40px;
-        }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
 
+    .main-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-        /* ========================================= */
-        /* BOTÃO FIXO (FLUTUANTE) - VERDE ESMERALDA APLICADO */
-        /* ========================================= */
-        .cta-fixed {
-            /* Herda o estilo base do CTA */
-            background-color: var(--verde-esmeralda-cta); /* USANDO VERDE ESMERALDA */
-            color: var(--branco-fundo);
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            text-decoration: none;
-            padding: 12px 20px;
-            border-radius: 50px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
-            z-index: 1000;
+    /* CTA */
+    .cta {
+      display: inline-block;
+      background-color: var(--verde-esmeralda);
+      color: var(--branco);
+      font-weight: 700;
+      text-decoration: none;
+      padding: 15px 35px;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+      margin-top: 25px;
+    }
 
-            /* Posição Fixa no canto inferior direito */
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            transition: background-color 0.3s ease;
-        }
+    .cta:hover {
+      background-color: var(--verde-esmeralda-hover);
+    }
 
-        .cta-fixed:hover {
-            background-color: var(--verde-esmeralda-hover); /* USANDO VERDE ESMERALDA HOVER */
-        }
+    .cta-fixed {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: var(--verde-esmeralda);
+      color: var(--branco);
+      text-decoration: none;
+      font-weight: 700;
+      padding: 12px 25px;
+      border-radius: 50px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      z-index: 1000;
+    }
 
+    .cta-fixed:hover {
+      background-color: var(--verde-esmeralda-hover);
+    }
 
+    /* HERO */
+    .hero {
+      background-color: var(--branco);
+      padding-top: 40px;
+    }
 
-        /* ========================================= */
-        /* HEADER */
-        /* ========================================= */
-        .header {
-          text-align: center;
-          padding: 40px 20px;
-          background-color: var(--branco-fundo);
-        }
+    .hero h1 {
+      font-size: 2.4rem;
+    }
 
-        .logo {
-          max-width: 180px;
-          margin-bottom: 20px;
-        }
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
 
-        .subheadline {
-          font-size: 1.2rem;
-          color: var(--preto-texto);
-          margin-bottom: 30px;
-        }
+    /* PROBLEMA */
+    .problema {
+      background-color: var(--cinza-fundo);
+    }
 
-        /* HERO SECTION */
-        .hero {
-            text-align: center;
-        }
+    .list {
+      list-style: none;
+      text-align: left;
+      max-width: 700px;
+      margin: 0 auto;
+    }
 
-        /* SEÇÃO PROBLEMA - FUNDO CINZA CLARO IMPLEMENTADO */
-        .problema {
-          text-align: center; 
-          background-color: var(--cinza-fundo); /* NOVO FUNDO CINZA CLARO */
-          padding: 40px 20px;
-        }
+    .list li {
+      font-size: 1.05rem;
+      padding: 10px 0;
+      border-bottom: 1px solid #e0e0e0;
+    }
 
-        /* ========================================= */
-        /* LISTAS (Problema / Benefícios) */
-        /* ========================================= */
-        .list {
-          list-style: none;
-          padding: 0;
-          text-align: left;
-          max-width: 600px;
-          margin: 0 auto 30px;
-        }
+    /* PROVA SOCIAL */
+    .depoimentos {
+      background-color: var(--cinza-fundo);
+    }
 
-        .list li {
-          font-size: 1.1rem;
-          padding: 10px 0;
-          /* Borda sutil que aparece bem contra o cinza/branco */
-          border-bottom: 1px solid #E0E0E0; 
-        }
+    .video-testimonials {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
 
-        /* SEÇÃO DEPOIMENTOS (Fundo Cinza Claro para Prova Social) */
-        .depoimentos {
-            text-align: center;
-            background-color: var(--cinza-fundo); /* Cinza Claro */
-            padding: 60px 20px;
-        }
+    video {
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 280px;
+    }
 
-        .video-testimonials {
-          display: flex;
-          justify-content: center;
-          gap: 20px;
-          flex-wrap: wrap;
-        }
+    /* RECURSOS */
+    .recursos-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 40px;
+    }
 
-        .video-testimonials video {
-          max-width: 100%;
-          height: auto;
-          border-radius: 10px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    .recurso {
+      background: var(--branco);
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
 
-        /* SEÇÃO FUNCIONAMENTO (RECURSOS) */
-        .recursos {
-          text-align: center;
-          padding: 60px 20px;
-          background-color: var(--branco-fundo);
-        }
+    .icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
 
-        .recursos-grid {
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
-          gap: 20px;
-          margin-top: 40px;
-        }
+    /* AUTORIDADE */
+    .autoridade {
+      border-top: 2px solid #e0e0e0;
+    }
 
-        .recurso {
-          background: var(--branco-fundo);
-          border: 1px solid #E0E0E0;
-          border-radius: 10px;
-          padding: 20px;
-          width: 260px;
-          text-align: center;
-          box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
+    .selos {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 20px;
+    }
 
-        .icon {
-          font-size: 2rem;
-          display: block;
-          margin-bottom: 10px;
-        }
+    .selos img {
+      max-width: 90px;
+    }
 
-        /* AUTORIDADE - Fundo Branco Limpo */
-        .autoridade {
-          text-align: center;
-          background-color: var(--branco-fundo);
-          padding: 60px 20px;
-          border-top: 2px solid #E0E0E0;
-        }
+    /* CTA FINAL */
+    .cta-final {
+      background-color: var(--azul-confia);
+      color: var(--branco);
+      border-radius: 12px;
+      padding: 70px 20px;
+      margin-top: 60px;
+    }
 
-        .selos {
-          display: flex;
-          justify-content: center;
-          gap: 25px;
-          margin-bottom: 20px;
-        }
+    .cta-final h2 {
+      color: var(--branco);
+    }
 
-        .selos img {
-          max-width: 90px;
-        }
+    /* FOOTER */
+    footer {
+      background-color: #111;
+      color: var(--branco);
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+    }
 
-        /* CTA FINAL - Fundo Azul Primário */
-        .cta-final {
-          text-align: center;
-          background-color: var(--azul-primario);
-          color: var(--branco-fundo);
-          padding: 80px 20px;
-          border-radius: 12px;
-          margin-top: 60px;
-        }
+    footer a {
+      color: var(--azul-confia);
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-        .cta-final .cta-text {
-          margin: 20px 0;
-          font-size: 1.2rem;
-        }
+    footer a:hover {
+      text-decoration: underline;
+    }
 
-        /* FOOTER */
-        .footer {
-          background-color: #1A1A1A;
-          color: var(--branco-fundo);
-          text-align: center;
-          padding: 30px 20px;
-        }
-
-        /* Links do footer agora usam a cor primária */
-        .footer a {
-          color: var(--azul-primario); 
-          text-decoration: none;
-          font-weight: 600;
-        }
-
-        .footer a:hover {
-          text-decoration: underline;
-        }
-
-        .footer .logo {
-          max-width: 100px;
-          margin-bottom: 10px;
-        }
-
-        /* ========================================= */
-        /* RESPONSIVO - CORRIGIDO */
-        /* ========================================= */
-        @media (max-width: 768px) {
-          .title {
-            font-size: 1.8rem;
-          }
-
-          .subtitle {
-              font-size: 1.6rem;
-          }
-          
-          section {
-            padding: 40px 15px; /* Adicionado refinamento */
-          }
-          
-          .recursos-grid {
-            flex-direction: column;
-            align-items: center;
-          }
-
-          /* CTA GIGANTE no mobile se torna full-width */
-          .cta-gigante {
-            display: block;
-            width: 90%;
-            margin: 30px auto;
-          }
-          
-          .cta-fixed {
-              font-size: 0.9rem; /* Adicionado refinamento */
-              padding: 10px 15px; /* Adicionado refinamento */
-          }
-
-          .video-testimonials {
-              gap: 10px;
-          }
-        } /* FIM CORRIGIDO DO MEDIA QUERY */
-    </style>
-
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 1.8rem; }
+      .cta { width: 90%; display: block; margin: 20px auto; }
+      .recursos-grid { flex-direction: column; align-items: center; }
+      .cta-fixed { font-size: 0.9rem; padding: 10px 18px; }
+    }
+  </style>
 </head>
+
 <body>
 
-    <a href="https://wa.me/5524981095926?text=Quero%20conversar%20com%20um%20advogado%20especialista." 
-       target="_blank" 
-       class="cta-fixed">
-       Falar Agora!
-    </a>
+  <!-- BOTÃO FLUTUANTE -->
+  <a href="https://wa.me/5524981095926?text=Quero%20conversar%20com%20um%20especialista"
+     target="_blank" class="cta-fixed">Falar Agora!</a>
 
-    <header class="header">
-        <div class="main-content">
-            <img src="logo-hotizontal.png" alt="Confia JUS Logo Horizontal" class="logo">
-            <p class="subheadline">Nunca mais seja pego de surpresa. Sua tranquilidade é nosso único caso.</p>
-        </div>
-    </header>
+  <!-- HEADER -->
+  <header>
+    <img src="logo-horizontal.png" alt="Confia JUS Logo" class="logo">
+    <p class="subheadline">Sua tranquilidade é o nosso único caso.</p>
+  </header>
 
-    <section class="hero">
-        <div class="main-content">
-            <h1 class="title">Seu advogado sumiu? Não deixe seu caso nas mãos de quem vai negligenciar o seu futuro.</h1>
-            <p class="cta-text">A Confia JUS te coloca no controle total do seu processo com transparência em tempo real.</p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="main-content">
+      <h1>Advogado sumiu? Não deixe seu caso nas mãos de quem vai negligenciar o seu futuro.</h1>
+      <p>A Confia JUS te coloca no controle total do seu processo com transparência em tempo real.</p>
+      <a href="https://wa.me/5524981095926?text=Quero%20conversar%20com%20um%20especialista" class="cta">
+        Quero conversar com um especialista
+      </a>
+    </div>
+  </section>
 
-            <a href="https://wa.me/5524981095926?text=Quero%20conversar%20com%20um%20advogado%20especialista." 
-               target="_blank" 
-               class="cta-whatsapp cta-gigante">
-               Quero Conversar com um Especialista Agora!
-            </a>
-        </div>
-    </section>
+  <!-- PROBLEMA -->
+  <section class="problema">
+    <div class="main-content">
+      <h2>O que acontece quando seu advogado some?</h2>
+      <ul class="list">
+        <li>❌ <strong>Perda de prazos:</strong> decisões judiciais podem ser comprometidas.</li>
+        <li>❌ <strong>Falta de controle:</strong> você fica no escuro sobre seu processo.</li>
+        <li>❌ <strong>Estresse e desconfiança:</strong> ausência de retorno gera insegurança.</li>
+        <li>❌ <strong>Decisões ruins:</strong> você age sem dados claros do seu caso.</li>
+        <li>❌ <strong>Prejuízo financeiro:</strong> oportunidades de recurso ou acordo são perdidas.</li>
+      </ul>
+      <a href="https://wa.me/5524981095926?text=Quero%20conversar%20com%20um%20especialista" class="cta">
+        Fale com um especialista agora
+      </a>
+    </div>
+  </section>
 
-    <section class="problema">
-        <div class="main-content">
-            <h2 class="subtitle">O Risco Iminente: O que acontece quando seu advogado some e te ignora.</h2>
+  <!-- PROVA SOCIAL -->
+  <section class="depoimentos">
+    <div class="main-content">
+      <h2>Quem confiou na Confia JUS voltou a ter controle sobre o próprio caso</h2>
+      <div class="video-testimonials">
+        <video controls><source src="video1.mp4" type="video/mp4"></video>
+        <video controls><source src="video2.mp4" type="video/mp4"></video>
+        <video controls><source src="video3.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+  </section>
 
-            <p class="cta-text">A falta de comunicação e follow-up pode transformar o seu caso em um pesadelo. Veja os 5 maiores riscos que você corre:</p>
+  <!-- FUNCIONAMENTO -->
+  <section class="recursos">
+    <div class="main-content">
+      <h2>Como o Confia JUS funciona</h2>
+      <div class="recursos-grid">
+        <div class="recurso"><span class="icon">💻</span><h3>1. Envie seus dados</h3><p>Nosso especialista começa a análise imediatamente.</p></div>
+        <div class="recurso"><span class="icon">📊</span><h3>2. Dashboard em tempo real</h3><p>Acompanhe cada andamento com total transparência.</p></div>
+        <div class="recurso"><span class="icon">🗣️</span><h3>3. Comunicação clara</h3><p>Sem jargões. Tudo explicado de forma simples.</p></div>
+        <div class="recurso"><span class="icon">🔔</span><h3>4. Alertas automáticos</h3><p>Seja notificado de novos movimentos no processo.</p></div>
+        <div class="recurso"><span class="icon">📄</span><h3>5. Relatórios resumidos</h3><p>Receba um documento claro com tudo o que importa.</p></div>
+      </div>
+    </div>
+  </section>
 
-            <ul class="list">
-                <li>❌ <strong>Perda de Prazos (Risco Crítico):</strong> O processo pode ser prejudicado ou perdido por negligência e sumiço do profissional.</li>
-                <li>❌ <strong>Falta de Controle:</strong> Você é pego de surpresa por decisões judiciais, sem tempo para reação ou preparo emocional/financeiro.</li>
-                <li>❌ <strong>Sentimento de Engano e Estresse:</strong> Você é tratado como prioridade na venda, mas se sente um estorvo depois, perdendo a confiança.</li>
-                <li>❌ <strong>Decisões Mal Informadas:</strong> Você precisa recorrer a terceiros (internet) para saber do seu caso, tomando decisões de vida sem ter os dados completos.</li>
-                <li>❌ <strong>Prejuízo Financeiro Irreversível:</strong> Sentenças favoráveis podem ser revertidas, ou oportunidades de negociação são perdidas permanentemente por pura falta de atenção.</li>
-            </ul>
+  <!-- AUTORIDADE -->
+  <section class="autoridade">
+    <div class="main-content">
+      <h2>Credibilidade e Legalidade Garantidas</h2>
+      <div class="selos">
+        <img src="ssl.png" alt="Selo SSL">
+        <img src="parceiro1.png" alt="Parceiro Legal">
+      </div>
+      <p>Desenvolvido por advogados especialistas em Direito Digital e Processual, comprometidos com a transparência total.</p>
+    </div>
+  </section>
 
-            <a href="https://wa.me/5524981095926?text=Quero%20conversar%20com%20um%20advogado%20especialista." 
-               target="_blank" 
-               class="cta-whatsapp">
-               Não corra mais riscos. Fale com um especialista agora!
-            </a>
-        </div>
-    </section>
+  <!-- CTA FINAL -->
+  <section class="cta-final">
+    <div class="main-content">
+      <h2>Transforme o medo em controle em minutos.</h2>
+      <p>Fale diretamente com um advogado especialista e receba sua primeira orientação sem compromisso.</p>
+      <a href="https://wa.me/5524981095926?text=Quero%20conversar%20com%20um%20especialista" class="cta">
+        Quero conversar com um especialista
+      </a>
+    </div>
+  </section>
 
-    <section class="beneficios">
-        <div class="main-content">
-            <h2 class="subtitle">A Confia JUS é a solução para você ter controle e paz.</h2>
-            <ul class="list">
-                <li>✅ <strong>Explicações claras</strong> sobre cada etapa do seu processo.</li>
-                <li>✅ Acesso descomplicado e **direto ao status** do seu caso.</li>
-                <li>✅ **Segurança e autonomia** para entender seus direitos e tomar decisões.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="depoimentos">
-        <div class="main-content">
-            <h2 class="subtitle">Quem confiou na Confia JUS e voltou a ter controle sobre o caso.</h2>
-            <div class="video-testimonials">
-                <video controls width="280">
-                    <source src="video1.mp4" type="video/mp4">
-                    Seu navegador não suporta vídeos.
-                </video>
-                <video controls width="280">
-                    <source src="video2.mp4" type="video/mp4">
-                    Seu navegador não suporta vídeos.
-                </video>
-                <video controls width="280">
-                    <source src="video3.mp4" type="video/mp4">
-                    Seu navegador não suporta vídeos.
-                </video>
-            </div>
-            <a href="https://wa.me/5524981095926?text=Quero%20conversar%20com%20um%20advogado%20especialista." 
-               target="_blank" 
-               class="cta-whatsapp">
-               Quero ver a minha satisfação garantida.
-            </a>
-        </div>
-    </section>
-
-    <section class="recursos">
-        <div class="main-content">
-            <h2 class="subtitle">Como o Confia JUS Funciona (Tecnologia e Transparência)</h2>
-            <div class="recursos-grid">
-                <div class="recurso">
-                    <span class="icon">💻</span>
-                    <h3>1. Você envia os dados do processo</h3>
-                    <p>O primeiro passo para o nosso especialista começar a analisar seu caso imediatamente.</p>
-                </div>
-                <div class="recurso">
-                    <span class="icon">📊</span>
-                    <h3>2. Dashboard: Acompanhamento em tempo real</h3>
-                    <p>Acesse a qualquer momento uma área exclusiva para ver o status, próximas datas e decisões.</p>
-                </div>
-                <div class="recurso">
-                    <span class="icon">🗣️</span>
-                    <h3>3. Um especialista traduz as informações jurídicas</h3>
-                    <p>Fim do 'jurisdiquês'. Entenda o que está acontecendo sem depender de longas ligações.</p>
-                </div>
-                <div class="recurso">
-                    <span class="icon">🔔</span>
-                    <h3>4. Alertas: Notificação de novos andamentos</h3>
-                    <p>Você é notificado por e-mail e WhatsApp sobre qualquer mudança ou prazo crítico do seu caso.</p>
-                </div>
-                <div class="recurso">
-                    <span class="icon">📄</span>
-                    <h3>5. Você recebe um relatório claro e direto</h3>
-                    <p>Todas as informações consolidadas em um documento objetivo para sua total compreensão.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="autoridade">
-        <div class="main-content">
-            <h2 class="subtitle">Credibilidade e Legalidade Garantidas</h2>
-            <div class="selos">
-                <img src="ssl.png" alt="Selo de Segurança SSL">
-                <img src="parceiro1.png" alt="Parceiro Legal">
-            </div>
-            <p>O Confia JUS é um serviço desenvolvido por advogados especialistas em Direito Digital e Processual, focado na transparência total para o cliente final.</p>
-        </div>
-    </section>
-
-    <section class="cta-final">
-        <div class="main-content">
-            <h2 class="subtitle" style="color: var(--branco-fundo);">
-                Não espere mais. Transforme o medo em controle em minutos.
-            </h2>
-
-            <p class="cta-text">
-                Fale diretamente com um advogado especialista para levantar o seu caso e receber a primeira orientação SEM COMPROMISSO.
-            </p>
-
-            <a href="https://wa.me/5524981095926?text=Quero%20conversar%20com%20um%20advogado%20especialista." 
-               target="_blank" 
-               class="cta-whatsapp cta-gigante">
-               Quero Iniciar a Conversa Agora!
-            </a>
-        </div>
-    </section>
-
-
-    <footer class="footer">
-        <div class="main-content">
-            <img src="logo-hotizontal.png" alt="Confia JUS Logo Horizontal" class="logo">
-            <p>&copy; 2025 Confia JUS. Todos os direitos reservados.</p>
-            <p>
-                <a href="politica.html">Política de Privacidade</a> | 
-                <a href="termos.html">Termos de Uso</a> | 
-                <a href="contato.html">Contato</a>
-            </p>
-        </div>
-    </footer>
+  <!-- FOOTER -->
+  <footer>
+    <img src="logo-horizontal.png" alt="Confia JUS Logo" class="logo">
+    <p>&copy; 2025 Confia JUS. Todos os direitos reservados.</p>
+    <p><a href="politica.html">Política de Privacidade</a> | <a href="termos.html">Termos de Uso</a> | <a href="contato.html">Contato</a></p>
+  </footer>
 </body>
 </html>
