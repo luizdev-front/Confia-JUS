@@ -1,350 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advogado Sumiu? Fale com a Confia JUS e Tenha Controle Total!</title>
-
-  <!-- FAVICON -->
-  <link rel="icon" href="favicon.png" type="image/png">
-
-  <!-- FONTES -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- META TAGS SEO -->
-  <meta name="description" content="A Confia JUS te coloca no controle total do seu processo jurídico com tecnologia, transparência e acompanhamento em tempo real.">
-  <meta name="keywords" content="advogado sumiu, controle de processo, Confia JUS, acompanhamento jurídico, advocacia transparente">
-  <meta name="author" content="Confia JUS">
-
-  <!-- META TAGS OPEN GRAPH -->
-  <meta property="og:title" content="Advogado Sumiu? Fale com a Confia JUS e Tenha Controle Total!">
-  <meta property="og:description" content="Nunca mais perca o controle do seu caso. Transparência e acompanhamento em tempo real com a Confia JUS.">
-  <meta property="og:image" content="og-image.jpg">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.confiajus.com.br">
-
-  <!-- ESTILOS -->
-  <style>
-    :root {
-      --azul-confia: #00BFFF;
-      --verde-esmeralda: #2ecc71;
-      --verde-esmeralda-hover: #28b966;
-      --branco: #ffffff;
-      --cinza-fundo: #f8f9fa;
-      --preto: #1e1e1e;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 16px;
-      color: var(--preto);
-      background-color: var(--branco);
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    header {
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    .logo {
-      max-width: 180px;
-      margin-bottom: 15px;
-    }
-
-    .subheadline {
-      font-size: 1.1rem;
-      color: var(--preto);
-      opacity: 0.85;
-    }
-
-    h1, h2, h3 {
-      font-weight: 800;
-      color: var(--preto);
-      margin-bottom: 20px;
-    }
-
-    section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .main-content {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    /* CTA */
-    .cta {
-      display: inline-block;
-      background-color: var(--verde-esmeralda);
-      color: var(--branco);
-      font-weight: 700;
-      text-decoration: none;
-      padding: 15px 35px;
-      border-radius: 10px;
-      font-size: 1.2rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      transition: background-color 0.3s ease;
-      margin-top: 25px;
-    }
-
-    .cta:hover {
-      background-color: var(--verde-esmeralda-hover);
-    }
-
-    .cta-fixed {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background-color: var(--verde-esmeralda);
-      color: var(--branco);
-      text-decoration: none;
-      font-weight: 700;
-      padding: 12px 25px;
-      border-radius: 50px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-      z-index: 1000;
-    }
-
-    .cta-fixed:hover {
-      background-color: var(--verde-esmeralda-hover);
-    }
-
-    /* HERO */
-    .hero {
-      background-color: var(--branco);
-      padding-top: 40px;
-    }
-
-    .hero h1 {
-      font-size: 2.4rem;
-    }
-
-    .hero p {
-      font-size: 1.1rem;
-      margin-bottom: 30px;
-    }
-
-    /* PROBLEMA */
-    .problema {
-      background-color: var(--cinza-fundo);
-    }
-
-    .list {
-      list-style: none;
-      text-align: left;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .list li {
-      font-size: 1.05rem;
-      padding: 10px 0;
-      border-bottom: 1px solid #e0e0e0;
-    }
-
-    /* PROVA SOCIAL */
-    .depoimentos {
-      background-color: var(--cinza-fundo);
-    }
-
-    .video-testimonials {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    video {
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      max-width: 280px;
-    }
-
-    /* RECURSOS */
-    .recursos-grid {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 40px;
-    }
-
-    .recurso {
-      background: var(--branco);
-      border: 1px solid #e0e0e0;
-      border-radius: 10px;
-      padding: 20px;
-      width: 250px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-
-    .icon {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-
-    /* AUTORIDADE */
-    .autoridade {
-      border-top: 2px solid #e0e0e0;
-    }
-
-    .selos {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      margin-bottom: 20px;
-    }
-
-    .selos img {
-      max-width: 90px;
-    }
-
-    /* CTA FINAL */
-    .cta-final {
-      background-color: var(--azul-confia);
-      color: var(--branco);
-      border-radius: 12px;
-      padding: 70px 20px;
-      margin-top: 60px;
-    }
-
-    .cta-final h2 {
-      color: var(--branco);
-    }
-
-    /* FOOTER */
-    footer {
-      background-color: #111;
-      color: var(--branco);
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 0.9rem;
-    }
-
-    footer a {
-      color: var(--azul-confia);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 1.8rem; }
-      .cta { width: 90%; display: block; margin: 20px auto; }
-      .recursos-grid { flex-direction: column; align-items: center; }
-      .cta-fixed { font-size: 0.9rem; padding: 10px 18px; }
-    }
-  </style>
-</head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confia JUS - Advocacia Avançada</title>
+    <link rel="stylesheet" href="styles.css"> </head>
 <body>
 
-  <!-- BOTÃO FLUTUANTE -->
-  <a href="https://wa.me/5524981095926?text=Quero%20conversar%20com%20um%20especialista"
-     target="_blank" class="cta-fixed">Falar Agora!</a>
+    <section class="hero-section">
+        <div class="content-wrapper">
+            <div class="logo-area">
+                <img src="caminho/para/o/seu/logo.png" alt="Logotipo Confia JUS" class="logo-image">
+                <div class="logo-text">
+                    <h1>Confia <span class="jus-highlight">JUS</span></h1>
+                    <p class="tagline">Advocacia Avançada</p>
+                </div>
+            </div>
 
-  <!-- HEADER -->
-  <header>
-    <img src="logo-horizontal.png" alt="Confia JUS Logo" class="logo">
-    <p class="subheadline">Sua tranquilidade é o nosso único caso.</p>
-  </header>
+            <h2 class="impact-title">
+                Seu advogado sumiu? Não deixe seu caso nas mãos de quem vai negligenciar o seu futuro.
+            </h2>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="main-content">
-      <h1>Advogado sumiu? Não deixe seu caso nas mãos de quem vai negligenciar o seu futuro.</h1>
-      <p>A Confia JUS te coloca no controle total do seu processo com transparência em tempo real.</p>
-      <a href="https://wa.me/5524981095926?text=Quero%20conversar%20com%20um%20especialista" class="cta">
-        Quero conversar com um especialista
-      </a>
-    </div>
-  </section>
+            <h3 class="secondary-title">
+                O que acontece quando seu <span class="advogado-highlight">advogado some e te ignora</span>.
+            </h3>
 
-  <!-- PROBLEMA -->
-  <section class="problema">
-    <div class="main-content">
-      <h2>O que acontece quando seu advogado some?</h2>
-      <ul class="list">
-        <li>❌ <strong>Perda de prazos:</strong> decisões judiciais podem ser comprometidas.</li>
-        <li>❌ <strong>Falta de controle:</strong> você fica no escuro sobre seu processo.</li>
-        <li>❌ <strong>Estresse e desconfiança:</strong> ausência de retorno gera insegurança.</li>
-        <li>❌ <strong>Decisões ruins:</strong> você age sem dados claros do seu caso.</li>
-        <li>❌ <strong>Prejuízo financeiro:</strong> oportunidades de recurso ou acordo são perdidas.</li>
-      </ul>
-      <a href="https://wa.me/5524981095926?text=Quero%20conversar%20com%20um%20especialista" class="cta">
-        Fale com um especialista agora
-      </a>
-    </div>
-  </section>
+            <ul class="problem-list">
+                <li>
+                    <h4>Perda de Prazos <span class="critical-risk">(Risco Crítico)</span>:</h4>
+                    O processo pode ser prejudicado ou perdido por negligência e sumiço do profissional.
+                </li>
+                <li>
+                    <h4>Falta de Controle:</h4>
+                    Você é pego de surpresa por decisões judiciais, sem tempo para reação ou preparo emocional/financeiro.
+                </li>
+                <li>
+                    <h4>Sentimento de Engano e Estresse:</h4>
+                    Você é tratado como prioridade na venda, mas se sente um estorvo depois, perdendo a confiança.
+                </li>
+                <li>
+                    <h4>Decisões Mal Informadas:</h4>
+                    Você precisa recorrer a terceiros (amigos, internet) para saber do seu caso, tomando decisões de vida sem ter os dados completos.
+                </li>
+            </ul>
+        </div>
+    </section>
 
-  <!-- PROVA SOCIAL -->
-  <section class="depoimentos">
-    <div class="main-content">
-      <h2>Quem confiou na Confia JUS voltou a ter controle sobre o próprio caso</h2>
-      <div class="video-testimonials">
-        <video controls><source src="video1.mp4" type="video/mp4"></video>
-        <video controls><source src="video2.mp4" type="video/mp4"></video>
-        <video controls><source src="video3.mp4" type="video/mp4"></video>
-      </div>
-    </div>
-  </section>
-
-  <!-- FUNCIONAMENTO -->
-  <section class="recursos">
-    <div class="main-content">
-      <h2>Como o Confia JUS funciona</h2>
-      <div class="recursos-grid">
-        <div class="recurso"><span class="icon">💻</span><h3>1. Envie seus dados</h3><p>Nosso especialista começa a análise imediatamente.</p></div>
-        <div class="recurso"><span class="icon">📊</span><h3>2. Dashboard em tempo real</h3><p>Acompanhe cada andamento com total transparência.</p></div>
-        <div class="recurso"><span class="icon">🗣️</span><h3>3. Comunicação clara</h3><p>Sem jargões. Tudo explicado de forma simples.</p></div>
-        <div class="recurso"><span class="icon">🔔</span><h3>4. Alertas automáticos</h3><p>Seja notificado de novos movimentos no processo.</p></div>
-        <div class="recurso"><span class="icon">📄</span><h3>5. Relatórios resumidos</h3><p>Receba um documento claro com tudo o que importa.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- AUTORIDADE -->
-  <section class="autoridade">
-    <div class="main-content">
-      <h2>Credibilidade e Legalidade Garantidas</h2>
-      <div class="selos">
-        <img src="ssl.png" alt="Selo SSL">
-        <img src="parceiro1.png" alt="Parceiro Legal">
-      </div>
-      <p>Desenvolvido por advogados especialistas em Direito Digital e Processual, comprometidos com a transparência total.</p>
-    </div>
-  </section>
-
-  <!-- CTA FINAL -->
-  <section class="cta-final">
-    <div class="main-content">
-      <h2>Transforme o medo em controle em minutos.</h2>
-      <p>Fale diretamente com um advogado especialista e receba sua primeira orientação sem compromisso.</p>
-      <a href="https://wa.me/5524981095926?text=Quero%20conversar%20com%20um%20especialista" class="cta">
-        Quero conversar com um especialista
-      </a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <img src="logo-horizontal.png" alt="Confia JUS Logo" class="logo">
-    <p>&copy; 2025 Confia JUS. Todos os direitos reservados.</p>
-    <p><a href="politica.html">Política de Privacidade</a> | <a href="termos.html">Termos de Uso</a> | <a href="contato.html">Contato</a></p>
-  </footer>
 </body>
 </html>
