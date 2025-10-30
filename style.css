@@ -670,3 +670,30 @@ body {
     margin: 0;
     color: #CCCCCC;
 }
+
+/* --- LISTA DE DETALHES DO PASSO 4 --- */
+.strategy-details-list {
+    list-style: none; 
+    padding: 0;
+    margin-top: 15px;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.strategy-details-list li {
+    position: relative;
+    padding-left: 20px; 
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    line-height: 1.4;
+}
+
+/* Marcador de bolinha */
+.strategy-details-list li::before {
+    content: "•"; 
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+    color: #FFC107; /* Amarelo/Laranja de destaque */
+    font-weight: bold;
+}
