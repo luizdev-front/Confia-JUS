@@ -330,7 +330,6 @@ body {
     line-height: 1.8 !important; /* Aumenta o espaçamento entre as linhas dos valores */
 }
 
-/* --- SEÇÃO DE ÁREAS DE ATUAÇÃO (INÍCIO) --- */
 .areas-section {
     /* Fundo Escuro com textura, simulamos um cinza escuro */
     background-color: #424242; 
@@ -376,4 +375,41 @@ body {
     margin-top: 5px;
     text-align: center;
 }
+/* --- ESTILO PARA AS LISTAS DE DETALHES DAS ÁREAS --- */
+.area-details-list {
+    list-style: none; /* Remove os marcadores padrão */
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 40px; /* Espaço entre as áreas */
+    text-align: left; /* Alinha o texto à esquerda (como na imagem) */
+    max-width: 600px; /* Limita a largura para melhor leitura */
+    margin-left: auto;
+    margin-right: auto;
+    color: #CCCCCC; /* Cor do texto da lista */
+}
 
+.area-details-list li {
+    position: relative;
+    padding-left: 20px; /* Espaço para o marcador simulado */
+    margin-bottom: 10px;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/* Criando o marcador de bullet point do Canva (ponto sólido pequeno) */
+.area-details-list li::before {
+    content: "•"; 
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+    color: #FFC107; /* Amarelo/Laranja (cor do ícone) */
+    font-weight: bold;
+}
+
+/* Garantindo que o item principal da área se alinhe com a lista */
+.areas-section .area-item {
+    text-align: left; /* Alinha o título da área à esquerda */
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
