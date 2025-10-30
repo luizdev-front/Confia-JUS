@@ -550,3 +550,67 @@ body {
     color: #000000;
     margin: 0;
 }
+/* --- DEPOIMENTOS --- */
+.testimonials-section {
+    background-color: #FFFFFF;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.testimonials-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+/* Reutilizando o estilo do botão CTA, mas centralizado */
+.cta-button-area.top-cta {
+    margin-bottom: 30px;
+}
+
+.testimonial-item {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    position: relative;
+    padding-left: 40px; /* Espaço para o ícone */
+}
+
+/* Ícone de Checkmark Laranja (Simulado) */
+.check-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.5em;
+    color: #FF5722; /* Laranja Vívido (cor da CTA) */
+}
+
+.quote-text-small {
+    font-style: italic;
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: #333333;
+    margin: 0 0 5px 0;
+}
+
+.client-info {
+    font-size: 1em;
+    font-weight: bold;
+    color: #000000;
+    margin: 0;
+}
+
+/* A imagem 1000179058.jpg tem uma imagem de fundo sutil para um depoimento */
+.testimonials-section {
+    /* Adicione a imagem de fundo das mãos, se for o caso. Simulação: */
+    background-image: url('caminho/para/imagem/maos.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* No caso da imagem 1000179058, o texto parece estar sobre uma imagem de fundo de mãos. Se for, ajuste: */
+.visible-on-next-image {
+    /* Estilo para o depoimento específico sobre a imagem de fundo, se precisar de ajuste de cor */
+    color: #000000; /* Texto preto para a parte superior do depoimento */
+}
