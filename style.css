@@ -413,3 +413,31 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* Correção para a lista continuada (se necessário) */
+.area-details-list.continued {
+    margin-top: -30px; /* Ajusta o espaçamento para continuar a lista anterior */
+    margin-bottom: 0;
+}
+
+/* --- SEÇÃO DE IMAGEM ESCURA DE TRANSIÇÃO --- */
+.transition-image-area {
+    /* Substitua pelo caminho real da sua imagem com as pessoas na mesa */
+    background-image: url('caminho/para/imagem/escritorio.jpg'); 
+    background-size: cover;
+    background-position: center top;
+    height: 400px; /* Altura visual da imagem */
+    width: 100%;
+    /* Adiciona um overlay escuro para o efeito da imagem */
+    position: relative;
+}
+
+.transition-image-area::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Leve escurecimento */
+}
