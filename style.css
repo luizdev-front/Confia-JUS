@@ -1,312 +1,114 @@
-/* ========================================= */
-/* VARIÁVEIS DE CORES DO PLANO */
-/* ========================================= */
-:root {
-  /* Primárias (Marca/Autoridade) */
-  --azul-primario: #007BFF;
-  --preto-texto: #212529;
-
-  /* Secundárias (Ação/Conversão) - VERDE ESMERALDA ATIVADO */
-  --verde-esmeralda-cta: #50C878; 
-  --verde-esmeralda-hover: #45b36a; 
-  
-  /* Laranja antigo (desativado, mantido para referência) */
-  --laranja-cta: #FF851B; 
-  --laranja-hover: #E07715; 
-
-  /* Neutras (Fundo) */
-  --branco-fundo: #FFFFFF;
-  --cinza-fundo: #F8F9FA;
-}
-
-/* ========================================= */
-/* ESTILOS GERAIS */
-/* ========================================= */
+/* Definições básicas e importação de fonte (simulada) */
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 17px; /* Adicionado refinamento */
-  color: var(--preto-texto);
-  margin: 0;
-  padding: 0;
-  background-color: var(--branco-fundo);
-  -webkit-font-smoothing: antialiased; /* Adicionado refinamento */
-  -moz-osx-font-smoothing: grayscale; /* Adicionado refinamento */
+    font-family: Arial, sans-serif; /* Use a fonte real do Canva, se souber qual é */
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF; /* Cor do texto principal */
+    background-color: #333; /* Cor de fundo de segurança */
 }
 
-.main-content {
-  max-width: 1200px;
-  margin: 0 auto;
+/* 1. SEÇÃO PRINCIPAL (HERO) - Configuração do Fundo */
+.hero-section {
+    background-image: url('caminho/para/sua/imagem/fundo.jpg'); /* Substitua pelo caminho da sua imagem de fundo (ex: martelo/escuro) */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Ocupa a altura total da tela */
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
 }
 
-.title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800; /* Extra Bold */
-  font-size: 2.5rem;
-  color: var(--preto-texto);
-  margin-top: 0; /* Adicionado refinamento */
-  margin-bottom: 30px;
+/* Camada escura para aumentar a legibilidade do texto (overlay) */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Escurece a imagem de fundo */
+    z-index: 1;
 }
 
-.subtitle {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 1.8rem;
-  color: var(--preto-texto);
-  margin-bottom: 45px; /* Ajustado refinamento */
+/* Wrapper para centralizar o conteúdo e garantir que ele fique acima do overlay */
+.content-wrapper {
+    max-width: 800px;
+    width: 100%;
+    z-index: 2; /* Fica acima do overlay */
 }
 
-section {
-  padding: 60px 20px; /* Ajustado refinamento */
-}
-
-/* ========================================= */
-/* ESTILIZAÇÃO DO CTA (Call to Action) - VERDE ESMERALDA APLICADO */
-/* ========================================= */
-
-/* Estilo Base para todos os Botões de Ação Imediata (Hero, Final) */
-.cta-whatsapp {
-    background-color: var(--verde-esmeralda-cta); /* USANDO VERDE ESMERALDA */
-    color: var(--branco-fundo);
-    text-decoration: none; 
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 700;
-    padding: 15px 30px; 
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
-    display: inline-block;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
-}
-
-.cta-whatsapp:hover {
-    background-color: var(--verde-esmeralda-hover); /* USANDO VERDE ESMERALDA HOVER */
-    cursor: pointer;
-}
-
-/* Estilo para Botão CTA GIGANTE (CTA Final) */
-.cta-gigante {
-    font-size: 1.6rem;
-    padding: 20px 40px;
-}
-
-
-/* ========================================= */
-/* BOTÃO FIXO (FLUTUANTE) - VERDE ESMERALDA APLICADO */
-/* ========================================= */
-.cta-fixed {
-    /* Herda o estilo base do CTA */
-    background-color: var(--verde-esmeralda-cta); /* USANDO VERDE ESMERALDA */
-    color: var(--branco-fundo);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    text-decoration: none;
-    padding: 12px 20px;
-    border-radius: 50px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
-    z-index: 1000;
-
-    /* Posição Fixa no canto inferior direito */
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    transition: background-color 0.3s ease;
-}
-
-.cta-fixed:hover {
-    background-color: var(--verde-esmeralda-hover); /* USANDO VERDE ESMERALDA HOVER */
-}
-
-
-
-/* ========================================= */
-/* HEADER */
-/* ========================================= */
-.header {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: var(--branco-fundo);
-}
-
-.logo {
-  max-width: 180px;
-  margin-bottom: 20px;
-}
-
-.subheadline {
-  font-size: 1.2rem;
-  color: var(--preto-texto);
-  margin-bottom: 30px;
-}
-
-/* HERO SECTION */
-.hero {
-    text-align: center;
-}
-
-/* SEÇÃO PROBLEMA - FUNDO CINZA CLARO IMPLEMENTADO */
-.problema {
-  text-align: center; 
-  background-color: var(--cinza-fundo); /* NOVO FUNDO CINZA CLARO */
-  padding: 40px 20px;
-}
-
-/* ========================================= */
-/* LISTAS (Problema / Benefícios) */
-/* ========================================= */
-.list {
-  list-style: none;
-  padding: 0;
-  text-align: left;
-  max-width: 600px;
-  margin: 0 auto 30px;
-}
-
-.list li {
-  font-size: 1.1rem;
-  padding: 10px 0;
-  /* Borda sutil que aparece bem contra o cinza/branco */
-  border-bottom: 1px solid #E0E0E0; 
-}
-
-/* SEÇÃO DEPOIMENTOS (Fundo Cinza Claro para Prova Social) */
-.depoimentos {
-    text-align: center;
-    background-color: var(--cinza-fundo); /* Cinza Claro */
-    padding: 60px 20px;
-}
-
-.video-testimonials {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.video-testimonials video {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* SEÇÃO FUNCIONAMENTO (RECURSOS) */
-.recursos {
-  text-align: center;
-  padding: 60px 20px;
-  background-color: var(--branco-fundo);
-}
-
-.recursos-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 40px;
-}
-
-.recurso {
-  background: var(--branco-fundo);
-  border: 1px solid #E0E0E0;
-  border-radius: 10px;
-  padding: 20px;
-  width: 260px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.icon {
-  font-size: 2rem;
-  display: block;
-  margin-bottom: 10px;
-}
-
-/* AUTORIDADE - Fundo Branco Limpo */
-.autoridade {
-  text-align: center;
-  background-color: var(--branco-fundo);
-  padding: 60px 20px;
-  border-top: 2px solid #E0E0E0;
-}
-
-.selos {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-bottom: 20px;
-}
-
-.selos img {
-  max-width: 90px;
-}
-
-/* CTA FINAL - Fundo Azul Primário */
-.cta-final {
-  text-align: center;
-  background-color: var(--azul-primario);
-  color: var(--branco-fundo);
-  padding: 80px 20px;
-  border-radius: 12px;
-  margin-top: 60px;
-}
-
-.cta-final .cta-text {
-  margin: 20px 0;
-  font-size: 1.2rem;
-}
-
-/* Estilos removidos: .preco-bloco, .valor, .preco */
-
-/* FOOTER */
-.footer {
-  background-color: #1A1A1A;
-  color: var(--branco-fundo);
-  text-align: center;
-  padding: 30px 20px;
-}
-
-/* Links do footer agora usam a cor primária */
-.footer a {
-  color: var(--azul-primario); 
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
-.footer .logo {
-  max-width: 100px;
-  margin-bottom: 10px;
-}
-
-/* ========================================= */
-/* RESPONSIVO */
-/* ========================================= */
-@media (max-width: 768px) {
-  .title {
-    font-size: 1.8rem;
-  }
-
-  .subtitle {
-      font-size: 1.6rem;
-  }
-
-  .recursos-grid {
-    flex-direction: column;
+/* 2. LOGOTIPO E TAGLINE */
+.logo-area {
+    display: flex;
     align-items: center;
-  }
+    margin-bottom: 50px;
+}
 
-  /* CTA GIGANTE no mobile se torna full-width */
-  .cta-gigante {
-    display: block;
-    width: 90%;
-    margin: 30px auto;
-  }
+.logo-image {
+    width: 60px; /* Ajuste conforme o tamanho real da sua imagem */
+    height: auto;
+    margin-right: 15px;
+}
 
-  .video-testimonials {
-      gap: 10px;
-  }
+.logo-text h1 {
+    font-size: 3em; /* Tamanho grande para o título */
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+    text-transform: uppercase;
+}
 
+.jus-highlight {
+    color: #4CAF50; /* Cor de destaque para 'JUS' (verde claro, adapte se a cor for azul) */
+}
 
+.tagline {
+    font-size: 1.2em;
+    color: #AAAAAA;
+    margin: 5px 0 0 0;
+}
+
+/* 3. TÍTULO DE IMPACTO */
+.impact-title {
+    font-size: 2.5em;
+    font-weight: 500;
+    margin-bottom: 50px;
+    line-height: 1.3;
+}
+
+/* 4. TÍTULO SECUNDÁRIO (AZUL CLARO) */
+.secondary-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #2196F3; /* Azul Claro, adapte para a cor exata do Canva */
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.advogado-highlight {
+    /* O texto 'advogado some e te ignora' parece em negrito/mais escuro dentro do título */
+    font-weight: 900;
+}
+
+/* 5. LISTA DE PROBLEMAS */
+.problem-list {
+    list-style: none; /* Remove os marcadores de lista padrão */
+    padding: 0;
+}
+
+.problem-list li {
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.problem-list h4 {
+    display: inline;
+    font-size: 1em; /* Tamanho do título do problema (ex: Perda de Prazos) */
+    font-weight: bold;
+    margin: 0;
+}
+
+.critical-risk {
+    color: #FFC107; /* Amarelo/Laranja para 'Risco Crítico' */
+    font-weight: 500;
+}
