@@ -244,3 +244,136 @@ body {
     margin-top: 5px;
     text-align: center;
 }
+/* --- SEÇÃO DE CONTINUAÇÃO DE TEXTO E CTA (Prejuízo Financeiro) --- */
+.text-cta-section {
+    background-color: #000000; /* Fundo preto sólido */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.final-impact-text {
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 1.4;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    color: #FFFFFF;
+}
+
+.cta-button-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.butterfly-icon {
+    font-size: 1.8em;
+    margin-right: 15px;
+    /* Ajuste de cor se for uma imagem e não um emoji */
+}
+
+.cta-button {
+    background-color: #FF5722; /* Laranja Vívido (adapte a cor exata) */
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 8px; /* Borda levemente arredondada */
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    background-color: #E64A19; /* Laranja um pouco mais escuro no hover */
+}
+
+/* --- SEÇÃO MISSÃO, VISÃO E VALORES --- */
+.m-v-v-section {
+    background-color: #2196F3; /* Fundo em tom de Azul/Ciano (adapte a cor exata) */
+    padding: 50px 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.m-v-v-section .content-wrapper {
+    max-width: 600px;
+}
+
+.m-v-v-item {
+    margin-bottom: 40px;
+}
+
+.arrow-icon {
+    font-size: 1.5em;
+    color: #FFC107; /* Cor de destaque (Laranja/Amarelo) */
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.m-v-v-item h4 {
+    display: inline;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.m-v-v-item p {
+    font-size: 1.1em;
+    line-height: 1.4;
+    margin-top: 10px;
+}
+
+.values-list {
+    line-height: 1.8 !important; /* Aumenta o espaçamento entre as linhas dos valores */
+}
+
+/* --- SEÇÃO DE ÁREAS DE ATUAÇÃO (INÍCIO) --- */
+.areas-section {
+    /* Fundo Escuro com textura, simulamos um cinza escuro */
+    background-color: #424242; 
+    padding: 50px 20px;
+}
+
+.areas-title {
+    background-color: #FFFFFF;
+    color: #FF5722; /* Laranja da CTA */
+    font-size: 1.8em;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 0 auto 30px auto;
+    width: fit-content; /* Largura ajustada ao texto */
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.area-item {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.area-icon {
+    font-size: 1.5em;
+    color: #FFC107; /* Cor do ícone */
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.area-item h4 {
+    display: inline;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.area-description {
+    font-size: 1em;
+    color: #CCCCCC;
+    margin-top: 5px;
+    text-align: center;
+}
+
