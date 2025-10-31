@@ -345,7 +345,31 @@ h1, h2, h3, h4 {
     color: #FFC107;
     font-weight: bold;
 }
+.areas-section {
+    background-image: url("sua-imagem.jpg"); /* coloque o nome da sua imagem aqui */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* sobreposição escura para dar contraste no texto */
+    position: relative;
+    z-index: 1;
 
+    padding: 50px 20px;
+    color: #fff; /* garante texto branco */
+}
+
+/* camada de overlay */
+.areas-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.65); /* ajuste a transparência se quiser */
+    z-index: -1;
+}
 .areas-section .area-item {
     text-align: left;
     max-width: 600px;
