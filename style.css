@@ -41,21 +41,66 @@ h1, h2, h3, h4 {
 
 /* ============================================== */
 /* SEÇÕES DO SITE                                 */
-/* ============================================== */
-
+/* =============================================
+/* --- HERO (HEADER PRINCIPAL) --- */
 .hero-section {
     background-image: url("1761876591850.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
-    padding: 40px 20px;
+    padding: 60px 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    position: relative; /* necessário pro overlay funcionar */
     text-align: center;
+    position: relative;
 }
+
+/* Overlay suave igual ao Canva */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.35); /* mais leve que o seu */
+    z-index: 1;
+}
+
+.hero-section > * {
+    z-index: 2;
+}
+
+/* --- LOGO E TEXTO --- */
+.logo-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.logo-image {
+    width: 110px; /* maior igual ao Canva */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.logo-text h1 {
+    font-size: 2.8em;
+    font-weight: 900;
+    margin: 0;
+}
+
+.tagline {
+    font-size: 1.5em;
+    color: #4bc8ff; /* azul claro igual ao Canva */
+    font-weight: 600;
+    margin-top: 5px;
+}
+   
 .hero-section::before {
     content: '';
     position: absolute;
