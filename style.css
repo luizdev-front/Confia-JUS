@@ -45,7 +45,7 @@ h1, h2, h3, h4 {
 
 /* 1. SEÇÃO PRINCIPAL (HERO) */
 .hero-section {
-    background-image: url('caminho/para/sua/imagem/fundo.jpg');
+    background-image: url('![image.jpg](https://github.com/user-attachments/assets/19baad5e-6445-4df5-9102-63f6f9af2445)');
     background-size: cover;
     background-position: center;
     min-height: 100vh;
