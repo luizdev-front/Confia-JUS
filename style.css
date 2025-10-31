@@ -43,19 +43,19 @@ h1, h2, h3, h4 {
 /* SEÇÕES DO SITE                                 */
 /* ============================================== */
 
-/* 1. SEÇÃO PRINCIPAL (HERO) */
 .hero-section {
-    /* CORREÇÃO AQUI */
-    background-image:1761876591850.jpg;
+    background-image: url("1761876591850.jpg");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     min-height: 100vh;
     padding: 40px 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    position: relative; /* necessário pro overlay funcionar */
+    text-align: center;
 }
-
-
 .hero-section::before {
     content: '';
     position: absolute;
@@ -70,12 +70,13 @@ h1, h2, h3, h4 {
 /* 2. LOGOTIPO E TAGLINE */
 .logo-area {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .logo-image {
-    width: 60px;
+    width: 220px;
     height: auto;
     margin-right: 15px;
 }
