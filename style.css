@@ -46,7 +46,7 @@ h1, h2, h3, h4 {
 /* 1. SEÇÃO PRINCIPAL (HERO) */
 .hero-section {
     /* CORREÇÃO AQUI */
-    background-image:1761876591850.jpg
+    background-image:1761876591850.jpg;
     background-size: cover;
     background-position: center;
     min-height: 100vh;
