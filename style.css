@@ -510,13 +510,14 @@ background-image: url("imagem2.png");
     background-color: var(--color-text-light);
     padding: 60px 20px;
     text-align: center;
-    /* Mantido o fundo com imagem das mãos */
-    background-image: url('moçacomcelular.png'); 
+    
+    /* ❌ RECOMENDADO: Remover ou comentar esta linha se o fundo deve ser apenas branco */
+    /* background-image: url('moçacomcelular.png'); */
+    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-
 .testimonials-title {
     font-size: 1.8em;
     color: var(--color-text-dark);
