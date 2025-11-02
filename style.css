@@ -400,14 +400,14 @@ background-image: url("imagem2.png");
     color: var(--color-text-dark);
     margin-bottom: 50px;
 }
-
 .team-member-card {
     background-color: #F8F8F8;
     padding: 30px 20px;
     max-width: 400px;
-    margin: 0 auto;
+    margin: 0 auto 20px; /* ✅ CORRIGIDO! (Topo=0, Lados=Auto, Fundo=20px) */
     border-radius: 5px;
 }
+
 
 .member-name {
     font-size: 1.8em;
