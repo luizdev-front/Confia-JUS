@@ -270,15 +270,15 @@ h1, h2, h3, h4 {
     line-height: 1.8 !important;
 }
 
-/* --- SEÇÃO DE ÁREAS DE ATUAÇÃO --- */
 .areas-section {
-    background-color: var(--color-dark-bg); 
-    padding: 50px 20px;
-    background-image: url("imagem2.png"); /* ou .png, .webp, etc */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-   
+  position: relative; /* necessário para controle de camadas */
+  background-color: var(--color-dark-bg); 
+  background-image: url("imagem2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px 20px;
+  color: white; /* se o fundo for escuro */
 }
 .areas-title {
     background-color: var(--color-text-light);
