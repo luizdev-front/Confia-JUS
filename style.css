@@ -327,28 +327,30 @@ h1, h2, h3, h4 {
 */
 
 /* --- SEÇÃO EQUIPE (COM IMAGEM DE FUNDO INTEGRADA) --- */
+/* --- SEÇÃO EQUIPE (COM IMAGEM DE FUNDO INTEGRADA) --- */
 .team-section {
-    padding: 60px 20px;
+    /* REMOVIDOS: background-image, background-size, background-position, min-height, overflow */
+    /* REMOVIDOS: display, flex-direction, justify-content, align-items, color */
+    
+    padding: 0; /* ✅ Remova o padding geral, pois as sub-partes terão o seu */
     text-align: center;
-    position: relative; /* Necessário para o ::before */
-    overflow: hidden;
-
-    /* ✅ NOVO: A imagem de fundo agora está aqui */
-    background-image: url('moçacomcelular.png');
-    background-size: cover;
-    /* ✅ Mantenha 'center bottom' se a mão/celular estiverem na parte inferior */
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    min-height: 600px; /* Garante que a imagem tenha espaço para aparecer */
-    color: var(--color-text-light); /* Cor do texto dentro da seção (agora é branco) */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: relative; 
+    /* color: var(--color-text-light); <--- Removido daqui, será definido nas sub-partes */
 }
 
-/* ✅ NOVO: Overlay para garantir a legibilidade do texto da equipe */
-.team-section::before {
+/* ✅ NOVO: Estilos para a área que EXIBE a imagem */
+.team-image-display {
+    background-image: url('moçacomcelular.png');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    height: 400px; /* Altura fixa para a área da imagem */
+    width: 100%;
+    position: relative; /* Para o overlay */
+}
+
+/* ✅ NOVO: Overlay apenas para a área da imagem */
+.team-image-display .image-overlay {
     content: '';
     position: absolute;
     top: 0;
@@ -356,30 +358,34 @@ h1, h2, h3, h4 {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.4); /* Overlay escuro (ajuste a opacidade se quiser) */
-    z-index: 1; /* Abaixo do conteúdo do wrapper */
+    z-index: 1; /* Abaixo do conteúdo do wrapper, se houvesse */
 }
 
-/* Garante que o conteúdo (texto e cards) fique visível */
-.team-section .content-wrapper {
-    z-index: 2;
-    position: relative;
+/* ✅ NOVO: Estilos para o CONTEÚDO da equipe (título e cards) que fica ABAIXO da imagem */
+.team-content-below-image {
+    padding: 60px 20px; /* ✅ Adicione padding aqui para o conteúdo da equipe */
+    background-color: var(--color-text-light); /* ✅ Fundo branco para esta parte */
+    color: var(--color-text-dark); /* ✅ Texto escuro para o conteúdo da equipe */
+    position: relative; /* Garante que fique acima de qualquer coisa no fundo */
+    z-index: 2; /* Garante que fique acima da imagem se houver sobreposição acidental */
 }
 
+/* --- TÍTULOS E CARDS DA EQUIPE (Ajustes) --- */
 .team-title {
     font-size: 2.5em;
-    /* ✅ CORRIGIDO: Mude a cor do título para branco (ou claro) */
-    color: var(--color-text-light);
+    /* ✅ CORRIGIDO: Cor do título agora é escura (pois o fundo é branco) */
+    color: var(--color-text-dark); 
     margin-bottom: 50px;
 }
 
 .team-member-card {
-    /* ✅ CORRIGIDO: Mude a cor do card para ter contraste (branco semi-transparente) */
-    background-color: rgba(255, 255, 255, 0.9);
+    /* ✅ CORRIGIDO: Fundo branco sólido ou quase sólido (para visibilidade contra branco) */
+    background-color: var(--color-text-light); 
     padding: 30px 20px;
     max-width: 400px;
-    /* ✅ CORRIGIDO: Garante espaçamento entre cards */
     margin: 0 auto 20px auto; 
     border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
 }
 
 .member-name {
@@ -400,11 +406,12 @@ h1, h2, h3, h4 {
 
 /* --- CITAÇÃO DE TRANSIÇÃO (results-cta) --- */
 .results-cta {
-    /* ✅ CORRIGIDO: Fundo claro e sólido para destaque na imagem escura */
+    /* ✅ CORRIGIDO: Fundo branco e sombra para contraste */
     background-color: var(--color-text-light); 
     padding: 30px 20px;
     margin-top: 50px;
     border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
 }
 
 .results-cta-text {
