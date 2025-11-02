@@ -511,7 +511,7 @@ background-image: url("imagem2.png");
     padding: 60px 20px;
     text-align: center;
     /* Mantido o fundo com imagem das mãos */
-    background-image: url('caminho/para/imagem/maos.jpg'); 
+    background-image: url('caminho/para/imagem/maos.jpg'); /* <-- O problema pode estar aqui */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
