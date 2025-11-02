@@ -348,18 +348,6 @@ h1, h2, h3, h4 {
     color: #FFC107;
     font-weight: bold;
 }
-.areas-section {
-  position: relative;
-  background-image: url("../imagem2.png"); /* ajuste conforme a estrutura do seu projeto */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: var(--color-dark-bg);
-  padding: 50px 20px;
-  min-height: 100vh;
-  color: white;
-}
-/* camada de overlay */
 .areas-section::before {
     content: "";
     position: absolute;
