@@ -275,7 +275,13 @@ h1, h2, h3, h4 {
     background-color: var(--color-dark-bg); 
     padding: 50px 20px;
 }
-
+.areas-section {
+    background-image: url("IMG/atuacao-estrategica.jpg"); /* ou .png, .webp, etc */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 20px;
+}
 .areas-title {
     background-color: var(--color-text-light);
     color: var(--color-cta-orange);
