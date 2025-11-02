@@ -280,6 +280,12 @@ background-image: url("imagem2.png");
   padding: 50px 20px;
   color: white; /* se o fundo for escuro */
 }
+.areas-section {
+    /* ... */
+    background-position: center 30%; /* Tenta focar 30% a partir do topo */
+    /* ... */
+}
+
 .areas-title {
     background-color: var(--color-text-light);
     color: var(--color-cta-orange);
