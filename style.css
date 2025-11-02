@@ -385,7 +385,7 @@ background-image: url("imagem2.png");
     background-image: url('moçacomcelular.png');
     background-size: cover;
     /* ✅ Mude de 'center top' para 'center center' */
-    background-position: center center; 
+    background-position: center bottom; 
     height: 400px;
     width: 100%;
     position: relative;
