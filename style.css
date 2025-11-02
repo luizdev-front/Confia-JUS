@@ -48,7 +48,7 @@ h1, h2, h3, h4 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    /* REMOVA esta linha ou comente-a: min-height: 100vh; */
     padding: 60px 20px;
     display: flex;
     flex-direction: column;
@@ -56,7 +56,11 @@ h1, h2, h3, h4 {
     align-items: center;
     text-align: center;
     position: relative;
+    
+    /* ✅ NOVO: Adicione um padding maior para dar espaço, se necessário */
+    padding-bottom: 80px; /* Exemplo de espaço extra na parte de baixo */
 }
+
 
 /* Overlay suave igual ao Canva */
 .hero-section::before {
