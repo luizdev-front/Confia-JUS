@@ -349,19 +349,16 @@ h1, h2, h3, h4 {
     font-weight: bold;
 }
 .areas-section {
-    background-image: url("sua-imagem.jpg"); /* coloque o nome da sua imagem aqui */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-    /* sobreposição escura para dar contraste no texto */
-    position: relative;
-    z-index: 1;
-
-    padding: 50px 20px;
-    color: #fff; /* garante texto branco */
+  position: relative;
+  background-image: url("../imagem2.png"); /* ajuste conforme a estrutura do seu projeto */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--color-dark-bg);
+  padding: 50px 20px;
+  min-height: 100vh;
+  color: white;
 }
-
 /* camada de overlay */
 .areas-section::before {
     content: "";
