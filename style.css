@@ -384,12 +384,12 @@ background-image: url("imagem2.png");
 .transition-image-area {
     background-image: url('moçacomcelular.png');
     background-size: cover;
-    background-position: center top;
+    /* ✅ Mude de 'center top' para 'center center' */
+    background-position: center center; 
     height: 400px;
     width: 100%;
     position: relative;
 }
-
 .transition-image-area::before {
     content: '';
     position: absolute;
