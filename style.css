@@ -30,7 +30,7 @@ h1, h2, h3, h4 {
     font-weight: 700;
 }
 
-.content-wrapper {
+.content-wrapper { 
     max-width: 800px;
     width: 100%;
     z-index: 2;
