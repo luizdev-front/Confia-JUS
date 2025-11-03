@@ -274,7 +274,7 @@ h1, h2, h3, h4 {
 
 .tranquility-image {
     width: 100%;
-    height: 100%;
+    height: 40%;
     object-fit: cover; /* A imagem cobre todo o espaço do wrapper */
     display: block;
     opacity: 0.8; /* Suaviza a imagem para o texto se destacar mais */
