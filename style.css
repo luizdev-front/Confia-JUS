@@ -237,10 +237,9 @@ h1, h2, h3, h4 {
     margin-bottom: 30px;
 }
 
-/* --- NOVO: CARD 1 - TRANQUILIDADE (IMAGEM) --- */
-/* --- NOVO: CARD 1 - TRANQUILIDADE (APENAS IMAGEM) --- */
+/* --- NOVO: CARD 1 - TRANQUILIDADE (IMAGEM GRANDE EM BLOCO) --- */
 .tranquility-card-section {
-    padding: 30px 20px; /* Reduz o padding para a imagem ficar mais próxima do conteúdo */
+    padding: 30px 20px; 
     background-color: #f0f0f0; 
     text-align: center;
 }
@@ -250,34 +249,22 @@ h1, h2, h3, h4 {
     border-radius: 10px;
     overflow: hidden; 
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    /* Remove o display flex padrão de coluna/linha, agora é só o wrapper da imagem */
+    /* Configuração para o "bloco grande" */
     display: block; 
-}
-
-.tranquility-card.image-only {
-    /* Garante que o card fique centralizado se o wrapper for menor */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card-image-wrapper {
-    /* Define uma altura e largura boas para o card da imagem */
-    width: 100%;
-    max-height: 450px; /* Altura máxima para desktop/tablet */
-    min-height: 250px; /* Altura mínima para mobile */
-    overflow: hidden;
-    margin: 0;
+    width: 100%; 
+    max-width: 800px; 
+    margin: 0 auto;
+    height: 350px; /* Altura fixa para o bloco. Ajuste se quiser mais "espessura" */
+    position: relative; 
 }
 
 .tranquility-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    display: block; 
+    border-radius: 10px; 
 }
-
-/* REMOVIDO: O estilo .card-content-wrapper e .tranquility-quote foram omitidos. */
-
 
 /* --- NOVO: CARD 2 - SEÇÃO EQUIPE (LISTA DE NOMES) --- */
 .team-section {
@@ -299,7 +286,7 @@ h1, h2, h3, h4 {
     flex-direction: column;
     gap: 15px;
     margin-bottom: 50px; 
-    
+
     /* Estilo do Card Principal de Nomes */
     background-color: #f5f5f5; 
     padding: 30px 20px;
@@ -331,11 +318,10 @@ h1, h2, h3, h4 {
 }
 
 /* --- CITAÇÃO DE TRANSIÇÃO (results-cta) --- */
-/* (Estilo movido e ajustado para não ter margem superior extra na nova estrutura) */
 .results-cta {
     background-color: #eee; 
     padding: 30px 20px;
-    margin-top: 20px; /* Ajuste para ter um pequeno espaço após o card de nomes */
+    margin-top: 20px; 
     border-radius: 5px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -543,5 +529,3 @@ h1, h2, h3, h4 {
     font-size: 0.95em;
     white-space: nowrap; 
 }
-
- 
