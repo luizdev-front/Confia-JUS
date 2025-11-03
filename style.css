@@ -353,7 +353,19 @@ margin-top: 50px;
     color: var(--color-text-dark); 
     margin: 0;
 }
+.results-grid {
+    display: flex;
+    flex-wrap: wrap; /* quebra linha */
+    gap: 10px; /* espaçamento entre as imagens */
+    justify-content: center; /* centraliza */
+}
 
+.result-card img {
+    width: 150px;   /* tamanho pequeno */
+    height: 150px;  /* quadradinha */
+    object-fit: cover;
+    border-radius: 8px; /* opcional — bordas arredondadas */
+}
 
 /* --- DEPOIMENTOS --- */
 .testimonials-section {
