@@ -238,8 +238,9 @@ h1, h2, h3, h4 {
 }
 
 /* --- NOVO: CARD 1 - TRANQUILIDADE (IMAGEM) --- */
+/* --- NOVO: CARD 1 - TRANQUILIDADE (APENAS IMAGEM) --- */
 .tranquility-card-section {
-    padding: 60px 20px;
+    padding: 30px 20px; /* Reduz o padding para a imagem ficar mais próxima do conteúdo */
     background-color: #f0f0f0; 
     text-align: center;
 }
@@ -249,44 +250,34 @@ h1, h2, h3, h4 {
     border-radius: 10px;
     overflow: hidden; 
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    display: flex; 
-    flex-direction: column; 
+    /* Remove o display flex padrão de coluna/linha, agora é só o wrapper da imagem */
+    display: block; 
 }
 
-@media (min-width: 768px) {
-    .tranquility-card {
-        flex-direction: row; 
-        text-align: left;
-    }
+.tranquility-card.image-only {
+    /* Garante que o card fique centralizado se o wrapper for menor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-image-wrapper {
-    flex: 1; 
-    min-height: 250px;
+    /* Define uma altura e largura boas para o card da imagem */
+    width: 100%;
+    max-height: 450px; /* Altura máxima para desktop/tablet */
+    min-height: 250px; /* Altura mínima para mobile */
     overflow: hidden;
+    margin: 0;
 }
 
 .tranquility-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
 }
 
-.card-content-wrapper {
-    flex: 1; 
-    padding: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/* REMOVIDO: O estilo .card-content-wrapper e .tranquility-quote foram omitidos. */
 
-.tranquility-quote {
-    font-size: 1.8em;
-    font-weight: 700;
-    line-height: 1.4;
-    color: var(--color-text-dark);
-    margin: 0;
-}
 
 /* --- NOVO: CARD 2 - SEÇÃO EQUIPE (LISTA DE NOMES) --- */
 .team-section {
