@@ -8,7 +8,7 @@
 /* ============================================== */
 :root {
     --color-cta-orange: #FF5722;      /* Laranja Vívido (Para Botões) */
-    --color-cta-emerald: #2e7c71;     /* VERDE ESMERALDA (Para WhatsApp, conforme doc.) */
+    --color-cta-emerald: #2e7c71;     /* VERDE ESMERALDA (Para WhatsApp) */
     --color-blue-m-v-v: #2196F3;      /* Azul Missão/Visão/Valores */
     --color-dark-bg: #424242;         /* Fundo Escuro das Áreas de Atuação */
     --color-text-light: #FFFFFF;
@@ -19,7 +19,6 @@
 /* DEFINIÇÕES BÁSICAS E GERAIS                    */
 /* ============================================== */
 body {
-    /* FASE 1.2: Aplicando a fonte Montserrat */
     font-family: 'Montserrat', sans-serif; 
     margin: 0;
     padding: 0;
@@ -28,7 +27,6 @@ body {
 }
 
 h1, h2, h3, h4 {
-    /* Garantindo que títulos usem uma variação de peso maior */
     font-weight: 700;
 }
 
@@ -36,7 +34,7 @@ h1, h2, h3, h4 {
     max-width: 800px;
     width: 100%;
     z-index: 2;
-    margin: 0 auto; /* Centraliza o wrapper */
+    margin: 0 auto; 
 }
 
 /* ============================================== */
@@ -49,25 +47,20 @@ h1, h2, h3, h4 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 60px 20px;
+    padding: 60px 20px 80px 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
     position: relative;
-    padding-bottom: 80px; 
 }
 
-
-/* Overlay suave igual ao Canva */
 .hero-section::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
 
@@ -84,63 +77,19 @@ h1, h2, h3, h4 {
 }
 
 .logo-image {
-    width: 200px;
-    height: auto;
-    mix-blend-mode: multiply; /* tenta remover fundo branco */
-}
-
-.tagline {
-    font-size: 1.5em;
-    color: #4bc8ff; /* azul claro igual ao Canva */
-    font-weight: 600;
-    margin-top: 5px;
-}
-    
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1;
-}
-
-/* 2. LOGOTIPO E TAGLINE */
-.logo-area {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.logo-image {
     width: 220px;
     height: auto;
-    margin-right: 15px;
-}
-
-.logo-text h1 {
-    font-size: 3em;
-    line-height: 1;
-    margin: 0;
-    text-transform: uppercase;
-}
-
-.jus-highlight {
-    /* Mantido o tom de verde claro/original para o logo, se for intencional */
-    color: #4CAF50; 
+    /* mix-blend-mode: multiply; (Pode ser removido se o logo tiver fundo transparente) */
 }
 
 .tagline {
     font-size: 1.2em;
     color: #AAAAAA;
     margin: 5px 0 0 0;
-    font-weight: 400; /* Regular */
+    font-weight: 400;
 }
 
-/* TÍTULO DE IMPACTO */
+/* TÍTULOS */
 .impact-title {
     font-size: 2.5em;
     font-weight: 400;
@@ -148,7 +97,6 @@ h1, h2, h3, h4 {
     line-height: 1.3;
 }
 
-/* TÍTULO SECUNDÁRIO (AZUL CLARO) */
 .secondary-title {
     font-size: 1.8em;
     color: #2196F3;
@@ -157,7 +105,7 @@ h1, h2, h3, h4 {
 }
 
 .advogado-highlight {
-    font-weight: 900; /* Bold */
+    font-weight: 900; 
 }
 
 /* LISTA DE PROBLEMAS */
@@ -169,7 +117,8 @@ h1, h2, h3, h4 {
 .problem-list li {
     margin-bottom: 25px;
     line-height: 1.5;
-    font-weight: 400; /* Regular */
+    font-weight: 400; 
+    text-align: left;
 }
 
 .problem-list h4 {
@@ -197,7 +146,6 @@ h1, h2, h3, h4 {
 }
 
 .cta-button {
-    /* FASE 1.3: Usando a variável de cor laranja para o CTA */
     background-color: var(--color-cta-orange); 
     color: var(--color-text-light);
     text-decoration: none;
@@ -214,21 +162,6 @@ h1, h2, h3, h4 {
     background-color: #E64A19;
 }
 
-/* --- SEÇÃO DE CONTINUAÇÃO DE TEXTO E CTA --- */
-.text-cta-section {
-    background-color: #000000;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.final-impact-text {
-    font-size: 1.5em;
-    font-weight: 500;
-    line-height: 1.4;
-    max-width: 700px;
-    margin: 0 auto 30px auto;
-    color: var(--color-text-light);
-}
 
 /* --- SEÇÃO MISSÃO, VISÃO E VALORES (M-V-V) --- */
 .m-v-v-section {
@@ -259,7 +192,7 @@ h1, h2, h3, h4 {
     font-size: 1.1em;
     line-height: 1.4;
     margin-top: 10px;
-    font-weight: 400; /* Regular */
+    font-weight: 400; 
 }
 
 .values-list {
@@ -268,14 +201,22 @@ h1, h2, h3, h4 {
 
 /* --- SEÇÃO ÁREAS DE ATUAÇÃO --- */
 .areas-section {
-    position: relative; /* necessário para controle de camadas */
+    position: relative; 
     background-color: var(--color-dark-bg); 
     background-image: url("imagem2.png");
     background-size: cover;
-    background-position: center 30%; /* Tenta focar 30% a partir do topo */
+    background-position: center 30%; 
     background-repeat: no-repeat;
     padding: 50px 20px;
-    color: white; /* se o fundo for escuro */
+    color: var(--color-text-light); 
+}
+
+.areas-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.65); 
+    z-index: -1;
 }
 
 .areas-title {
@@ -290,213 +231,321 @@ h1, h2, h3, h4 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* ... (resto dos estilos de areas-section) ... */
-
-.areas-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.65); /* ajuste a transparência se quiser */
-    z-index: -1;
+.area-details-list {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+    margin-bottom: 30px;
 }
 
-/* --- SEÇÃO DE TRANSIÇÃO (REMOVIDA E INTEGRADA) --- */
 
-/* COMENTADO/REMOVIDO: ESTILOS ANTIGOS DO .transition-image-area */
-/*
-.transition-image-area {
-    background-image: url('moçacomcelular.png');
-    background-size: cover;
-    background-position: center bottom; 
-    height: 400px;
-    width: 100%;
-    position: relative;
-}
-.transition-image-area::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-*/
-
-/* --- SEÇÃO EQUIPE (COM IMAGEM DE FUNDO INTEGRADA) --- */
-.team-section {
+/* --- NOVO: SEÇÃO EQUIPE E ÁREAS (team-areas-section) --- */
+.team-areas-section {
+    background-color: var(--color-text-light); /* Fundo branco/claro */
     padding: 60px 20px;
     text-align: center;
-    position: relative; /* Necessário para o ::before */
-    overflow: hidden;
+    color: var(--color-text-dark); /* Texto escuro por padrão */
+}
 
-    /* ✅ NOVO: A imagem de fundo agora está aqui */
-    background-image: url('moçacomcelular.png');
-    background-size: cover;
-    /* ✅ Mantenha 'center bottom' se a mão/celular estiverem na parte inferior */
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    min-height: 600px; /* Garante que a imagem tenha espaço para aparecer */
-    color: var(--color-text-light); /* Cor do texto dentro da seção (agora é branco) */
+.team-areas-section .areas-title {
+    /* Reutiliza o estilo do título principal das áreas (Laranja sobre branco) */
+    margin-bottom: 40px;
+}
+
+/* Card de destaque das áreas/equipe */
+.area-card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* ✅ NOVO: Overlay para garantir a legibilidade do texto da equipe */
-.team-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4); /* Overlay escuro (ajuste a opacidade se quiser) */
-    z-index: 1; /* Abaixo do conteúdo do wrapper */
+.area-card-image {
+    /* Pode ser usado para adicionar uma imagem de fundo ou ícone */
+    background-color: var(--color-blue-m-v-v);
+    height: 150px;
+    background-image: url('placeholder-team.png'); /* Substitua pela imagem real, se houver */
+    background-size: cover;
+    background-position: center;
 }
 
-/* Garante que o conteúdo (texto e cards) fique visível */
-.team-section .content-wrapper {
-    z-index: 2;
-    position: relative;
+.area-card-content {
+    padding: 30px;
 }
 
-.team-title {
-    font-size: 2.5em;
-    /* ✅ CORRIGIDO: Mude a cor do título para branco (ou claro) */
+.area-card-content h3 {
+    font-size: 1.5em;
+    color: var(--color-cta-orange);
+    margin-top: 0;
+}
+
+.area-card-content p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.card-cta-button {
+    background-color: var(--color-cta-emerald); 
     color: var(--color-text-light);
-    margin-bottom: 50px;
-}
-
-.team-member-card {
-    /* ✅ CORRIGIDO: Mude a cor do card para ter contraste (branco semi-transparente) */
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 30px 20px;
-    max-width: 400px;
-    /* ✅ CORRIGIDO: Garante espaçamento entre cards */
-    margin: 0 auto 20px auto; 
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 20px;
     border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s;
 }
 
-.member-name {
-    font-size: 1.8em;
-    /* ✅ CORRIGIDO: O texto dentro do card deve ser escuro */
+.card-cta-button:hover {
+    background-color: #266b60;
+}
+
+/* Cards dos Representantes (Advogados) */
+.rep-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.rep-card {
+    background-color: var(--color-text-light); 
+    padding: 25px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.rep-name {
+    font-size: 1.5em;
     color: var(--color-text-dark); 
     margin: 0 0 5px 0;
     line-height: 1.2;
 }
 
-.member-oab {
-    font-size: 1.2em;
-    /* ✅ CORRIGIDO: O texto dentro do card deve ser escuro */
+.rep-oab {
+    font-size: 1em;
     color: #666666; 
     margin: 0;
-    font-weight: 400; /* Regular */
+    font-weight: 400; 
 }
+
 
 /* --- CITAÇÃO DE TRANSIÇÃO (results-cta) --- */
 .results-cta {
-    /* ✅ CORRIGIDO: Fundo claro e sólido para destaque na imagem escura */
     background-color: var(--color-text-light); 
     padding: 30px 20px;
     margin-top: 50px;
     border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--color-text-dark);
 }
 
 .results-cta-text {
     font-size: 1.6em;
     font-weight: 500;
     line-height: 1.4;
-    /* ✅ CORRIGIDO: Texto escuro para o CTA de resultados */
     color: var(--color-text-dark); 
     margin: 0;
 }
 
-/* ... (resto dos estilos do site) ... */
-
-/* ... (Seções anteriores sem alteração) ... */
-
-/* ... (Seções anteriores sem alteração) ... */
 
 /* --- DEPOIMENTOS --- */
 .testimonials-section {
-    background-color: var(--color-text-light); /* Fundo branco */
+    background-color: var(--color-text-light); 
     padding: 60px 20px;
     text-align: center;
-    /* Remover background-size, background-position, background-repeat se não houver imagem de fundo */
-    /* background-size: cover; */
-    /* background-position: center; */
-    /* background-repeat: no-repeat; */
 }
 
 .testimonials-title {
     font-size: 1.8em;
-    color: var(--color-text-dark); /* ✅ Corrigido: Título agora é escuro */
+    color: var(--color-text-dark); 
     margin-bottom: 40px;
 }
 
 .testimonial-item {
-    background-color: #f5f5f5; /* Fundo levemente cinza para cada depoimento, para destacá-los */
-    border-left: 5px solid var(--color-cta-orange); /* Uma linha laranja para destacar */
+    background-color: #f5f5f5; 
+    border-left: 5px solid var(--color-cta-orange); 
     padding: 20px;
     margin-bottom: 30px;
     border-radius: 5px;
-    text-align: left; /* Alinha o texto à esquerda dentro do item */
+    text-align: left; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .testimonial-item .check-icon {
     font-size: 1.5em;
-    color: #4CAF50; /* Um verde vibrante para o check, se desejar */
+    color: #4CAF50; 
     margin-right: 10px;
-    vertical-align: middle; /* Alinha com o texto */
+    vertical-align: middle; 
 }
 
 .testimonial-item .quote-text-small {
     font-size: 1.1em;
     line-height: 1.6;
-    color: var(--color-text-dark); /* ✅ Corrigido: Texto do depoimento agora é escuro */
+    color: var(--color-text-dark); 
     margin-top: 15px;
     margin-bottom: 10px;
 }
 
 .testimonial-item .client-info {
     font-size: 0.9em;
-    color: #666; /* Cor cinza para a informação do cliente */
+    color: #666; 
     font-style: italic;
     margin-top: 15px;
 }
 
-/* Ajuste para o CTA flutuante */
-.floating-cta-whatsapp {
-    position: fixed;
-    bottom: 20px; /* ✅ Garante que está a 20px do fundo */
-    right: 20px;
-    z-index: 1000;
-    /* ... (outros estilos existentes) ... */
+
+/* --- ESTRATÉGIA COMPROVADA --- */
+.strategy-section {
+    background-color: #007ACC; 
+    padding: 60px 20px;
+    text-align: left;
+    color: var(--color-text-light);
 }
 
-/* ... (Seções seguintes sem alteração) ... */
+.strategy-main-title {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.highlight-action {
+    color: #FFC107;
+}
+
+.strategy-step {
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 50px;
+}
+
+.step-number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 35px;
+    height: 35px;
+    background-color: var(--color-cta-orange);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.step-title {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.5em;
+}
+
+.strategy-details-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
 
 
+/* --- CTA FINAL --- */
+.final-cta-section {
+    background-color: #000000;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.cta-final-title {
+    font-size: 3em;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.cta-final-text {
+    font-size: 1.2em;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-final-info {
+    font-weight: 700;
+    color: #4CAF50; /* Um verde de destaque */
+    margin-bottom: 40px;
+}
+
+.cta-button-area.final-cta {
+    margin-bottom: 0;
+}
+
+
+/* --- RODAPÉ --- */
+.site-footer {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.footer-links a, .footer-links p, .footer-links span {
+    color: #999;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-links a:hover {
+    color: var(--color-cta-orange);
+}
+
+.separator {
+    color: #444;
+}
+
+.canva-credit {
+    margin-top: 10px;
+    display: block;
+}
+
+
+/* --- CTA FLUTUANTE (WHATSAPP) --- */
+.floating-cta-whatsapp {
+    position: fixed; 
+    bottom: 20px;     
+    right: 20px;      
+    z-index: 1000;    
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--color-cta-emerald); 
+    color: var(--color-text-light);
+    padding: 10px 15px;
+    border-radius: 50px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
 
 .floating-cta-whatsapp:hover {
-    background-color: #266b60; /* Tom um pouco mais escuro no hover */
+    background-color: #266b60; 
     transform: scale(1.05);
 }
 
 .whatsapp-icon {
-    font-size: 1.5em; /* Tamanho do ícone de mensagem/WhatsApp */
+    font-size: 1.5em; 
     margin-right: 10px;
-    line-height: 1; /* Alinha o ícone */
+    line-height: 1; 
 }
 
 .whatsapp-text {
     font-weight: bold;
     font-size: 0.95em;
-    white-space: nowrap; /* Impede que o texto quebre */
+    white-space: nowrap; 
 }
