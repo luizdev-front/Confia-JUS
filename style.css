@@ -79,7 +79,6 @@ h1, h2, h3, h4 {
 .logo-image {
     width: 220px;
     height: auto;
-    /* mix-blend-mode: multiply; (Pode ser removido se o logo tiver fundo transparente) */
 }
 
 .tagline {
@@ -238,83 +237,87 @@ h1, h2, h3, h4 {
     margin-bottom: 30px;
 }
 
+/* --- NOVO: CARD 1 - TRANQUILIDADE (IMAGEM) --- */
+.tranquility-card-section {
+    padding: 60px 20px;
+    background-color: #f0f0f0; 
+    text-align: center;
+}
 
-/* --- NOVO: SEÇÃO EQUIPE E ÁREAS (team-areas-section) --- */
-.team-areas-section {
-    background-color: var(--color-text-light); /* Fundo branco/claro */
+.tranquility-card {
+    background-color: var(--color-text-light); 
+    border-radius: 10px;
+    overflow: hidden; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    display: flex; 
+    flex-direction: column; 
+}
+
+@media (min-width: 768px) {
+    .tranquility-card {
+        flex-direction: row; 
+        text-align: left;
+    }
+}
+
+.card-image-wrapper {
+    flex: 1; 
+    min-height: 250px;
+    overflow: hidden;
+}
+
+.tranquility-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.card-content-wrapper {
+    flex: 1; 
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tranquility-quote {
+    font-size: 1.8em;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--color-text-dark);
+    margin: 0;
+}
+
+/* --- NOVO: CARD 2 - SEÇÃO EQUIPE (LISTA DE NOMES) --- */
+.team-section {
+    background-color: var(--color-text-light); 
     padding: 60px 20px;
     text-align: center;
-    color: var(--color-text-dark); /* Texto escuro por padrão */
+    color: var(--color-text-dark); 
 }
 
-.team-areas-section .areas-title {
-    /* Reutiliza o estilo do título principal das áreas (Laranja sobre branco) */
+.team-section .team-title {
+    font-size: 2.5em; 
+    color: var(--color-cta-orange); 
     margin-bottom: 40px;
 }
 
-/* Card de destaque das áreas/equipe */
-.area-card {
-    display: flex;
-    flex-direction: column;
-    background-color: #f5f5f5;
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 40px;
-    text-align: left;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.area-card-image {
-    /* Pode ser usado para adicionar uma imagem de fundo ou ícone */
-    background-color: var(--color-blue-m-v-v);
-    height: 150px;
-    background-image: url('placeholder-team.png'); /* Substitua pela imagem real, se houver */
-    background-size: cover;
-    background-position: center;
-}
-
-.area-card-content {
-    padding: 30px;
-}
-
-.area-card-content h3 {
-    font-size: 1.5em;
-    color: var(--color-cta-orange);
-    margin-top: 0;
-}
-
-.area-card-content p {
-    font-size: 1em;
-    line-height: 1.5;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.card-cta-button {
-    background-color: var(--color-cta-emerald); 
-    color: var(--color-text-light);
-    text-decoration: none;
-    font-size: 1em;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 5px;
-    display: inline-block;
-    transition: background-color 0.3s;
-}
-
-.card-cta-button:hover {
-    background-color: #266b60;
-}
-
-/* Cards dos Representantes (Advogados) */
-.rep-container {
+/* CARD GERAL DE NOMES (Contém os dois advogados) */
+.rep-container.team-names-card {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin-bottom: 50px; 
+    
+    /* Estilo do Card Principal de Nomes */
+    background-color: #f5f5f5; 
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .rep-card {
-    background-color: var(--color-text-light); 
+    background-color: var(--color-text-light); /* Cards internos brancos */
     padding: 25px 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -336,12 +339,12 @@ h1, h2, h3, h4 {
     font-weight: 400; 
 }
 
-
 /* --- CITAÇÃO DE TRANSIÇÃO (results-cta) --- */
+/* (Estilo movido e ajustado para não ter margem superior extra na nova estrutura) */
 .results-cta {
-    background-color: var(--color-text-light); 
+    background-color: #eee; 
     padding: 30px 20px;
-    margin-top: 50px;
+    margin-top: 20px; /* Ajuste para ter um pequeno espaço após o card de nomes */
     border-radius: 5px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -549,4 +552,5 @@ h1, h2, h3, h4 {
     font-size: 0.95em;
     white-space: nowrap; 
 }
+
  
