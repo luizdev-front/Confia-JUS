@@ -436,9 +436,18 @@ margin-top: 50px;
 
 /* --- DEPOIMENTOS --- */
 .testimonials-section {
-    background-color: var(--color-text-light); 
+    position: relative;
+    background-color: var(--color-text-light);
     padding: 60px 20px;
     text-align: center;
+
+    /* imagem de fundo com camada escura por cima para legibilidade */
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
+        url('fundo-depoimentos.jpg'); /* troque pelo nome da sua imagem */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .testimonials-title {
