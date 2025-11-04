@@ -444,7 +444,7 @@ margin-top: 50px;
     /* imagem de fundo com camada escura por cima para legibilidade */
     background-image: 
         linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
-        url('fundo-depoimentos.jpg'); /* troque pelo nome da sua imagem */
+        url('justica.png'); /* troque pelo nome da sua imagem */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
