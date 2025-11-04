@@ -391,6 +391,10 @@ margin-top: 50px;
     width: 150px; /* reduz um pouco no celular */
     height: 150px;
   }
+.rep-card:nth-child(3) {
+    /* Garante que ele fique sozinho na linha se houver espaço */
+    width: 250px; /* Mantém a largura do cartão */
+    margin: 0 auto; /* Centraliza o item se ele ocupar uma linha inteira */
 }
 
 
