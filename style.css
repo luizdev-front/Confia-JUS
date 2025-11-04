@@ -314,7 +314,6 @@ margin-top: 50px;
   letter-spacing: 1px;
 }
 
-/* Container geral */
 .rep-container.team-names-card {
   display: flex;
   flex-wrap: wrap;
@@ -325,6 +324,13 @@ margin-top: 50px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 50px;
+}
+
+/* Ajuste para alinhar o terceiro card no centro abaixo dos dois primeiros */
+.rep-card:nth-child(3) {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 /* Cartão individual */
