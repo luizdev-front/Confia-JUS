@@ -423,14 +423,12 @@ margin-top: 50px;
     justify-content: center; /* centraliza */
 }
 
-/* Este código deve estar no seu arquivo CSS, e ele deve estar lincado corretamente ao seu HTML */
 .result-card img {
-    width: 150px;   
-    height: 150px;  
-    object-fit: cover;
-    border-radius: 8px; 
+    width: 150px !important;  /* Teste: Adicione !important */
+    height: 150px !important; /* Teste: Adicione !important */
+    object-fit: cover;
+    border-radius: 8px; 
 }
-
 /* --- DEPOIMENTOS --- */
 .testimonials-section {
     position: relative;
