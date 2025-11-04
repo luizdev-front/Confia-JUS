@@ -424,10 +424,10 @@ margin-top: 50px;
 }
 
 .result-card img {
-    width: 150px;   /* tamanho pequeno */
-    height: 150px;  /* quadradinha */
-    object-fit: cover;
-    border-radius: 8px; /* opcional — bordas arredondadas */
+    width: 150px;   /* Define a largura da imagem */
+    height: 150px;  /* Define a altura da imagem */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    border-radius: 8px; /* Aplica bordas arredondadas */
 }
 
 /* --- DEPOIMENTOS --- */
