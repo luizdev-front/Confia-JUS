@@ -165,7 +165,7 @@ h1, h2, h3, h4 {
 //* --- SEÇÃO MISSÃO, VISÃO E VALORES (M-V-V) --- */
 .m-v-v-section {
     position: relative;
-    background: url("IMG-20251104-WA0022.jpg") center/cover no-repeat;
+    background: url("https://raw.githubusercontent.com/luizdev-front/Confia-JUS/main/IMG-20251104-WA0022.jpg") center/cover no-repeat;
     padding: 50px 20px;
     text-align: center;
 }
