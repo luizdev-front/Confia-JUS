@@ -162,15 +162,28 @@ h1, h2, h3, h4 {
 }
 
 
-/* --- SEÇÃO MISSÃO, VISÃO E VALORES (M-V-V) --- */
+//* --- SEÇÃO MISSÃO, VISÃO E VALORES (M-V-V) --- */
 .m-v-v-section {
-    background-color: var(--color-blue-m-v-v);
+    position: relative;
+    background: url("IMG-20251104-WA0022.jpg") center/cover no-repeat;
     padding: 50px 20px;
     text-align: center;
 }
 
+/* Overlay escuro para melhorar a leitura sobre a imagem */
+.m-v-v-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45); /* Ajuste se quiser mais claro/escuro */
+    backdrop-filter: blur(2px); /* Blur leve — pode remover se quiser */
+    z-index: 1;
+}
+
 .m-v-v-item {
     margin-bottom: 40px;
+    position: relative;
+    z-index: 2; /* Texto acima da imagem */
 }
 
 .arrow-icon {
@@ -185,13 +198,15 @@ h1, h2, h3, h4 {
     font-size: 1.5em;
     margin-top: 0;
     margin-bottom: 5px;
+    color: #fff; /* Texto branco */
 }
 
 .m-v-v-item p {
     font-size: 1.1em;
     line-height: 1.4;
     margin-top: 10px;
-    font-weight: 400; 
+    font-weight: 400;
+    color: #fff; /* Texto branco */
 }
 
 .values-list {
