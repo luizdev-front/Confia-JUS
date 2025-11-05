@@ -161,16 +161,10 @@ h1, h2, h3, h4 {
     background-color: #E64A19;
 }
 
-
 .m-v-v-section {
     position: relative;
-    /* Seu link RAW do GitHub ficaria aqui */
-    background: url("https://raw.githubusercontent.com/luizdev-front/Confia-JUS/main/IMG-20251104-WA0022.jpg") center/cover no-repeat;
-    
-    /* MUDANÇA AQUI: Reduza o valor vertical (50px) para um menor, como 30px */
-    padding: 30px 20px; 
-    
-    text-align: center;
+    background: url("IMG-20251104-WA0022.jpg") center/cover no-repeat;
+ text-align: center;
 }
 
 
