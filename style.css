@@ -164,11 +164,14 @@ h1, h2, h3, h4 {
 
 //* --- SEÇÃO MISSÃO, VISÃO E VALORES (M-V-V) --- */
 .m-v-v-section {
-    position: relative;
-    background: url("https://raw.githubusercontent.com/luizdev-front/Confia-JUS/main/IMG-20251104-WA0022.jpg") center/cover no-repeat;
-    padding: 50px 20px;
-    text-align: center;
+    /* ... outras propriedades ... */
+    background: url("https://raw.githubusercontent.com/luizdev-front/Confia-JUS/main/IMG-20251104-WA0022.jpg") center/contain no-repeat; /* Mude 'cover' para 'contain' */
+    /* Ou, se quiser um tamanho específico, por exemplo, 50% da largura da seção: */
+    /* background: url("...") center/50% no-repeat; */
+    /* Ou para não repetir e ter um tamanho fixo: */
+    /* background: url("...") center/400px no-repeat; */
 }
+
 
 /* Overlay escuro para melhorar a leitura sobre a imagem */
 .m-v-v-section::before {
