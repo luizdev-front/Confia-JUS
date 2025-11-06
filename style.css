@@ -1,4 +1,4 @@
-* =================== BASE =================== */
+q* =================== BASE =================== */
 :root {
   --color-primary: #1a1a1a;
   --color-secondary: #2e7c71;
@@ -438,4 +438,48 @@ section, header {
     display: inline-block;
     font-size: 0.9rem;
   }
+}
+body {
+  color: #ffffff; /* Texto branco padrão */
+}
+
+h1, h2, h3, h4, h5, h6, p, li {
+  color: #f1f1f1; /* Cinza-claro, para leitura confortável */
+}
+
+.titulo-impacto, .titulo-secundario {
+  color: #ffffff;
+}
+
+.listas-problemas li strong {
+  color: #ffb74d; /* Destaque amarelo para títulos dos itens */
+}
+
+.cta-button {
+  background: #ff5722;
+  color: #fff;
+}
+
+.team-section {
+  background-color: #181818; /* Mantém fundo escuro */
+  color: #fff; /* Corrige texto claro */
+}
+
+.strategy-section {
+  background-color: #003f6e; /* Azul escuro */
+  color: #fff;
+}
+
+.strategy-step {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.strategy-step .step-number {
+  background-color: #ffc107;
+  color: #003f6e;
+}
+
+.final-cta-section {
+  background-color: #2e7c71;
+  color: #fff;
 }
