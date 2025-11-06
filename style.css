@@ -196,6 +196,7 @@ section, header {
 .testimonial-card p {
   margin: 5px 0;
 }
+
 /* ==========================
    Seção Estratégia
 ========================== */
@@ -482,4 +483,11 @@ h1, h2, h3, h4, h5, h6, p, li {
 .final-cta-section {
   background-color: #2e7c71;
   color: #fff;
+}
+.result-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
