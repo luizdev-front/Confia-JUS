@@ -15,11 +15,10 @@ q* =================== BASE =================== */
 
 body {
   font-family: var(--font-main);
-  color: var(--color-light);
-  background-color: var(--color-primary);
+  color: var(--color-primary); /* texto escuro para contraste */
+  background-color: #f0f0f0; /* fundo cinza claro */
   line-height: 1.6;
 }
-
 /* =================== GERAIS =================== */
 section, header {
   position: relative;
