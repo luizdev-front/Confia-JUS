@@ -16,7 +16,7 @@ q* =================== BASE =================== */
 body {
   font-family: var(--font-main);
   color: var(--color-primary); /* texto escuro para contraste */
-  background-color: #e5e5e5;
+  background-color: #3a3a3a;
   line-height: 1.6;
 }
 /* =================== GERAIS =================== */
