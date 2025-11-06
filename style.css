@@ -307,3 +307,135 @@ section, header {
 .floating-cta-whatsapp:hover {
   transform: scale(1.05);
 }
+/* =================== RESPONSIVIDADE =================== */
+
+/* Telas até 1024px (tablets e notebooks pequenos) */
+@media (max-width: 1024px) {
+  .content-wrapper, .logo-area, .header-text {
+    padding: 2rem;
+  }
+
+  .titulo-impacto {
+    font-size: 1.6rem;
+  }
+
+  .titulo-secundario {
+    font-size: 1.2rem;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* Telas até 768px (celulares em paisagem) */
+@media (max-width: 768px) {
+  header.bloco1 {
+    text-align: center;
+    padding: 3rem 1.5rem;
+  }
+
+  .logo-area img {
+    width: 70%;
+    max-width: 250px;
+  }
+
+  .titulo-impacto {
+    font-size: 1.4rem;
+  }
+
+  .titulo-secundario {
+    font-size: 1.1rem;
+  }
+
+  .listas-problemas li {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .cta-button {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .areas-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .testimonial-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-column {
+    width: 100%;
+  }
+
+  .strategy-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .strategy-main-title {
+    font-size: 1.5rem;
+  }
+
+  .step-title {
+    font-size: 1.2rem;
+  }
+
+  .floating-cta-whatsapp {
+    bottom: 15px;
+    right: 15px;
+    padding: 0.8rem 1.2rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Telas até 480px (celulares pequenos) */
+@media (max-width: 480px) {
+  .logo-area h1 {
+    font-size: 1rem;
+  }
+
+  .titulo-impacto {
+    font-size: 1.2rem;
+  }
+
+  .titulo-secundario {
+    font-size: 1rem;
+  }
+
+  .area-item ul li {
+    font-size: 0.9rem;
+  }
+
+  .team-card {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .rep-name {
+    font-size: 1rem;
+  }
+
+  .rep-oab {
+    font-size: 0.85rem;
+  }
+
+  .final-cta-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .cta-button {
+    display: inline-block;
+    font-size: 0.9rem;
+  }
+}
