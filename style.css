@@ -49,6 +49,7 @@ section, header {
   justify-content: center;
   text-align: center;
 }
+/* Telas até 1024px (tablets e notebooks pequenos) */
 
 .titulo-impacto {
   font-size: 2rem;
