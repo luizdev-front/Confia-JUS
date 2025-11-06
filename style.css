@@ -498,3 +498,47 @@ h1, h2, h3, h4, h5, h6, p, li {
   justify-content: center;
   margin-top: 40px;
 }
+.testimonials {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.testimonial-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimonial-column {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: none; /* sem sombra se quiser mais minimalista */
+}
+
+.testimonial-card p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.testimonial-card strong {
+  color: #000;
+  font-weight: 700;
+}
