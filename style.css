@@ -541,3 +541,39 @@ h1, h2, h3, h4, h5, h6, p, li {
   color: #000;
   font-weight: 700;
 }
+/* galeria de resultados (vídeos embutidos) */
+.result-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+  z-index: 2;
+  padding: 1rem;
+}
+
+.result-card {
+  width: 100%;
+  max-width: 420px; /* controla largura máxima de cada vídeo */
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-video {
+  width: 100%;
+  /* mantém proporção 16:9 em navegadores modernos */
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+  border: none;
+  overflow: hidden;
+}
+
+/* ajustes responsivos (opcional) */
+@media (max-width: 768px) {
+  .result-card { max-width: 100%; }
+  .result-gallery { gap: 12px; padding: .5rem; }
+}
