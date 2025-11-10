@@ -407,7 +407,7 @@ section, header {
   justify-content: center;
   font-weight: 700;
   font-size: 1.2em;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
 }
 
 .step-title {
