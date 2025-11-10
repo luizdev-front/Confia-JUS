@@ -463,7 +463,7 @@ section, header {
 #canva-embed {
   position: relative;
   width: 100%;
-  height: 60vh; /* Altura ajustada para mobile */
+  height: 70vh; /* Altura ajustada para mobile */
   overflow: hidden;
   display: flex;
   justify-content: center;
