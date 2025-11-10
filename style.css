@@ -202,7 +202,7 @@ section, header {
   color: #1a1a1a;
   padding: 4rem 2rem;
   text-align: center;
-  /* Removendo imagem de fundo para melhor legibilidade em mobile */
+  background:url("bloco-nossa-equipe.png");
 }
 
 .team-grid {
