@@ -198,54 +198,79 @@ section, header {
 
 /* =================== EQUIPE =================== */
 .team-section {
-  background-color: #f9f9f9; /* Fundo claro para o grid da equipe */
-  color: #1a1a1a;
+  background: url("bloco-nossa-equipe.png") center center / cover no-repeat;
+  position: relative;
+  color: #fff;
   padding: 4rem 2rem;
   text-align: center;
-  background:url("bloco-nossa-equipe.png");
+  overflow: hidden;
 }
 
+/* Cria uma leve sombra para melhorar contraste do texto */
+.team-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* Escurece o fundo */
+  z-index: 1;
+}
+
+/* Mantém o conteúdo acima do fundo e da sombra */
+.team-section .content-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.team-title {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+/* Layout do grid */
 .team-grid {
   display: grid;
-  grid-template-columns: 1fr; /* Padrão Mobile: 1 coluna */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
   justify-items: center;
 }
 
+/* Cartões da equipe */
 .team-card {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.9); /* Fundo translúcido branco */
   border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1.5rem;
   width: 100%;
   max-width: 300px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  color: #111;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .team-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .team-card img {
   width: 100%;
-  border-radius: 12px;
-  margin-bottom: 1.2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .rep-name {
   font-weight: 700;
   font-size: 1.1rem;
-  margin-bottom: 0.25rem;
-  color: #1a1a1a;
+  margin-bottom: 0.3rem;
+  color: #000;
 }
 
 .rep-oab {
   font-size: 0.9rem;
-  color: #555;
+  color: #333;
 }
-
 /* =================== RESULTADOS / VÍDEOS =================== */
 .results-block {
     background: var(--color-primary); /* Fundo escuro */
