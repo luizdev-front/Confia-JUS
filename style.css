@@ -4,6 +4,7 @@
   --color-secondary: #2e7c71;
   --color-accent: #ff5722;
   --color-light: #ffffff;
+  --color-soft: #f5f5f5;
   --font-main: 'Montserrat', sans-serif;
 }
 
@@ -20,7 +21,6 @@ body {
   line-height: 1.6;
 }
 
-/* =================== GERAIS / MOBILE FIRST =================== */
 section, header {
   position: relative;
   overflow: hidden;
@@ -34,71 +34,72 @@ section, header {
   z-index: 1;
 }
 
-/* Reduz o padding geral em mobile para melhor aproveitamento */
-.content-wrapper, .logo-area, .header-text {
+.content-wrapper {
   position: relative;
   z-index: 2;
-  padding: 1.5rem; /* Ajuste para mobile */
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* =================== BLOCO 1 (HEADER) =================== */
+/* =================== HEADER =================== */
 .bloco1 {
   background: url("capa1.png") center/cover no-repeat;
-  min-height: 80vh; /* Ajuste para mobile */
+  min-height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 2rem 1rem; /* Padding horizontal reduzido */
 }
 
 .logo-area {
-  display: inline-block;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.85);
   padding: 20px 40px;
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
 }
 
 .logo-area img {
   max-width: 200px;
-  height: auto;
 }
 
 .logo-area h1 {
-  margin: 10px 0 0 0;
-  font-size: 1.5rem;
+  margin-top: 8px;
   color: #000;
+  font-size: 1.4rem;
 }
 
 .titulo-impacto {
-  font-size: 1.8rem; /* Ajuste para mobile */
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 2rem 0 1rem 0;
+  max-width: 900px;
 }
 
 .titulo-secundario {
-    font-size: 1.2rem;
-    font-weight: 400;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--color-light);
+  margin-bottom: 1.5rem;
 }
 
 .advogado-highlight {
-    font-weight: 700;
-    color: var(--color-accent); /* Destaque de cor */
+  color: var(--color-accent);
+  font-weight: 700;
 }
 
 .listas-problemas {
-  list-style: disc; /* Usar bullet points */
-  margin: 1.5rem auto 2.5rem auto;
+  list-style: disc;
+  margin: 1rem auto 2rem auto;
   text-align: left;
   max-width: 700px;
   padding-left: 1.5rem;
-  font-size: 1rem; /* Leitura confortável */
 }
 
 .listas-problemas li {
-    margin-bottom: 0.75rem; /* Espaçamento entre itens */
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
 }
 
 .cta-button {
@@ -106,377 +107,256 @@ section, header {
   color: #fff;
   padding: 1rem 2rem;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 6px;
   font-weight: 700;
   transition: 0.3s;
-  display: inline-block;
 }
 
 .cta-button:hover {
   background: var(--color-secondary);
-}
-/* --- NOVO AJUSTE: Garante que a área do CTA centralize o botão --- */
-.cta-button-area {
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center;     /* Centraliza verticalmente, se houver espaço */
-    text-align: center;      /* Centraliza o texto (redundante, mas bom) */
-    width: 100%;             /* Ocupa a largura total do container */
-    min-height: 50px;        /* Garante uma altura mínima, se necessário */
+  transform: scale(1.05);
 }
 
-/* Removendo ou ajustando a classe top-cta para evitar excesso de margem */
-.cta-button-area.top-cta {
-    margin-top: 0; /* Remove margem superior que pode estar empurrando */
-    margin-bottom: 2rem; /* Adiciona algum espaço abaixo, se necessário */
-    padding: 1rem 0; /* Adiciona padding interno */
-}
-/* =================== BLOCO 2 (MISSÃO/VISÃO/VALORES) =================== */
+/* =================== MISSÃO / VISÃO / VALORES =================== */
 .bloco2 {
   background: url("imagem-missao-visaoe-valores.png") center/cover no-repeat;
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
 }
 
 .mvv-items {
-    display: flex;
-    flex-direction: column; /* Força a coluna em mobile */
-    gap: 2rem;
-    text-align: left;
-    max-width: 500px;
-    margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
 }
 
 .mvv-item {
-    background: rgba(46, 124, 113, 0.8); /* Fundo suave */
-    padding: 1.5rem;
-    border-radius: 10px;
+  background: rgba(46, 124, 113, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 350px;
+  text-align: left;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 
 /* =================== ÁREAS DE ATUAÇÃO =================== */
-
 .areas-section {
   background: url("area-atuacao-estrategica.png") center/cover no-repeat;
   padding: 5rem 2rem;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .areas-title {
-  text-align: center;
-  color: #fff;
   font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
   margin-bottom: 3rem;
-  z-index: 2;
 }
 
 .areas-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 2rem;
-  z-index: 2;
+  justify-content: center;
 }
 
 .area-item {
   background: rgba(0,0,0,0.6);
   padding: 1.5rem;
-  border-radius: 8px;
-  width: 100%; /* Ajuste para mobile */
-  max-width: 350px;
-  transition: transform 0.3s;
-  color: #fff;
-  text-align: left;
+  border-radius: 12px;
+  max-width: 320px;
+  transition: 0.3s;
 }
 
 .area-item:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 }
 
 /* =================== EQUIPE =================== */
 .team-section {
-  background: url("bloco-nossa-equipe.png") center center / cover no-repeat;
+  background: url("bloco-nossa-equipe.png") center/cover no-repeat;
   position: relative;
-  color: #fff;
-  padding: 4rem 2rem;
-  text-align: center;
-  overflow: hidden;
+  padding: 5rem 2rem;
 }
 
-/* Cria uma leve sombra para melhorar contraste do texto */
 .team-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55); /* Escurece o fundo */
+  background: rgba(0,0,0,0.55);
   z-index: 1;
 }
 
-/* Mantém o conteúdo acima do fundo e da sombra */
 .team-section .content-wrapper {
   position: relative;
   z-index: 2;
 }
 
-.team-title {
-  font-size: 2rem;
-  font-weight: 900;
-  margin-bottom: 2rem;
-  color: #fff;
-}
-
-/* Layout do grid */
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
-  justify-items: center;
+  margin-top: 2rem;
 }
 
-/* Cartões da equipe */
 .team-card {
-  background: rgba(255, 255, 255, 0.9); /* Fundo translúcido branco */
+  background: rgba(255,255,255,0.9);
+  color: #111;
   border-radius: 12px;
   padding: 1.5rem;
-  width: 100%;
-  max-width: 300px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  color: #111;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  transition: 0.3s;
 }
 
 .team-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
 .team-card img {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.rep-name {
-  font-weight: 700;
-  font-size: 1.1rem;
-  margin-bottom: 0.3rem;
-  color: #000;
-}
-
-.rep-oab {
-  font-size: 0.9rem;
-  color: #333;
-}
 /* =================== RESULTADOS / VÍDEOS =================== */
 .results-block {
-    background: var(--color-primary); /* Fundo escuro */
-}
-
-.results-block-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4rem 1.5rem; /* Ajuste padding */
+  background: linear-gradient(180deg, #111 0%, #000 100%);
+  padding: 5rem 2rem;
+  text-align: center;
 }
 
 .results-card {
-  background: #ffffff; /* card branco */
-  border-radius: 16px;
-  padding: 1.5rem; /* Padding ajustado para mobile */
-  max-width: 500px;
-  width: 100%; /* Ocupa a largura total no mobile */
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.results-cta {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #1a1a1a;
-  font-size: 1.3rem; /* Ajuste de fonte */
-  font-weight: 700;
-}
-
-.results-cta-text {
-  margin: 0;
-}
-
-.videos-container {
-  width: 100%;
-  max-width: 500px;
+  background: #fff;
+  color: #111;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  padding: 2rem;
+  max-width: 900px;
   margin: 0 auto;
 }
 
+.results-cta-text {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: #000;
+}
+
 .result-gallery {
-  display: flex;
-  flex-direction: column; /* Empilha os vídeos em mobile */
-  gap: 20px;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
-.result-card {
+.result-card iframe {
   width: 100%;
-  max-width: 500px;
-}
-
-.result-video {
-  width: 100%;
-  height: 250px; /* Altura ajustada para mobile */
-  border-radius: 8px;
+  border-radius: 10px;
+  height: 260px;
   border: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
 }
 
-.cta-button-area .cta-button {
-  margin-top: 2rem;
+/* =================== NOVO BLOCO: URGÊNCIA =================== */
+.urgency-section {
+  background: url("urgencia-cliente.jpg") center/cover no-repeat;
+  position: relative;
+  text-align: center;
+  padding: 6rem 2rem;
 }
 
-/* =================== DEPOIMENTOS (CARDS) =================== */
-.testimonials-section {
-  background: linear-gradient(180deg, #1a1a1a 0%, #000 100%);
-  padding: 5rem 1.5rem;
+.urgency-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: 1;
+}
+
+.urgency-section .content-wrapper {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.urgency-title {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.urgency-text {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =================== NOVO BLOCO: DIFERENCIAIS =================== */
+.differentials-section {
+  background: var(--color-soft);
+  color: #000;
+  padding: 5rem 2rem;
   text-align: center;
 }
 
-.testimonials-title {
-  font-size: 1.8rem; /* Ajuste para mobile */
+.differentials-title {
+  font-size: 2rem;
   font-weight: 900;
   margin-bottom: 3rem;
-  color: #fff;
+}
+
+.differentials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.differential-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  padding: 2rem;
+  transition: 0.3s;
+}
+
+.differential-card:hover {
+  transform: translateY(-5px);
+}
+
+.differential-icon {
+  font-size: 2rem;
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+
+/* =================== TESTEMUNHOS =================== */
+.testimonials-section {
+  background: linear-gradient(180deg, #1a1a1a 0%, #000 100%);
+  padding: 5rem 2rem;
+  text-align: center;
 }
 
 .testimonial-grid {
   display: grid;
-  grid-template-columns: 1fr; /* Padrão Mobile: 1 coluna */
-  gap: 1.5rem;
-  justify-items: center;
-  margin-bottom: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
 }
 
 .testimonial-card {
-  background: rgba(255, 255, 255, 0.95);
-  color: #1a1a1a;
+  background: rgba(255,255,255,0.95);
+  color: #111;
   border-radius: 12px;
-  padding: 1.5rem; /* Padding ajustado */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 100%;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   text-align: left;
 }
 
 .testimonial-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-}
-
-.testimonial-card p {
-  margin-bottom: 1rem;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.testimonial-author {
-  font-size: 0.9rem;
-  color: #444;
-  font-weight: 600;
-  text-align: right;
-}
-
-/* =================== ESTRATÉGIA =================== */
-.strategy-section {
-  background-color: #007ACC;
-  padding: 60px 20px; /* Padding ajustado */
-  color: #fff;
-  font-family: Arial, sans-serif;
-}
-
-.strategy-main-title {
-  font-size: 1.5em; /* Ajuste para mobile */
-  text-align: center;
-  margin-bottom: 40px;
-  line-height: 1.3;
-}
-
-.highlight-action {
-  color: #FFC107;
-}
-
-.strategy-step {
-  margin-bottom: 40px;
-  position: relative;
-  /* Removendo padding-left fixo para centralizar o número */
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
-  padding: 50px 20px 20px 20px; /* Padding superior para o número */
-  text-align: center; /* Centraliza textos */
-}
-
-.step-number {
-  position: absolute;
-  left: 50%; /* Centraliza o número */
-  transform: translateX(-50%);
-  top: -20px; /* Posição acima do card */
-  width: 40px;
-  height: 40px;
-  background-color: #FFC107;
-  color: #007ACC;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 1.2em;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
-}
-
-.step-title {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 1.4em; /* Ajuste de fonte */
-}
-
-.step-description {
-  margin: 0;
-  font-size: 1em;
-  line-height: 1.5;
-}
-
-.strategy-details-list {
-  list-style: disc;
-  margin: 15px auto 0 auto;
-  padding-left: 20px;
-  max-width: 300px; /* Limita a largura para melhor leitura */
-  text-align: left;
-}
-
-.strategy-details-list li {
-  margin-bottom: 8px;
-}
-
-/* =================== CANVA EMBED =================== */
-#canva-embed {
-  position: relative;
-  width: 100%;
-  height: 70vh; /* Altura ajustada para mobile */
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #000;
-}
-
-#canva-embed iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 0;
-  object-fit: cover;
+  transform: translateY(-5px);
 }
 
 /* =================== FOOTER =================== */
@@ -484,11 +364,9 @@ section, header {
   background: #111;
   text-align: center;
   padding: 2rem;
-  font-size: 0.9rem;
   color: #ccc;
 }
 
-/* =================== WHATSAPP =================== */
 .floating-cta-whatsapp {
   position: fixed;
   bottom: 20px;
@@ -500,7 +378,7 @@ section, header {
   text-decoration: none;
   font-weight: 700;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: transform 0.3s;
+  transition: 0.3s;
   z-index: 10;
 }
 
@@ -508,117 +386,12 @@ section, header {
   transform: scale(1.05);
 }
 
-/* =================== RESPONSIVIDADE (DE 1200PX PARA BAIXO) =================== */
-@media (max-width: 1200px) {
-  /* Mantido */
-}
-
-/* =================== RESPONSIVIDADE (DE 992PX PARA BAIXO) =================== */
-@media (max-width: 992px) {
-  .bloco1 {
-    min-height: auto;
-    padding: 2rem 1rem;
-  }
-  .titulo-impacto {
-    font-size: 1.6rem;
-  }
-  .listas-problemas {
-    font-size: 0.95rem;
-  }
-  .team-grid {
-    grid-template-columns: 1fr 1fr; /* Em tablets, 2 colunas */
-  }
-  .areas-wrapper {
-      gap: 1.5rem;
-  }
-}
-
-/* =================== RESPONSIVIDADE (DE 768PX PARA BAIXO - FOCO EM MOBILE) =================== */
+/* =================== RESPONSIVIDADE =================== */
 @media (max-width: 768px) {
-  .content-wrapper, .logo-area, .header-text {
-      padding: 1.5rem 1rem;
-  }
-  .titulo-impacto {
-    font-size: 1.4rem;
-  }
-  .listas-problemas {
-    font-size: 0.9rem;
-    max-width: 90%;
-  }
-
-  /* Equipe */
-  .team-grid {
-    grid-template-columns: 1fr; /* Força 1 coluna em celular */
-  }
-
-  /* Resultados/Vídeos */
-  .results-block-wrapper {
-      padding: 3rem 1rem;
-  }
-  .results-card {
-      padding: 1rem;
-  }
-  .results-cta {
-      font-size: 1.1rem;
-  }
-  .result-video {
-    height: 200px;
-  }
-
-  /* Depoimentos */
-  .testimonials-title {
-    font-size: 1.5rem;
-  }
-  .testimonial-grid {
-    grid-template-columns: 1fr; /* Força 1 coluna em celular */
-  }
-
-  /* Estratégia */
-  .strategy-main-title {
-    font-size: 1.3em;
-  }
-  .strategy-step {
-    padding: 40px 15px 15px 15px;
-  }
-  .step-number {
-    width: 35px;
-    height: 35px;
-    font-size: 1em;
-  }
-  .step-title {
-    font-size: 1.3em;
-  }
-  
-  /* Canva */
-  #canva-embed {
-      height: 50vh;
-  }
-}
-
-/* =================== RESPONSIVIDADE (DE 480PX PARA BAIXO) =================== */
-@media (max-width: 480px) {
-  .logo-area {
-      padding: 15px 30px;
-  }
-  .logo-area h1 {
-      font-size: 1.3rem;
-  }
-  .titulo-impacto {
-    font-size: 1.2rem;
-  }
-  .titulo-secundario {
-      font-size: 1rem;
-  }
-  .listas-problemas {
-    font-size: 0.85rem;
-    padding-left: 1rem;
-  }
-  .cta-button {
-      padding: 0.8rem 1.5rem;
-      font-size: 0.9rem;
-  }
-  .floating-cta-whatsapp {
-      padding: 0.8rem 1.2rem;
-      font-size: 0.9rem;
-  }
+  .titulo-impacto { font-size: 1.4rem; }
+  .results-cta-text { font-size: 1.3rem; }
+  .urgency-title { font-size: 1.6rem; }
+  .urgency-text { font-size: 1rem; }
+  .differentials-grid { grid-template-columns: 1fr; }
+  .testimonial-grid { grid-template-columns: 1fr; }
 }
