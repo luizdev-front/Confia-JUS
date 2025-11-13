@@ -395,3 +395,20 @@ section, header {
   .differentials-grid { grid-template-columns: 1fr; }
   .testimonial-grid { grid-template-columns: 1fr; }
 }
+.social-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 6px;
+  filter: brightness(0) invert(1); /* deixa branco se fundo for escuro */
+}
+
+.footer-links a {
+  color: #ffcc00;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
