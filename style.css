@@ -1149,7 +1149,7 @@ section, header {
   margin: 0 auto;
 }
 #footer {
-  background-color:#2A2A2C;  /* Cinza azulado escuro, harmônico com a imagem */
+  background-color:black;  /* Cinza azulado escuro, harmônico com a imagem */
   color: #f9e6d8;             /* Texto bege claro para contraste */
 }
 
