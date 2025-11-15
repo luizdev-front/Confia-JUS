@@ -1153,10 +1153,15 @@ section, header {
   color: #FFFFFF;             /* Texto bege claro para contraste */
 }
 
-/* LOGO */
-.footer-logo img {
+.footer-logo .logo-area-footer img {
   max-width: 250px;
 }
+
+.footer-social .social-item img {
+  width: 26px;
+  height: 26px;
+}
+
 
 /* TITULOS */
 #footer h3 {
