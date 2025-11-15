@@ -1162,6 +1162,11 @@ section, header {
   height: 26px;
 }
 
+.footer-social .social-item img {
+  width: 26px !important;
+  height: 26px !important;
+  max-width: 26px !important;
+}
 
 /* TITULOS */
 #footer h3 {
