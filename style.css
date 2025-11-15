@@ -137,3 +137,162 @@
     .texto-sobre-imagem h2 { font-size:1.2rem; }
     .texto-principal { font-size:0.95rem; }
   }
+
+/* ================= RESPONSIVIDADE APRIMORADA ================ */
+
+/* ------- Telas até 1024px ------- */
+@media (max-width: 1024px) {
+  .content-wrapper {
+    padding: 2.5rem 1.2rem;
+  }
+
+  .header-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .header-text {
+    text-align: center;
+  }
+
+  .logo-area img {
+    max-width: 170px;
+  }
+}
+
+/* ------- Telas até 900px ------- */
+@media (max-width: 900px) {
+
+  header.bloco1 {
+    padding: 2rem 1rem;
+    min-height: auto;
+  }
+
+  .titulo-impacto {
+    font-size: 1.6rem;
+  }
+
+  .titulo-secundario {
+    font-size: 1.15rem;
+  }
+
+  .listas-problemas {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .imagem-capa {
+    height: 330px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ------- Telas até 720px ------- */
+@media (max-width: 720px) {
+
+  .area-item {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .results-card {
+    padding: 1.2rem;
+  }
+
+  .result-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-vertical {
+    display: none;
+  }
+}
+
+/* ------- Telas até 520px ------- */
+@media (max-width: 520px) {
+
+  .titulo-impacto {
+    font-size: 1.28rem;
+  }
+
+  .titulo-secundario {
+    font-size: 1rem;
+  }
+
+  .listas-problemas li {
+    font-size: 0.92rem;
+  }
+
+  .brand-area {
+    justify-content: center;
+  }
+
+  /* Texto sobre imagem */
+  .texto-sobre-imagem h2 {
+    font-size: 1.25rem;
+  }
+
+  .texto-principal {
+    font-size: 0.95rem;
+  }
+
+  /* Footer responsivo */
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-social p,
+  .footer-contact p {
+    justify-content: center;
+  }
+
+  /* Horafinal */
+  #horafinal h2 {
+    font-size: 1.8rem;
+  }
+
+  .horafinal-text {
+    font-size: 1rem;
+  }
+
+  .cta-horafinal {
+    font-size: 1rem;
+    padding: 0.9rem 1.1rem;
+  }
+}
+
+/* ------- Telas muito pequenas até 390px ------- */
+@media (max-width: 390px) {
+  .logo-area img {
+    max-width: 140px;
+  }
+
+  .titulo-impacto {
+    font-size: 1.15rem;
+  }
+
+  .cta-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
