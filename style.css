@@ -1331,3 +1331,36 @@ section, header {
   }
 
 }
+@media (max-width: 768px) {
+    /* 1. Remove a altura fixa e usa min-height */
+    #horafinal {
+        height: auto; /* Remove a altura fixa de 80vh */
+        min-height: 500px; /* Garante uma altura mínima para o banner */
+        padding: 60px 20px; /* Aumenta o padding vertical para dar espaço em cima e embaixo */
+    }
+
+    /* 2. Redimensiona o título e texto para caberem na largura da tela */
+    #horafinal h2 {
+        font-size: 2.5rem; /* Reduz de 3.5rem para 2.5rem ou menos */
+        margin-bottom: 1rem;
+    }
+
+    .horafinal-text {
+        font-size: 1.1rem; /* Reduz o corpo do texto */
+    }
+
+    .horafinal-sub {
+        font-size: 1rem; /* Reduz o subtítulo */
+    }
+    
+    .cta-horafinal {
+        padding: 0.8rem 1.5rem; /* Ajusta o tamanho do botão */
+    }
+
+    /* 3. Garante que o conteúdo não seja espremido */
+    .horafinal-content {
+        /* Garante que o conteúdo não tenha restrições que o façam cortar */
+        width: 100%;
+        padding: 0 10px; /* Padding extra para as laterais se necessário */
+    }
+}
