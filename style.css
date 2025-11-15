@@ -1131,6 +1131,97 @@ section, header {
 .cta-horafinal:hover {
   background: #e64a19;
 }
+/* ============ BLOCO 7 – FAQ ============ */
+
+#faq-bloco7 {
+    background: #F8F9FA;
+    padding: 4rem 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.faq-title {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: #1A1A1A;
+}
+
+.faq-subtitle {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 3rem;
+    line-height: 1.5;
+}
+
+/* Acordeão */
+.faq-accordion {
+    text-align: left;
+}
+
+.faq-item {
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    background: #fff;
+    border: none;
+    padding: 1.2rem 1rem;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #1A1A1A;
+}
+
+.faq-question:hover {
+    background: #eef0f2;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1rem;
+    transition: max-height 0.35s ease;
+}
+
+.faq-answer p {
+    padding: 1rem 0 1.5rem;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.55;
+}
+
+/* Quando aberto */
+.faq-item.active .faq-answer {
+    max-height: 300px;
+}
+
+.faq-item.active .faq-question {
+    background: #e3e6e9;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .faq-title {
+        font-size: 1.7rem;
+    }
+    .faq-question {
+        font-size: 1rem;
+    }
+}
+
 /* AREA INTEIRA DO FOOTER */
 #footer {
   background: #E5E5E5;   /* você pode trocar depois */
