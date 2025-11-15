@@ -1208,6 +1208,31 @@ section, header {
   margin-right: 10px;
   vertical-align: middle;
 }
+/* LINKS DE REDES SOCIAIS */
+.footer-social .social-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+
+  margin: 12px 0;
+
+  transition: 0.2s ease-in-out;
+}
+
+.footer-social .social-item img {
+  width: 26px;
+  height: 26px;
+}
+
+.footer-social .social-item:hover {
+  color: #00eaff;
+  transform: translateX(4px);
+}
+
 /* RESPONSIVO (CELULAR) */
 @media (max-width: 768px) {
   .footer-container {
