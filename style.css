@@ -1484,3 +1484,90 @@ section, header {
         padding: 0 10px; /* Padding extra para as laterais se necessário */
     }
 }
+/* ============================================================
+   BLOCO 8 — FORMULÁRIO DE CAPTAÇÃO (Minimalista e Estratégico)
+   ============================================================ */
+
+#bloco8-formulario {
+  width: 100%;
+  padding: 70px 20px;
+  background: #F7F9FC; /* tom claro, elegante, não compete com o CTA */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 650px;
+  background: white;
+  padding: 40px 35px;
+  border-radius: 18px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.06);
+  text-align: center;
+}
+
+.form-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #1A1A1A;
+}
+
+.formulario-lead {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* INPUTS */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid #D7D7D7;
+  background: #FFFFFF;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  outline: none;
+  transition: 0.25s ease-in-out;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #008CFF;
+  box-shadow: 0 0 6px rgba(0, 140, 255, 0.35);
+}
+
+/* BOTÃO */
+.btn-form {
+  width: 100%;
+  padding: 16px;
+  background: #008CFF; /* Azul Confia — conforme o cliente pediu */
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn-form:hover {
+  background: #0075D4;
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 30px 20px;
+  }
+  
+  .form-title {
+    font-size: 24px;
+  }
+}
+
