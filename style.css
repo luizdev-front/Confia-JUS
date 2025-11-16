@@ -93,7 +93,7 @@ section, header {
 
 .bloco1 {
 
-  background: url("capa1.png") center/cover no-repeat;
+  background: url("imagens/capa1.png") center/cover no-repeat;
 
   min-height: 80vh; /* Ajuste para mobile */
 
@@ -273,7 +273,7 @@ section, header {
 
 .bloco2 {
 
-  background: url("imagem-missao-visaoe-valores.png") center/cover no-repeat;
+  background: url("imagens/imagem-missao-visaoe-valores.png") center/cover no-repeat;
 
   text-align: center;
 
@@ -319,7 +319,7 @@ section, header {
 
 .areas-section {
 
-  background: url("area-atuacao-estrategica.png") center/cover no-repeat;
+  background: url("imagens/area-atuacao-estrategica.png") center/cover no-repeat;
 
   padding: 5rem 2rem;
 
@@ -403,7 +403,7 @@ section, header {
 
 /* =================== EQUIPE =================== */
 .team-section {
-  background: url("bloco-nossa-equipe.png") center/cover no-repeat;
+  background: url("imagens/bloco-nossa-equipe.png") center/cover no-repeat;
   position: relative;
   color: #fff;
   padding: 4rem 2rem;
@@ -557,7 +557,7 @@ section, header {
 
 }
 .image-depoimentos {
-  background:url("imgdepoimentos.jpg");
+  background:url("imagens/imgdepoimentos.jpg");
 }
 
 
@@ -610,7 +610,7 @@ section, header {
 /* =================== DEPOIMENTOS (CARDS) =================== */
 
 .testimonials-section {
- background: url("bloco-depoimentos.jpg");
+ background: url("imagens/bloco-depoimentos.jpg");
   padding: 5rem 1.5rem;
   text-align: center;
 }
@@ -1066,7 +1066,7 @@ section, header {
   position: relative;
   width: 100%;
   height: 80vh;
-  background: url("ahoraeagora.png") center/cover no-repeat;
+  background: url("imagens/ahoraeagora.png") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
