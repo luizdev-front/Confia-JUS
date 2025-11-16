@@ -1134,10 +1134,17 @@ section, header {
 /* ============ BLOCO 7 – FAQ ============ */
 
 #faq-bloco7 {
-    background: #F8F9FA;
+    background: 
+        linear-gradient(rgba(248,249,250,0.30), rgba(248,249,250,0.30)), 
+        url("img-bloco7.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 4rem 1.5rem;
     font-family: 'Montserrat', sans-serif;
 }
+
+
 
 .faq-container {
     max-width: 900px;
